@@ -1,0 +1,94 @@
+{
+  "analysis_experiment": "efficientnet_b0_pretrained_strong_aug",
+  "columns": [
+    "selection_rank",
+    "image_id",
+    "local_image_path",
+    "true_label",
+    "predicted_label",
+    "top1_score",
+    "correct",
+    "selection_type",
+    "scientific_name",
+    "common_name",
+    "predicted_scientific_name",
+    "predicted_common_name",
+    "confused_pair_id",
+    "confused_pair_rank",
+    "pair_direction",
+    "source_prediction_row",
+    "analysis_experiment",
+    "prediction_artifact_sha256",
+    "confusion_artifact_sha256",
+    "stage3_freeze_sha256",
+    "stage3_test_access_sha256",
+    "test_manifest_sha256"
+  ],
+  "counts": {
+    "confused_pair": 9,
+    "correct_high_confidence": 12,
+    "incorrect_high_confidence": 12
+  },
+  "inputs": {
+    "confusion_pairs": {
+      "bytes": 2801,
+      "path": "results/tables/deep_learning/efficientnet_b0_pretrained_strong_aug_test_top_confusions.csv",
+      "sha256": "edc91be3f5ce7902f94a6133b66bfd50eba230cacecc6073bcb25f67acf7a397"
+    },
+    "predictions": {
+      "bytes": 3112275,
+      "path": "results/predictions/deep_learning/efficientnet_b0_pretrained_strong_aug_test_predictions.csv",
+      "sha256": "249c26898bd3bb0dbffb1cb02e4939b0c23f8dfd25ad5be637b3e37513e9401f"
+    },
+    "stage3_freeze": {
+      "bytes": 21726,
+      "path": "results/metrics/deep_learning/stage3_freeze.json",
+      "sha256": "bea68b307fb7ff5db4f066b47ff00ade462bd71609ed9735c4faff125ce2257f"
+    },
+    "stage3_test_access": {
+      "bytes": 8072,
+      "path": "results/metrics/deep_learning/stage3_test_access.json",
+      "sha256": "04420ab5eb9bca3f5a6e56f6015fd2ce158ba9121d0e328b076912bac2292f2b"
+    },
+    "test_manifest": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+    }
+  },
+  "outputs": {
+    "selected_examples": {
+      "bytes": 19040,
+      "path": "results/tables/gradcam_selected_examples.csv",
+      "sha256": "564ff298161eaf7068e10e57137b2ade7da33edca295aacf0e985e2b1073a705"
+    },
+    "selection_preview_grids": {
+      "confused_pair": {
+        "bytes": 610522,
+        "path": "results/figures/gradcam/selection_confused_pair_grid.png",
+        "sha256": "bf1bac97398d828fb17b62729117bea454dc2d83cf8bd92f69ffa7f6e73826b9"
+      },
+      "correct_high_confidence": {
+        "bytes": 836846,
+        "path": "results/figures/gradcam/selection_correct_high_confidence_grid.png",
+        "sha256": "db09f50192e0078b469da9b59a3c6184ceab66d08c1a982ff6ebd586756cb519"
+      },
+      "incorrect_high_confidence": {
+        "bytes": 797612,
+        "path": "results/figures/gradcam/selection_incorrect_high_confidence_grid.png",
+        "sha256": "a5758b55621978a846e1e15e3823744cc7b0077cbd9dca3a1f826b6ca2316ce7"
+      }
+    }
+  },
+  "schema_version": 1,
+  "selection_policy": {
+    "correct_high_confidence": 12,
+    "incorrect_high_confidence_excluding_pair_examples": 12,
+    "ranking": "top1_score descending, image_id ascending",
+    "representatives_per_available_direction": 1,
+    "top_confused_pairs": 5,
+    "unique_images": true
+  },
+  "status": "selected",
+  "total_selected": 33
+}

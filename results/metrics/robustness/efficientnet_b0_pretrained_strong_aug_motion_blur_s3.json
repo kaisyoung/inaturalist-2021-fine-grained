@@ -1,0 +1,108 @@
+{
+  "architecture": "efficientnet_b0",
+  "artifacts": {
+    "predictions": {
+      "bytes": 1738333,
+      "path": "results/predictions/robustness/efficientnet_b0_pretrained_strong_aug_motion_blur_s3_predictions.csv",
+      "sha256": "31864198865592bfae260782f1d2b80bbca4e8fe67d7863db47997eb17381009"
+    }
+  },
+  "corruption": {
+    "determinism": "per-image angle shared across severities",
+    "parameter": "kernel_length",
+    "parameter_value": 15,
+    "seed": 42,
+    "severity_index": 3,
+    "type": "motion_blur"
+  },
+  "created_at_utc": "2026-08-03T02:57:07Z",
+  "evaluation": {
+    "batch_size": 32,
+    "labels": "exactly 0..499",
+    "max_samples": null,
+    "num_workers": 4,
+    "sample_selection": "complete manifest",
+    "score_type": "softmax_probability",
+    "stable_tie_break": "lower new_label first",
+    "weight_update_operations": 0
+  },
+  "inputs": {
+    "clean_metrics": {
+      "bytes": 4390,
+      "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_test_metrics.json",
+      "sha256": "8aa987e53ce8a0051ad0be092a7b0f2280e0ca1563eabbeddde0278f97f0deb5"
+    },
+    "clean_predictions": {
+      "bytes": 3112275,
+      "path": "results/predictions/deep_learning/efficientnet_b0_pretrained_strong_aug_test_predictions.csv",
+      "sha256": "249c26898bd3bb0dbffb1cb02e4939b0c23f8dfd25ad5be637b3e37513e9401f"
+    },
+    "manifest": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+    },
+    "model_artifact": {
+      "bytes": 56336203,
+      "path": "results/models/deep_learning/efficientnet_b0_pretrained_strong_aug_best.pt",
+      "sha256": "787bc18b24b02e7671eea4197af75be8f193c969331351d8173a84aad7cd7a97"
+    },
+    "model_support_artifacts": {
+      "resolved_config": {
+        "bytes": 5785,
+        "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_resolved_config.json",
+        "sha256": "272e5d5f7e4b2dc800e893f2b19f944fd12c67e999f9fa25d5d9571275e6cd1c"
+      },
+      "source_config": {
+        "bytes": 642,
+        "path": "configs/deep_efficientnet_b0_pretrained.yaml",
+        "sha256": "e83acda6a2bcadfb88744e124c2deaaff0aac8ec1148076845e931ce2c4ae085"
+      }
+    }
+  },
+  "method_family": "deep_learning",
+  "metrics": {
+    "evaluation_wall_time_seconds": 22.458161124959588,
+    "feature_extraction_time_seconds": 0.0,
+    "inference_time_seconds": 6.974327828036621,
+    "macro_f1": 0.34724166228418923,
+    "macro_precision": 0.4715413344307581,
+    "macro_recall": 0.342,
+    "model_forward_time_seconds": 6.974327828036621,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.342,
+    "seconds_per_image": 0.0013948655656073243,
+    "top1_accuracy": 0.342,
+    "top5_accuracy": 0.5596
+  },
+  "model_name": "efficientnet_b0_pretrained_strong_aug",
+  "package_versions": {
+    "Pillow": "12.3.0",
+    "joblib": "1.5.3",
+    "numpy": "2.2.6",
+    "opencv_python_headless": "4.13.0.92",
+    "pandas": "2.3.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13",
+    "scikit_image": "0.25.2",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.1",
+    "torchvision": "0.27.1"
+  },
+  "protocol": {
+    "path": "results/metrics/stage4_robustness_protocol.json",
+    "sha256": "0dcbc3f7d7380367cb2a9522ee28e4dc2239307575fe57892f13556a607f5233"
+  },
+  "run_type": "canonical_full",
+  "schema_version": 1,
+  "split": "test",
+  "stage": "stage4_robustness",
+  "status": "complete",
+  "timing": {
+    "definition": "full wall includes image decode, on-the-fly corruption, preprocessing, feature extraction/transfer, and one model score call; serialization and metrics excluded. model_forward_seconds covers only predict_proba/decision_function or synchronized neural forward passes.",
+    "feature_extraction_seconds": 0.0,
+    "full_evaluation_wall_seconds": 22.458161124959588,
+    "model_forward_seconds": 6.974327828036621
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "artifacts": {
+    "class_mapping.json": "2d6e60104b133d2758dffd585d373b085ddb42845d0b4b2c93bf5277ef9a0a1b",
+    "selected_classes_seed42.txt": "3c2af417a5c174ef14f2be117a00880b0a08f8dce0c24fad6aaa8ea5dcde8141",
+    "split_summary.json": "324413fb3d8d3affe611f8fd1454358cf54f2e6fcd81ef961994be0cc19f0b76",
+    "test.csv": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91",
+    "train.csv": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+    "val.csv": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb"
+  },
+  "capture_source": "Pre-Stage-2 hash check corroborated by STAGE1_FIX_REPORT.md",
+  "hash_algorithm": "SHA-256",
+  "machine_readable_file_created_during_stage2": true,
+  "status": "PRE-STAGE-2 REFERENCE HASHES"
+}

@@ -1,0 +1,465 @@
+{
+  "allowed_test_models": [
+    "linear_svm",
+    "random_forest",
+    "sift_bovw_svm"
+  ],
+  "compatibility_role": "stage2_freeze alias for the authoritative selection",
+  "created_at_utc": "2026-08-03T02:03:58.139915+00:00",
+  "feature_configs": {
+    "linear_svm": {
+      "path": "results/models/traditional/linear_svm.feature_contract.json",
+      "sha256": "63199404c4d2a5f8a66ee1b2b5ed9bacb3163f1569a7b391921386462f678415"
+    },
+    "random_forest": {
+      "path": "results/features/traditional_feature_config.json",
+      "sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea"
+    },
+    "sift_bovw_svm": {
+      "path": "results/features/bovw/bovw_feature_config.json",
+      "sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08"
+    }
+  },
+  "models": {
+    "linear_svm": {
+      "classifier": "LinearSVC",
+      "estimator_diagnostics": {
+        "classifier": "LinearSVC",
+        "converged": true,
+        "max_iter": 5000,
+        "n_iter": 30
+      },
+      "estimator_parameters": {
+        "classifier": {
+          "class": "sklearn.svm._classes.LinearSVC",
+          "repr": "LinearSVC(max_iter=5000, random_state=42)"
+        },
+        "classifier__C": 1.0,
+        "classifier__class_weight": null,
+        "classifier__dual": "auto",
+        "classifier__fit_intercept": true,
+        "classifier__intercept_scaling": 1,
+        "classifier__loss": "squared_hinge",
+        "classifier__max_iter": 5000,
+        "classifier__multi_class": "ovr",
+        "classifier__penalty": "l2",
+        "classifier__random_state": 42,
+        "classifier__tol": 0.0001,
+        "classifier__verbose": 0,
+        "memory": null,
+        "normalise": {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424), (2424, 3704)])"
+        },
+        "normalise__alpha": 0.3,
+        "normalise__blocks": [
+          [
+            0,
+            520
+          ],
+          [
+            520,
+            660
+          ],
+          [
+            660,
+            2424
+          ],
+          [
+            2424,
+            3704
+          ]
+        ],
+        "normalise__blockwise": true,
+        "normalise__weights": null,
+        "steps": [
+          [
+            "normalise",
+            {
+              "class": "src.traditional.normalize.PowerNormalizer",
+              "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424), (2424, 3704)])"
+            }
+          ],
+          [
+            "classifier",
+            {
+              "class": "sklearn.svm._classes.LinearSVC",
+              "repr": "LinearSVC(max_iter=5000, random_state=42)"
+            }
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false
+      },
+      "feature_bindings": [
+        {
+          "feature_config_path": "results/features/traditional_feature_config.json",
+          "feature_config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+          "feature_dim": 2424,
+          "role": "handcrafted",
+          "train_feature_path": "results/features/traditional_train_features.npz",
+          "train_feature_sha256": "8e6b7a623153840b52abdd3d9159fedb26b63c1321920ab962b5fdbc3edc28f4",
+          "train_manifest_file_name": "train.csv",
+          "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+        },
+        {
+          "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+          "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+          "feature_dim": 1280,
+          "role": "bovw",
+          "train_feature_path": "results/features/bovw/bovw_train_features.npz",
+          "train_feature_sha256": "3f8bae0f39dd90f9c002bf3b7c4021a01985f481e4425d417546c68afb0f44ea",
+          "train_manifest_file_name": "train.csv",
+          "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+          "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+          "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3",
+          "vocabulary_training_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+        }
+      ],
+      "feature_components": [
+        "color",
+        "texture",
+        "hog",
+        "bovw"
+      ],
+      "feature_config_path": "results/models/traditional/linear_svm.feature_contract.json",
+      "feature_config_sha256": "63199404c4d2a5f8a66ee1b2b5ed9bacb3163f1569a7b391921386462f678415",
+      "feature_dim": 3704,
+      "feature_set": "combined",
+      "metadata_path": "results/models/traditional/linear_svm.metadata.json",
+      "metadata_sha256": "51f5272cfe984148d71b5147614ae48659caeac2e4903dc817f25fb7b35737da",
+      "model_type": "linear_svm",
+      "normalisation": {
+        "alpha": 0.3,
+        "blocks": [
+          [
+            0,
+            520
+          ],
+          [
+            520,
+            660
+          ],
+          [
+            660,
+            2424
+          ],
+          [
+            2424,
+            3704
+          ]
+        ],
+        "blockwise": true
+      },
+      "path": "results/models/traditional/linear_svm.joblib",
+      "sha256": "9d8c5cf61fe5a79d5576f0ab244f36bcb5042d7ef0f484d714b9c8d81d3ec7d3"
+    },
+    "random_forest": {
+      "classifier": "RandomForestClassifier",
+      "estimator_diagnostics": {
+        "classifier": "RandomForestClassifier",
+        "converged": true,
+        "max_iter": null,
+        "n_iter": null
+      },
+      "estimator_parameters": {
+        "classifier": {
+          "class": "sklearn.ensemble._forest.RandomForestClassifier",
+          "repr": "RandomForestClassifier(min_samples_leaf=2, n_estimators=300, n_jobs=-1,\n                       random_state=42)"
+        },
+        "classifier__bootstrap": true,
+        "classifier__ccp_alpha": 0.0,
+        "classifier__class_weight": null,
+        "classifier__criterion": "gini",
+        "classifier__max_depth": null,
+        "classifier__max_features": "sqrt",
+        "classifier__max_leaf_nodes": null,
+        "classifier__max_samples": null,
+        "classifier__min_impurity_decrease": 0.0,
+        "classifier__min_samples_leaf": 2,
+        "classifier__min_samples_split": 2,
+        "classifier__min_weight_fraction_leaf": 0.0,
+        "classifier__monotonic_cst": null,
+        "classifier__n_estimators": 300,
+        "classifier__n_jobs": -1,
+        "classifier__oob_score": false,
+        "classifier__random_state": 42,
+        "classifier__verbose": 0,
+        "classifier__warm_start": false,
+        "memory": null,
+        "normalise": {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424)])"
+        },
+        "normalise__alpha": 0.3,
+        "normalise__blocks": [
+          [
+            0,
+            520
+          ],
+          [
+            520,
+            660
+          ],
+          [
+            660,
+            2424
+          ]
+        ],
+        "normalise__blockwise": true,
+        "normalise__weights": null,
+        "steps": [
+          [
+            "normalise",
+            {
+              "class": "src.traditional.normalize.PowerNormalizer",
+              "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424)])"
+            }
+          ],
+          [
+            "classifier",
+            {
+              "class": "sklearn.ensemble._forest.RandomForestClassifier",
+              "repr": "RandomForestClassifier(min_samples_leaf=2, n_estimators=300, n_jobs=-1,\n                       random_state=42)"
+            }
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false
+      },
+      "feature_bindings": [
+        {
+          "feature_config_path": "results/features/traditional_feature_config.json",
+          "feature_config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+          "feature_dim": 2424,
+          "role": "handcrafted",
+          "train_feature_path": "results/features/traditional_train_features.npz",
+          "train_feature_sha256": "8e6b7a623153840b52abdd3d9159fedb26b63c1321920ab962b5fdbc3edc28f4",
+          "train_manifest_file_name": "train.csv",
+          "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+        }
+      ],
+      "feature_components": [
+        "color",
+        "texture",
+        "hog"
+      ],
+      "feature_config_path": "results/features/traditional_feature_config.json",
+      "feature_config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+      "feature_dim": 2424,
+      "feature_set": "handcrafted",
+      "metadata_path": "results/models/traditional/random_forest.metadata.json",
+      "metadata_sha256": "af1a6c6d66f879477acd1b6f20b8bac1e11ec42631f5ca9a3788ad4b840475cc",
+      "model_type": "random_forest",
+      "normalisation": {
+        "alpha": 0.3,
+        "blocks": [
+          [
+            0,
+            520
+          ],
+          [
+            520,
+            660
+          ],
+          [
+            660,
+            2424
+          ]
+        ],
+        "blockwise": true
+      },
+      "path": "results/models/traditional/random_forest.joblib",
+      "sha256": "346c4d48e505b71f019765d30bc2c54dc73a0e566a971cfc6ad65cf4a0946fda"
+    },
+    "sift_bovw_svm": {
+      "classifier": "LinearSVC",
+      "estimator_diagnostics": {
+        "classifier": "LinearSVC",
+        "converged": true,
+        "max_iter": 5000,
+        "n_iter": 23
+      },
+      "estimator_parameters": {
+        "classifier": {
+          "class": "sklearn.svm._classes.LinearSVC",
+          "repr": "LinearSVC(max_iter=5000, random_state=42)"
+        },
+        "classifier__C": 1.0,
+        "classifier__class_weight": null,
+        "classifier__dual": "auto",
+        "classifier__fit_intercept": true,
+        "classifier__intercept_scaling": 1,
+        "classifier__loss": "squared_hinge",
+        "classifier__max_iter": 5000,
+        "classifier__multi_class": "ovr",
+        "classifier__penalty": "l2",
+        "classifier__random_state": 42,
+        "classifier__tol": 0.0001,
+        "classifier__verbose": 0,
+        "memory": null,
+        "normalise": {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 1280)])"
+        },
+        "normalise__alpha": 0.3,
+        "normalise__blocks": [
+          [
+            0,
+            1280
+          ]
+        ],
+        "normalise__blockwise": true,
+        "normalise__weights": null,
+        "steps": [
+          [
+            "normalise",
+            {
+              "class": "src.traditional.normalize.PowerNormalizer",
+              "repr": "PowerNormalizer(blocks=[(0, 1280)])"
+            }
+          ],
+          [
+            "classifier",
+            {
+              "class": "sklearn.svm._classes.LinearSVC",
+              "repr": "LinearSVC(max_iter=5000, random_state=42)"
+            }
+          ]
+        ],
+        "transform_input": null,
+        "verbose": false
+      },
+      "feature_bindings": [
+        {
+          "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+          "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+          "feature_dim": 1280,
+          "role": "bovw",
+          "train_feature_path": "results/features/bovw/bovw_train_features.npz",
+          "train_feature_sha256": "3f8bae0f39dd90f9c002bf3b7c4021a01985f481e4425d417546c68afb0f44ea",
+          "train_manifest_file_name": "train.csv",
+          "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+          "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+          "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3",
+          "vocabulary_training_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+        }
+      ],
+      "feature_components": [
+        "bovw"
+      ],
+      "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+      "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+      "feature_dim": 1280,
+      "feature_set": "bovw",
+      "metadata_path": "results/models/traditional/sift_bovw_svm.metadata.json",
+      "metadata_sha256": "c38736b3bc8d725d6b6890cd051dca70c76b3b3f96a21133d6156e75818d5be0",
+      "model_type": "linear_svm",
+      "normalisation": {
+        "alpha": 0.3,
+        "blocks": [
+          [
+            0,
+            1280
+          ]
+        ],
+        "blockwise": true
+      },
+      "path": "results/models/traditional/sift_bovw_svm.joblib",
+      "sha256": "53a815b01a0b459d00b5e4efe9a94500468dcc6b9cae2e35d2862f14eb1ff1f7"
+    }
+  },
+  "policy": "Validation-only selection fixed before any held-out test cache access",
+  "retrospective_limitation": "This forward-looking manifest gates all new test access. It cannot prove that historical snapshot authors never viewed earlier test evidence.",
+  "schema_version": 1,
+  "selected_models": [
+    "linear_svm",
+    "random_forest",
+    "sift_bovw_svm"
+  ],
+  "selection_manifest": {
+    "path": "results/metrics/stage2_selection_manifest.json",
+    "sha256": "5b39108a92ab34d052010e99b8cbcb5c7af5ba685889ad5f143ae6d26f8c8f05"
+  },
+  "selection_policy": {
+    "canonical_blockwise_normalisation": true,
+    "canonical_power_alpha": 0.3,
+    "required_unique_validation_configurations": 19,
+    "test_evaluations_allowed": 3
+  },
+  "selection_schema_version": 2,
+  "stage1_artifacts": {
+    "class_mapping.json": {
+      "bytes": 279280,
+      "path": "data/splits/class_mapping.json",
+      "sha256": "2d6e60104b133d2758dffd585d373b085ddb42845d0b4b2c93bf5277ef9a0a1b"
+    },
+    "selected_classes_seed42.txt": {
+      "bytes": 2450,
+      "path": "data/splits/selected_classes_seed42.txt",
+      "sha256": "3c2af417a5c174ef14f2be117a00880b0a08f8dce0c24fad6aaa8ea5dcde8141"
+    },
+    "split_summary.json": {
+      "bytes": 2063,
+      "path": "data/splits/split_summary.json",
+      "sha256": "324413fb3d8d3affe611f8fd1454358cf54f2e6fcd81ef961994be0cc19f0b76"
+    },
+    "test.csv": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+    },
+    "train.csv": {
+      "bytes": 4971333,
+      "path": "data/splits/train.csv",
+      "sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+    },
+    "val.csv": {
+      "bytes": 1222951,
+      "path": "data/splits/val.csv",
+      "sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb"
+    }
+  },
+  "status": "frozen",
+  "validation_grid": {
+    "experiments": [
+      "ablation_cb_color_bovw_a03",
+      "ablation_cb_color_bovw_a05",
+      "ablation_drop_color",
+      "ablation_drop_hog",
+      "ablation_drop_texture",
+      "ablation_norm_blk_a01",
+      "ablation_norm_blk_a02",
+      "ablation_norm_blk_a03",
+      "ablation_norm_blk_a05",
+      "ablation_norm_blk_a10",
+      "ablation_norm_glb_a03",
+      "ablation_norm_glb_a05",
+      "ablation_norm_glb_a10",
+      "ablation_only_color",
+      "ablation_only_hog",
+      "ablation_only_texture",
+      "linear_svm",
+      "random_forest",
+      "sift_bovw_svm"
+    ],
+    "path": "results/tables/traditional_validation_grid.csv",
+    "rows": 19,
+    "sha256": "98956e7437cea109bffc1aadad21f803217837c97587b5e975d13addf1e4cd1e",
+    "unique_configuration_fingerprints": 19
+  },
+  "validation_metrics": {
+    "linear_svm": {
+      "path": "results/metrics/traditional_linear_svm_val_metrics.json",
+      "sha256": "b8f75ab426159b62ce0b0495ec9f5e90b586ca098451dde6a27eaefb4822e904"
+    },
+    "random_forest": {
+      "path": "results/metrics/traditional_random_forest_val_metrics.json",
+      "sha256": "1a4ff8ad2ec09a509c68fca6a26419f27a863fe7bd85e0237951f8df1fe360ad"
+    },
+    "sift_bovw_svm": {
+      "path": "results/metrics/traditional_sift_bovw_svm_val_metrics.json",
+      "sha256": "eb71edbacb9dbb93438d04280b1ef9732c897085a1b6cf92360d806fbece6c06"
+    }
+  }
+}

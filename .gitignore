@@ -1,0 +1,85 @@
+# macOS and editor metadata
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python caches, environments, and tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Raw and derived datasets (small split manifests remain trackable)
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+
+# Model weights and training checkpoints
+*.pt
+*.pth
+*.ckpt
+*.onnx
+/checkpoints/
+/models/
+/results/checkpoints/
+/results/models/
+/results/features/
+/results/predictions/
+
+# Generated logs and large result images
+/results/logs/*
+!/results/logs/.gitkeep
+/results/figures/*
+!/results/figures/.gitkeep
+/results/final_report_figures/
+
+# Submission builds and unrelated local/generated assets
+/submission/
+/pet-runs/
+/report/*.pdf
+/data/processed.zip
+/data/splits.zip
+/results.zip
+/integration_backups/
+/presentation/rendered/
+/presentation/.artifact-tool/
+/presentation/.template-work/
+/presentation/.tmp/
+/presentation/COMP9517_Final_Presentation_10min/
+/presentation/*.inspect.ndjson
+/results/smoke/robustness_traditional_rewrite/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# LaTeX build products (keep .tex/.bib/style sources)
+/report/cvpr_latex/**/*.aux
+/report/cvpr_latex/**/*.bbl
+/report/cvpr_latex/**/*.blg
+/report/cvpr_latex/**/*.fdb_latexmk
+/report/cvpr_latex/**/*.fls
+/report/cvpr_latex/**/*.log
+/report/cvpr_latex/**/*.out
+/report/cvpr_latex/**/*.pdf
+/report/cvpr_latex/**/*.synctex.gz
+/report/cvpr_latex/**/*.toc
+/report/cvpr_latex/**/*.lof
+/report/cvpr_latex/**/*.lot
+/report/cvpr_latex/**/*.nav
+/report/cvpr_latex/**/*.snm
+/report/cvpr_latex/**/*.vrb
+/report/cvpr_latex/**/*.xdv
+/report/cvpr_latex/**/_minted-*/
+/report/cvpr_latex/build/
+
+# Keep the compiled report in the public repository
+!/report/COMP9517_Group_Project_Report.pdf

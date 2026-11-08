@@ -1,0 +1,178 @@
+\section{Experimental Results}
+\label{sec:results}
+
+\subsection{Clean validation and held-out test}
+
+Table~\ref{tab:main-results} reports all completed baselines.  The three
+traditional rows now represent distinct inputs.  The primary 3,704-D
+colour--texture--HOG--BoVW LinearSVC reaches
+\PrimaryTraditionalTestTopOnePercent\% test top-1,
+\PrimaryTraditionalTestTopFivePercent\% top-5, and
+\PrimaryTraditionalTestMacroFOnePercent\% macro F1.  The 2,424-D, 300-tree
+handcrafted-only Random Forest without BoVW reaches
+\RandomForestTestTopOnePercent\%,
+\RandomForestTestTopFivePercent\%, and
+\RandomForestTestMacroFOnePercent\%, while the 1,280-D BoVW-only LinearSVC
+reaches \BoVWOnlyTestTopOnePercent\%, \BoVWOnlyTestTopFivePercent\%, and
+\BoVWOnlyTestMacroFOnePercent\%.  These values are smaller than the learned
+representations: scratch ResNet18 reaches 29.88\% top-1, pretrained ResNet18
+reaches 67.60\%, and pretrained EfficientNet-B0 reaches
+\BestTestTopOnePercent\% top-1, \BestTestTopFivePercent\% top-5, and
+\BestTestMacroFOnePercent\% macro F1.  Validation/test rank agreement is
+descriptive only; it is not evidence that validation overfitting or prior test
+access did not occur.
+
+\input{generated/main_results_table.tex}
+\input{generated/detailed_test_table.tex}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{final_model_comparison.png}
+  \caption{Held-out comparison of the six complete methods.  The large gap
+  between fixed descriptors and fine-tuned pretrained networks dominates the
+  smaller within-family differences.}
+  \label{fig:model-comparison}
+\end{figure*}
+
+The best network is also parameter-efficient: EfficientNet-B0 has 4.65M
+trainable parameters, versus 11.43M for ResNet18, yet improves test top-1 by
+5.14 points over the selected pretrained ResNet18.  Its canonical training
+loop takes 2,421.3 seconds, compared with 1,453.2 seconds for that ResNet18 and
+2,772.5 seconds for scratch ResNet18.  These times reflect different epoch
+counts and convergence behaviour, not architecture throughput in isolation.
+Figure~\ref{fig:model-comparison} visualises the clean-score separation.
+
+\subsection{Validation-only ablations}
+
+Table~\ref{tab:ablations} contains only validation results, so none of these
+comparisons consumes additional test information.  The traditional rows show
+the selected full four-block validation reference beside colour-only,
+texture-only, and HOG-only controls.  The complete 19-configuration grid also
+varied the power exponent, block-wise versus global normalisation, feature
+subsets, and the three canonical model roles.  It selected block-wise
+$\alpha{=}0.3$ with all four blocks; single-block scores must not be interpreted
+as a block's contribution in the combined model.
+
+\input{generated/ablation_results_table.tex}
+
+The matched ResNet18 augmentation ablation is the cleanest deep comparison:
+strong augmentation improves validation top-1 from 66.16\% to 67.54\%
+(+1.38 points) and macro F1 from 66.08\% to 67.37\% (+1.28 points).  The
+scratch/basic run reaches 28.74\% and the pretrained/basic run 66.16\%; this
+large descriptive gap is consistent with the value of ImageNet transfer, but
+is not a one-factor causal estimate because the canonical learning rate,
+epoch cap, and stopping policy also differ.  Similarly, the frozen-head
+configuration reaches 57.46\% versus 66.16\% for full fine-tuning, but uses a
+different optimisation schedule.  It nevertheless shows that the pretrained
+representation is already useful before backbone adaptation.
+
+\subsection{Confusions and class-level failures}
+
+The normalised 500-by-500 confusion overview in
+Figure~\ref{fig:confusion} is strongly diagonal, but local off-diagonal errors
+remain.  The most frequent symmetric pair is Indian Pond Heron versus Squacco
+Heron, with six errors (two in one direction and four in the other).  Several
+other leading pairs are taxonomically or visually close: Red-eyed Damselfly
+versus Common Bluetail, Yellow-faced versus Singing Honeyeater, and
+MacGillivray's versus Orange-crowned Warbler.  Figure~\ref{fig:confused-pairs}
+preserves both error directions rather than collapsing them into a single
+uninterpretable count.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.92\columnwidth]{efficientnet_confusion.png}
+  \caption{Row-normalised held-out confusion matrix for EfficientNet-B0
+  (rows true, columns predicted).  The overview is complemented by the exact
+  integer confused-pair counts in Figure~\ref{fig:confused-pairs}.}
+  \label{fig:confusion}
+\end{figure}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.88\textwidth]{top_confused_pairs.png}
+  \caption{Ten most frequent bidirectional species confusions for
+  EfficientNet-B0.  Colour separates the two directions of each pair.}
+  \label{fig:confused-pairs}
+\end{figure*}
+
+Class-level recall ranges from 0.1 for totara, Small-leaved Blinks, and New
+Zealand jasmine to 1.0 for multiple visually distinctive moth and beetle
+classes.  These extremes should be interpreted cautiously because each recall
+uses only ten test images.  High-confidence failures are more revealing.  For
+example, a matrimony-vine image is predicted as Jerusalem cherry with 0.986
+probability, and a Red Junglefowl is predicted as white pasqueflower with
+0.932 probability.  Such errors motivate the spatial analysis below.
+
+\subsection{Robustness to degradation}
+
+Table~\ref{tab:robustness} and Figure~\ref{fig:robustness} are generated only
+from a complete set of 16 corrupted conditions per model.  EfficientNet-B0 averages
+\BestMeanCorruptedTopOnePercent\% top-1 and
+\BestMeanCorruptedMacroFOnePercent\% macro F1; its lowest recorded top-1 is
+\BestWorstCorruptedTopOnePercent\%, and its lowest recorded macro F1 is
+\BestWorstCorruptedMacroFOnePercent\%.  These minima are computed independently
+and need not occur under the same corruption.  The traditional curve is not
+the primary 3,704-D LinearSVC.  It is the canonical 2,424-D, 300-tree
+handcrafted-only Random Forest comparator without BoVW, averaging
+\RandomForestMeanCorruptedTopOnePercent\%
+top-1 and \RandomForestMeanCorruptedMacroFOnePercent\% macro F1, with worst
+recorded top-1 and macro-F1 values of
+\RandomForestWorstCorruptedTopOnePercent\% and
+\RandomForestWorstCorruptedMacroFOnePercent\%, respectively; these minima are
+also computed independently.  The build emits every value in
+this paragraph, the table, and the curves from the same complete 64-cell
+evidence matrix after the Stage~2 model change.
+
+\input{generated/robustness_summary_table.tex}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.97\textwidth]{robustness_curves.png}
+  \caption{Top-1 and macro-F1 trajectories under four deterministic
+  corruptions.  Severity zero is the same frozen clean test evaluation for
+  every curve.  The traditional curve is the 2,424-D, 300-tree handcrafted
+  Random Forest without BoVW, not the primary 3,704-D LinearSVC.  No model is
+  retrained or adapted.}
+  \label{fig:robustness}
+\end{figure*}
+
+The absolute results demonstrate that clean accuracy is not a robustness
+guarantee.  The observed pretrained deep models retain higher clean and
+corrupted performance in the regenerated evidence, yet the gap between clean
+and worst-condition scores remains substantial.  Robustness therefore remains
+a first-order failure mode rather than a minor correction to the clean ranking.
+
+\subsection{Grad-CAM and qualitative failure analysis}
+
+Figure~\ref{fig:gradcam} presents predicted-target overlays drawn only from the
+pre-registered analysis set.  Correct predictions often concentrate on the
+organism: fruit clusters, flower heads, wing markings, or bird bodies.  This
+localisation is encouraging but not sufficient evidence of the right
+fine-grained cue.  The error cases are more diagnostic.  Both matrimony vine
+and Jerusalem cherry maps emphasise red fruit, suggesting that shared colour
+and shape dominate subtler botanical distinctions.  The Red Junglefowl map
+focuses on a bright textured region and supports a plausible texture shortcut
+for the flower prediction.  For the shield-bug/tick error, the predicted map
+is tightly centred on the arthropod while the true-target map shifts, showing
+that correct localisation can coexist with incorrect classification.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.32\textwidth]{gradcam_correct_examples.jpg}\hfill
+  \includegraphics[width=0.32\textwidth]{gradcam_incorrect_examples.jpg}\hfill
+  \includegraphics[width=0.32\textwidth]{gradcam_confused_pairs.jpg}
+  \caption{Persisted EfficientNet-B0 Grad-CAM overlays.  Left: four
+  high-confidence correct predictions.  Centre: four high-confidence errors.
+  Right: representatives of frequent confused pairs.  Captions show true
+  $\rightarrow$ predicted common names and softmax
+  confidence.  These are qualitative diagnostics, not causal explanations.}
+  \label{fig:gradcam}
+\end{figure*}
+
+Confused-pair maps likewise centre on the relevant animals, including the two
+herons and two damselflies.  Their failure is therefore not simply background
+attention; it is consistent with insufficient resolution or feature
+specificity for closely related morphology.  Conversely, some overlays span
+large rectangular crop regions, reflecting the coarse spatial resolution of
+the final convolutional layer.  We consequently treat the maps as spatial
+associations rather than evidence of pixel-level causation.

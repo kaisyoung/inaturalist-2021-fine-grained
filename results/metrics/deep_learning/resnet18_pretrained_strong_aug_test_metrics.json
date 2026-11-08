@@ -1,0 +1,104 @@
+{
+  "artifacts": {
+    "confusion": {
+      "bytes": 9055,
+      "path": "results/metrics/deep_learning/resnet18_pretrained_strong_aug_test_confusion.npz",
+      "sha256": "6e582ea7dd26ff4f07d93e9be2e3a5fcb6047f5b54ce4bc26d80e7ec6c17f78f"
+    },
+    "confusion_figure": {
+      "bytes": 83328,
+      "path": "results/figures/deep_learning/resnet18_pretrained_strong_aug_test_confusion_matrix.png",
+      "sha256": "9c792c88c08497c1f00cfab6cfcf4a1a67e55d929d00a383e07db88a2d29c45b"
+    },
+    "pairs": {
+      "bytes": 2822,
+      "path": "results/tables/deep_learning/resnet18_pretrained_strong_aug_test_top_confusions.csv",
+      "sha256": "138812b588d9092ecff0f7f1f1adaf72120339157f9d4770defbde33af5ad3e4"
+    },
+    "pairs_figure": {
+      "bytes": 159127,
+      "path": "results/figures/deep_learning/resnet18_pretrained_strong_aug_test_top_confusions.png",
+      "sha256": "c8d4c12fdd1576b5d417a56a85564990e1a74ab9ec48fb912e2eff261276a1cc"
+    },
+    "per_class": {
+      "bytes": 42701,
+      "path": "results/tables/deep_learning/resnet18_pretrained_strong_aug_test_per_class_metrics.csv",
+      "sha256": "e2cecb8f1e8bb6b87065885ef6c789683d4add5057c38c1caeb08c91872c288b"
+    },
+    "predictions": {
+      "bytes": 3117006,
+      "path": "results/predictions/deep_learning/resnet18_pretrained_strong_aug_test_predictions.csv",
+      "sha256": "202602338f015985f8c0a7dbaabab4fb557ca04e371abd88825e758fc3812362"
+    }
+  },
+  "best_epoch": 14,
+  "experiment_name": "resnet18_pretrained_strong_aug",
+  "freeze_backbone": false,
+  "image_size": 224,
+  "metrics": {
+    "evaluation_wall_time_seconds": 7.53202620799857,
+    "loss": 1.4104158935546875,
+    "macro_f1": 0.6727522280355102,
+    "macro_precision": 0.6910919483938834,
+    "macro_recall": 0.676,
+    "model_forward_time_seconds": 6.856243042057031,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.676,
+    "seconds_per_image": 0.0013712486084114061,
+    "test_time_seconds": 6.856243042057031,
+    "top1_accuracy": 0.676,
+    "top5_accuracy": 0.8624
+  },
+  "model_name": "resnet18",
+  "num_classes": 500,
+  "pretrained": true,
+  "provenance": {
+    "checkpoint_path": "results/models/deep_learning/resnet18_pretrained_strong_aug_best.pt",
+    "checkpoint_sha256": "b8a371f0e9aa4c8b412b34884bf1a3ddfd9d2694346c23d29b6249b22ba6e4e5",
+    "device": "mps",
+    "freeze_manifest_path": "results/metrics/deep_learning/stage3_freeze.json",
+    "freeze_manifest_sha256": "bea68b307fb7ff5db4f066b47ff00ade462bd71609ed9735c4faff125ce2257f",
+    "resolved_config_path": "results/metrics/deep_learning/resnet18_pretrained_strong_aug_resolved_config.json",
+    "resolved_config_sha256": "5eaebb707d216b0cc11869f870c2f658a597816d2e8fbd4efd0afc4111ebbcd6",
+    "source_config_path": "configs/deep_resnet18_pretrained_strong_aug.yaml",
+    "source_config_sha256": "fde8a11dc62115557037448b7947ddd62a87c57f3a391163aedfb85661397ffe",
+    "split_manifest": "test.csv",
+    "split_manifest_sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91",
+    "stored_best_metrics_path": "results/metrics/deep_learning/resnet18_pretrained_strong_aug_best_val_metrics.json",
+    "stored_best_metrics_sha256": "ec7b4a7129875ffd88db4921a7ecfde6d2ebf736b01cc40d6847ecc547e090cb",
+    "test_access_record_path": "results/metrics/deep_learning/stage3_test_access.json",
+    "versions": {
+      "Pillow": "12.3.0",
+      "PyYAML": "6.0.3",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "platform": "macOS-27.0-arm64-arm-64bit",
+      "python": "3.12.13",
+      "scikit_learn": "1.7.2",
+      "torch": "2.12.1",
+      "torchvision": "0.27.1"
+    }
+  },
+  "schema_version": 1,
+  "score_type": "softmax_probability",
+  "split": "test",
+  "status": "complete",
+  "training_time_seconds": 1453.1629156249983,
+  "validation": {
+    "loss": 1.4043431068420411,
+    "macro_f1": 0.6736517609839002,
+    "macro_precision": 0.6927593382108088,
+    "macro_recall": 0.6754000000000001,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.6754,
+    "top1_accuracy": 0.6754,
+    "top5_accuracy": 0.8646
+  },
+  "validation_recheck": {
+    "agrees_with_stored_best": true,
+    "source": "frozen independent validation",
+    "validation_metrics_sha256": "2eb2e80010f0ae38e9c300fc04eedd4ccda45ed34567773976b2737a407fd1fd"
+  }
+}

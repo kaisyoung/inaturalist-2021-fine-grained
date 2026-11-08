@@ -1,0 +1,136 @@
+{
+  "experiments": {
+    "efficientnet_b0_pretrained_strong_aug": {
+      "checks": {
+        "disk": true,
+        "priority": true,
+        "time": true
+      },
+      "committed_total_seconds": 5728.227193372004,
+      "committed_training_seconds": {
+        "resnet18_pretrained_basic": 1502.5804650840146,
+        "resnet18_pretrained_strong_aug": 1453.1629156249983,
+        "resnet18_scratch_basic": 2772.483812662991
+      },
+      "current_projected_training_seconds": 2475.503013482679,
+      "experiment_name": "efficientnet_b0_pretrained_strong_aug",
+      "free_disk_bytes": 262623772672,
+      "minimum_free_disk_bytes": 21474836480,
+      "phase": "pre_training",
+      "prior_experiments": [
+        "resnet18_scratch_basic",
+        "resnet18_pretrained_basic",
+        "resnet18_pretrained_strong_aug"
+      ],
+      "priority_index": 3,
+      "projected_cumulative_training_seconds": 8203.730206854683,
+      "reasons": [],
+      "status": "PASS",
+      "training_limit_seconds": 43200
+    },
+    "resnet18_pretrained_basic": {
+      "checks": {
+        "disk": true,
+        "priority": true,
+        "time": true
+      },
+      "committed_total_seconds": 2772.483812662991,
+      "committed_training_seconds": {
+        "resnet18_scratch_basic": 2772.483812662991
+      },
+      "current_projected_training_seconds": 1967.4991749687324,
+      "experiment_name": "resnet18_pretrained_basic",
+      "free_disk_bytes": 264984895488,
+      "minimum_free_disk_bytes": 21474836480,
+      "phase": "pre_training",
+      "prior_experiments": [
+        "resnet18_scratch_basic"
+      ],
+      "priority_index": 1,
+      "projected_cumulative_training_seconds": 4739.9829876317235,
+      "reasons": [],
+      "status": "PASS",
+      "training_limit_seconds": 43200
+    },
+    "resnet18_pretrained_frozen_head": {
+      "checks": {
+        "disk": true,
+        "priority": true,
+        "time": true
+      },
+      "committed_total_seconds": 8149.479555080012,
+      "committed_training_seconds": {
+        "efficientnet_b0_pretrained_strong_aug": 2421.252361708008,
+        "resnet18_pretrained_basic": 1502.5804650840146,
+        "resnet18_pretrained_strong_aug": 1453.1629156249983,
+        "resnet18_scratch_basic": 2772.483812662991
+      },
+      "current_projected_training_seconds": 389.49899175610625,
+      "experiment_name": "resnet18_pretrained_frozen_head",
+      "free_disk_bytes": 262282240000,
+      "minimum_free_disk_bytes": 21474836480,
+      "phase": "pre_training",
+      "prior_experiments": [
+        "resnet18_scratch_basic",
+        "resnet18_pretrained_basic",
+        "resnet18_pretrained_strong_aug",
+        "efficientnet_b0_pretrained_strong_aug"
+      ],
+      "priority_index": 4,
+      "projected_cumulative_training_seconds": 8538.978546836119,
+      "reasons": [],
+      "status": "PASS",
+      "training_limit_seconds": 43200
+    },
+    "resnet18_pretrained_strong_aug": {
+      "checks": {
+        "disk": true,
+        "priority": true,
+        "time": true
+      },
+      "committed_total_seconds": 4275.064277747006,
+      "committed_training_seconds": {
+        "resnet18_pretrained_basic": 1502.5804650840146,
+        "resnet18_scratch_basic": 2772.483812662991
+      },
+      "current_projected_training_seconds": 1334.4469692952118,
+      "experiment_name": "resnet18_pretrained_strong_aug",
+      "free_disk_bytes": 264148262912,
+      "minimum_free_disk_bytes": 21474836480,
+      "phase": "pre_training",
+      "prior_experiments": [
+        "resnet18_scratch_basic",
+        "resnet18_pretrained_basic"
+      ],
+      "priority_index": 2,
+      "projected_cumulative_training_seconds": 5609.511247042217,
+      "reasons": [],
+      "status": "PASS",
+      "training_limit_seconds": 43200
+    },
+    "resnet18_scratch_basic": {
+      "checks": {
+        "disk": true,
+        "priority": true,
+        "time": true
+      },
+      "committed_total_seconds": 0.0,
+      "committed_training_seconds": {},
+      "current_projected_training_seconds": 2535.2047984338305,
+      "experiment_name": "resnet18_scratch_basic",
+      "free_disk_bytes": 263528419328,
+      "minimum_free_disk_bytes": 21474836480,
+      "phase": "pre_training",
+      "prior_experiments": [],
+      "priority_index": 0,
+      "projected_cumulative_training_seconds": 2535.2047984338305,
+      "reasons": [],
+      "status": "PASS",
+      "training_limit_seconds": 43200
+    }
+  },
+  "minimum_free_disk_bytes": 21474836480,
+  "policy": "D1 -> D2 basic -> D2 strong -> D3 -> frozen head; 12h training and 20 GiB free",
+  "schema_version": 1,
+  "training_limit_seconds": 43200
+}

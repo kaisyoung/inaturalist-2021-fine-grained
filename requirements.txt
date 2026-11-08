@@ -1,0 +1,14 @@
+# Reproducible dataset, traditional CV, and deep-learning baselines (Python >= 3.10)
+# Exact direct-dependency pins keep all experiment environments auditable.
+numpy==2.2.6
+pandas==2.3.3
+tqdm==4.67.1
+scikit-learn==1.7.2
+scikit-image==0.25.2
+Pillow==12.3.0
+matplotlib==3.10.9
+joblib==1.5.3
+opencv-python-headless==4.13.0.92
+torch==2.12.1
+torchvision==0.27.1
+PyYAML==6.0.3

@@ -1,0 +1,59 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Species recognition is an unusually demanding image-classification problem.
+The label space is large, distinctions may depend on a small anatomical
+marking, and photographs are acquired opportunistically rather than under
+controlled laboratory conditions.  In community-science collections, a
+target can occupy only a few pixels, be partially occluded, or resemble a
+closely related species while the background offers a tempting but unstable
+cue.  The iNaturalist benchmarks capture these challenges at scale and have
+therefore become important tests of visual representation learning
+\cite{vanhorn2018inaturalist,vanhorn2021benchmarking}.
+
+This work asks how far progressively more expressive computer-vision methods
+can address a fixed 500-class recognition task.  We begin with interpretable
+handcrafted representations---colour histograms, local binary patterns (LBP),
+histograms of oriented gradients (HOG), and SIFT bag-of-visual-words
+(BoVW)---paired with linear or tree-based classifiers.  We then compare
+ResNet18 trained from random initialization against ImageNet-pretrained
+ResNet18 and EfficientNet-B0 models.  Beyond clean-set accuracy, we test
+controlled image corruptions and inspect decisions with Grad-CAM.  This broad
+comparison is useful because a single accuracy number cannot reveal whether a
+model is learning transferable morphology, memorising texture, or failing
+under a realistic loss of image quality.
+
+Equally important is evaluation discipline.  The official iNaturalist
+validation archive is used only as a held-out test source.  Every fitted
+transform, visual vocabulary, classifier, and neural-network update sees the
+training partition alone.  Hyperparameters, early stopping, and ablations use
+an internal validation partition.  Stage~3 records its selected configurations
+before test access.  For the rewritten Stage~2 track, the present selection
+manifest cryptographically freezes the complete selected state going forward,
+but the available history cannot independently establish that an equivalent
+lock existed before the already-recorded test evaluation.  We therefore do not
+claim a retrospectively untouched Stage~2 test split.
+Figure~\ref{fig:method-overview} summarises the intended protocol.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.98\textwidth]{method_overview.pdf}
+  \caption{End-to-end project workflow.  Traditional and deep models share
+  the same frozen class mapping and partitions.  Validation controls
+  model/configuration selection and train-only pilots control feasibility;
+  current artifacts are hash-bound before any future test access.}
+  \label{fig:method-overview}
+\end{figure*}
+
+Our contributions are fourfold.  First, we construct a deterministic,
+audited 500-species protocol with 40 training, 10 validation, and 10 test
+images per species.  Second, we provide complete traditional and deep
+baselines under common metrics, including training and inference timing.
+Third, we compare feature components, ImageNet pretraining, augmentation
+strength, and backbone freezing on validation data; the matched ResNet18
+augmentation pair provides the strict one-factor ablation.
+Fourth, we complement clean evaluation with corruption robustness, confusion
+analysis, failure cases, and target-specific Grad-CAM visualisations.  The
+result is not merely a leaderboard: it is evidence about which design choices
+matter, where performance breaks down, and which apparent explanations remain
+uncertain.

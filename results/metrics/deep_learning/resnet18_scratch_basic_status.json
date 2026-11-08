@@ -1,0 +1,12 @@
+{
+  "best_checkpoint_sha256": "509dd62c39597ad868b9527ae8b2fc7e42f25fcb239f067310a3ad6e0bfa8bd6",
+  "best_epoch": 23,
+  "completed_epochs": 25,
+  "device": "mps",
+  "experiment_name": "resnet18_scratch_basic",
+  "resolved_config_sha256": "f07990f366bfa329a266cc8d5aca429101ab9ae0104e479c2918cbe44cd35a4d",
+  "resume_checkpoint": null,
+  "schema_version": 1,
+  "status": "COMPLETE",
+  "training_time_seconds": 2772.483812662991
+}

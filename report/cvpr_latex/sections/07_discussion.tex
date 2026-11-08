@@ -1,0 +1,73 @@
+\section{Discussion}
+\label{sec:discussion}
+
+The clearest result is the importance of learned, transferred
+representations.  Fixed colour/texture/gradient summaries provide a valid
+baseline but lose spatial and semantic structure; SIFT-BoVW adds local
+invariance without closing this gap.  Scratch ResNet18 learns far stronger
+features from 40 examples per class, yet pretrained ResNet18 more than doubles
+its top-1 accuracy.  EfficientNet-B0 then improves accuracy with fewer
+parameters than ResNet18, suggesting that its architecture and pretrained
+representation are well matched to the available compute and data.  Because
+the scratch/pretrained schedules differ, this evidence is consistent with a
+pretraining benefit but does not isolate that benefit causally.
+
+The traditional rewrite also sharpens what the classical comparison means.
+Joint colour statistics, multi-scale texture, HOG, and spatial soft-assignment
+BoVW are complementary enough that the 3,704-D LinearSVC is the primary
+Stage~2 traditional model.  The Stage~4 Random Forest is a different,
+2,424-D, 300-tree handcrafted-only comparator without BoVW.  It remains useful
+for a fixed corruption study because that evaluator can deterministically
+recompute its per-image input and reuse the fitted normaliser, whereas it does
+not reconstruct the training-fitted visual vocabulary.  Its robustness curve
+must therefore not be read as the robustness of the best-scoring traditional
+model.
+
+The strict augmentation comparison is more modest but actionable.  Strong
+augmentation improves the pretrained ResNet18 validation score without
+altering its initial weights, sampling order, optimiser, or stopping policy.
+The result is consistent with nuisance variability in iNaturalist images and
+supports the final use of colour, affine, crop, and erasing perturbations.
+However, the clean improvement does not make the model invariant to severe
+degradation.  Motion blur removes high-frequency edges and local markings that
+may be diagnostic, plausibly contributing to its large top-1 fall.  Training
+with blur or evaluating corruption-aware
+augmentation would be natural future work, but doing so after observing the
+held-out corruption scores would require a new validation protocol and test
+set.
+
+Confusion and Grad-CAM analyses reveal two distinct error regimes.  Some
+fine-grained pairs are correctly localised yet remain inseparable, indicating
+that global $224\!\times\!224$ classification may discard diagnostic detail.
+Other high-confidence failures align with conspicuous colour or texture, which
+may be predictive in training but not species-specific.  A promising extension
+would combine higher-resolution or part-based attention with taxonomic
+hierarchy, while explicitly testing whether explanations remain stable under
+background and corruption interventions.
+
+Several limitations bound our conclusions.  The balanced 500-class subset is
+reproducible but does not measure full 10,000-class or long-tail performance.
+Forty training images per class constrain scratch learning, and ten test images
+per class make per-class metrics noisy.  We evaluate one seed and a limited
+hyperparameter budget on one M4 Pro, so small model differences may not be
+statistically stable.  Traditional cached-feature timing and deep forward
+timing have different scopes.  The corruption suite covers four synthetic
+degradations, not distribution shifts in geography, season, camera, or
+observer behaviour.  Finally, Grad-CAM is coarse and gradient-based; its maps
+are useful for forming hypotheses, not certifying faithful reasoning.  A
+further provenance limitation is retrospective: the integrated repository
+contains validation and test evidence for rewritten Stage~2, but no surviving
+artifact independently proves that the selected configuration was immutably
+locked before the first test access.  The restored selection manifest freezes
+the current hashes, allowed models, and validation grid going forward; it does
+not manufacture a historical chronology.
+
+Despite these limitations, the project has two practical strengths.  First,
+the current split, model, prediction, metric, and selection artifacts are
+cross-hashed, so subsequent drift or unauthorised test access is detectable.
+Second,
+the combination of clean metrics, macro scores, classwise errors, corruptions,
+and explanations gives a more complete account than accuracy alone.  The
+best model is genuinely useful on clean images, but the robustness and failure
+analyses show exactly why it should not yet be treated as a dependable field
+identifier without uncertainty handling and expert review.

@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,138,Parma microlepis,141,Phycodurus eques,4,1,5
+2,142,Mola mola,166,Brachyramphus marmoratus,4,1,5
+3,133,Fundulus heteroclitus,257,Indotyphlops braminus,0,4,4
+4,137,Abudefduf saxatilis,140,Zanclus cornutus,4,0,4
+5,131,Luxilus chrysocephalus,132,Notemigonus crysoleucas,1,3,4
+6,133,Fundulus heteroclitus,261,Donax gouldii,1,3,4
+7,166,Brachyramphus marmoratus,234,Eschrichtius robustus,3,1,4
+8,295,Romulea rosea,399,Primula farinosa,3,1,4
+9,341,Helianthus divaricatus,345,Rudbeckia amplexicaulis,1,3,4
+10,385,Mentzelia laevicaulis,450,Eschscholzia parishii,3,1,4
+11,131,Luxilus chrysocephalus,133,Fundulus heteroclitus,2,2,4
+12,136,Ocyurus chrysurus,140,Zanclus cornutus,2,2,4
+13,39,Cnaphalocrocis poeyalis,42,Hileithia magualis,3,0,3
+14,52,Panopoda carneicosta,90,Gluphisia septentrionis,3,0,3
+15,108,Isotenes miserana,109,Platynota rostrana,0,3,3
+16,135,Bodianus diplotaenia,137,Abudefduf saxatilis,3,0,3
+17,142,Mola mola,234,Eschrichtius robustus,0,3,3
+18,154,Accipiter trivirgatus,163,Apus apus,3,0,3
+19,156,Aquila heliaca,163,Apus apus,3,0,3
+20,209,Contopus cooperi,212,Hymenops perspicillatus,0,3,3

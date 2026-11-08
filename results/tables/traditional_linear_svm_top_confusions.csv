@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,365,Echinocereus dasyacanthus,450,Eschscholzia parishii,5,0,5
+2,367,Ferocactus cylindraceus,369,Homalocephala polycephala,3,2,5
+3,178,Anthropoides paradiseus,232,Oryx gazella,0,4,4
+4,17,Lucanus capreolus,19,Necrodes surinamensis,1,3,4
+5,166,Brachyramphus marmoratus,224,Fulmarus glacialis,1,3,4
+6,137,Abudefduf saxatilis,140,Zanclus cornutus,2,2,4
+7,135,Bodianus diplotaenia,136,Ocyurus chrysurus,3,0,3
+8,156,Aquila heliaca,180,Alauda arvensis,0,3,3
+9,157,Elanoides forficatus,158,Haliaeetus leucogaster,0,3,3
+10,158,Haliaeetus leucogaster,199,Pycnonotus sinensis,0,3,3
+11,168,Haematopus moquini,235,Neomonachus schauinslandi,0,3,3
+12,272,Cryptochiton stelleri,273,Tonicella lineata,3,0,3
+13,279,Kretzschmaria deusta,473,Dysoxylum spectabile,3,0,3
+14,360,Lepidium didymum,499,Pteris macilenta,3,0,3
+15,372,Herniaria glabra,477,Sedum acre,3,0,3
+16,73,Euphilotes bernardino,276,Teloschistes exilis,2,1,3
+17,77,Plebejus melissa,78,Zizeeria karsandra,1,2,3
+18,112,Aeshna palmata,122,Nososticta solida,2,1,3
+19,118,Macrodiplax balteata,121,Tramea onusta,2,1,3
+20,138,Parma microlepis,262,Octopus tetricus,1,2,3

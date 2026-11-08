@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,142,Mola mola,166,Brachyramphus marmoratus,4,1,5
+2,157,Elanoides forficatus,163,Apus apus,3,2,5
+3,156,Aquila heliaca,163,Apus apus,4,0,4
+4,177,Gallus gallus,236,Lepus townsendii,4,0,4
+5,207,Cistothorus platensis,318,Typha domingensis,4,0,4
+6,280,Calvatia gigantea,286,Trametes coccinea,0,4,4
+7,55,Didymoctenia exsuperata,59,Horisme intestinata,1,3,4
+8,161,Bucephala islandica,166,Brachyramphus marmoratus,3,1,4
+9,163,Apus apus,180,Alauda arvensis,1,3,4
+10,294,Yucca schidigera,370,Lophocereus schottii,1,3,4
+11,138,Parma microlepis,262,Octopus tetricus,2,2,4
+12,21,Physocephala tibialis,110,Zygaena lonicerae,0,3,3
+13,58,Gastrina cristaria,79,Acronicta superans,0,3,3
+14,59,Horisme intestinata,132,Notemigonus crysoleucas,0,3,3
+15,81,Anaplectoides prasina,108,Isotenes miserana,0,3,3
+16,166,Brachyramphus marmoratus,224,Fulmarus glacialis,0,3,3
+17,167,Charadrius bicinctus,170,Limosa haemastica,0,3,3
+18,180,Alauda arvensis,219,Threskiornis aethiopicus,0,3,3
+19,265,Peltodoris nobilis,266,Acanthodoris rhodoceras,3,0,3
+20,293,Yucca rupicola,398,Myrsine salicina,0,3,3

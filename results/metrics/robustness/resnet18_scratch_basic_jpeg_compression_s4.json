@@ -1,0 +1,108 @@
+{
+  "architecture": "resnet18",
+  "artifacts": {
+    "predictions": {
+      "bytes": 1734342,
+      "path": "results/predictions/robustness/resnet18_scratch_basic_jpeg_compression_s4_predictions.csv",
+      "sha256": "c6017eaaab976edd92aea060e83eaf1de7ca7df2bd70643b325c172dabd3816c"
+    }
+  },
+  "corruption": {
+    "determinism": "deterministic operation",
+    "parameter": "quality",
+    "parameter_value": 10,
+    "seed": 42,
+    "severity_index": 4,
+    "type": "jpeg_compression"
+  },
+  "created_at_utc": "2026-08-03T02:40:03Z",
+  "evaluation": {
+    "batch_size": 32,
+    "labels": "exactly 0..499",
+    "max_samples": null,
+    "num_workers": 4,
+    "sample_selection": "complete manifest",
+    "score_type": "softmax_probability",
+    "stable_tie_break": "lower new_label first",
+    "weight_update_operations": 0
+  },
+  "inputs": {
+    "clean_metrics": {
+      "bytes": 4218,
+      "path": "results/metrics/deep_learning/resnet18_scratch_basic_test_metrics.json",
+      "sha256": "a687264e411b5a0b97b5073006cdb0679b003e2b1c909ed2cd9cf45bd0aab86c"
+    },
+    "clean_predictions": {
+      "bytes": 3120318,
+      "path": "results/predictions/deep_learning/resnet18_scratch_basic_test_predictions.csv",
+      "sha256": "3f3a8050c4f8fb79eba7f021092ea31295af07436261b51733e53cb1371dcdaf"
+    },
+    "manifest": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+    },
+    "model_artifact": {
+      "bytes": 137377580,
+      "path": "results/models/deep_learning/resnet18_scratch_basic_best.pt",
+      "sha256": "509dd62c39597ad868b9527ae8b2fc7e42f25fcb239f067310a3ad6e0bfa8bd6"
+    },
+    "model_support_artifacts": {
+      "resolved_config": {
+        "bytes": 5530,
+        "path": "results/metrics/deep_learning/resnet18_scratch_basic_resolved_config.json",
+        "sha256": "f07990f366bfa329a266cc8d5aca429101ab9ae0104e479c2918cbe44cd35a4d"
+      },
+      "source_config": {
+        "bytes": 620,
+        "path": "configs/deep_resnet18_scratch.yaml",
+        "sha256": "9ff576c726d1b283ca26517403d1a3943d16aa81e33340ffda7a8d11e3772800"
+      }
+    }
+  },
+  "method_family": "deep_learning",
+  "metrics": {
+    "evaluation_wall_time_seconds": 15.408806291990913,
+    "feature_extraction_time_seconds": 0.0,
+    "inference_time_seconds": 7.1908458368852735,
+    "macro_f1": 0.23821047036035498,
+    "macro_precision": 0.2685870597574222,
+    "macro_recall": 0.242,
+    "model_forward_time_seconds": 7.1908458368852735,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.242,
+    "seconds_per_image": 0.0014381691673770547,
+    "top1_accuracy": 0.242,
+    "top5_accuracy": 0.458
+  },
+  "model_name": "resnet18_scratch_basic",
+  "package_versions": {
+    "Pillow": "12.3.0",
+    "joblib": "1.5.3",
+    "numpy": "2.2.6",
+    "opencv_python_headless": "4.13.0.92",
+    "pandas": "2.3.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13",
+    "scikit_image": "0.25.2",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.1",
+    "torchvision": "0.27.1"
+  },
+  "protocol": {
+    "path": "results/metrics/stage4_robustness_protocol.json",
+    "sha256": "0dcbc3f7d7380367cb2a9522ee28e4dc2239307575fe57892f13556a607f5233"
+  },
+  "run_type": "canonical_full",
+  "schema_version": 1,
+  "split": "test",
+  "stage": "stage4_robustness",
+  "status": "complete",
+  "timing": {
+    "definition": "full wall includes image decode, on-the-fly corruption, preprocessing, feature extraction/transfer, and one model score call; serialization and metrics excluded. model_forward_seconds covers only predict_proba/decision_function or synchronized neural forward passes.",
+    "feature_extraction_seconds": 0.0,
+    "full_evaluation_wall_seconds": 15.408806291990913,
+    "model_forward_seconds": 7.1908458368852735
+  }
+}

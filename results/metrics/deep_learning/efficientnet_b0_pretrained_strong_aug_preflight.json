@@ -1,0 +1,88 @@
+{
+  "attempts": [
+    {
+      "first_batch_seconds": 6.602343832993938,
+      "median_batch_seconds": 0.21955729150067782,
+      "micro_batch_size": 32,
+      "num_images": 320,
+      "num_timed_batches": 10,
+      "status": "PASS",
+      "steady_mean_batch_seconds": 0.2193638611125708
+    }
+  ],
+  "device": "mps",
+  "experiment_name": "efficientnet_b0_pretrained_strong_aug",
+  "gradient_accumulation_steps": 1,
+  "micro_batch_size": 32,
+  "model_metadata": {
+    "architecture": "efficientnet_b0",
+    "classifier_in_features": 1280,
+    "classifier_path": "classifier",
+    "freeze_backbone": false,
+    "num_classes": 500,
+    "pretrained": true,
+    "total_parameters": 4648048,
+    "trainable_parameters": 4648048,
+    "weight_file_name": "efficientnet_b0_rwightman-7f5810bc.pth",
+    "weight_file_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+    "weights_enum": "EfficientNet_B0_Weights.IMAGENET1K_V1",
+    "weights_url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth"
+  },
+  "projected_training_hours": 0.6876397259674107,
+  "projected_training_seconds": 2475.503013482679,
+  "schema_version": 1,
+  "source_config_path": "configs/deep_efficientnet_b0_pretrained.yaml",
+  "source_config_sha256": "e83acda6a2bcadfb88744e124c2deaaff0aac8ec1148076845e931ce2c4ae085",
+  "stage1_artifacts": {
+    "class_mapping.json": {
+      "bytes": 279280,
+      "path": "data/splits/class_mapping.json",
+      "sha256": "2d6e60104b133d2758dffd585d373b085ddb42845d0b4b2c93bf5277ef9a0a1b",
+      "verification": "verified_current_bytes"
+    },
+    "selected_classes_seed42.txt": {
+      "bytes": 2450,
+      "path": "data/splits/selected_classes_seed42.txt",
+      "sha256": "3c2af417a5c174ef14f2be117a00880b0a08f8dce0c24fad6aaa8ea5dcde8141",
+      "verification": "verified_current_bytes"
+    },
+    "split_summary.json": {
+      "bytes": 2063,
+      "path": "data/splits/split_summary.json",
+      "sha256": "324413fb3d8d3affe611f8fd1454358cf54f2e6fcd81ef961994be0cc19f0b76",
+      "verification": "verified_current_bytes"
+    },
+    "test.csv": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91",
+      "verification": "accepted_precheck_digest; file not opened"
+    },
+    "train.csv": {
+      "bytes": 4971333,
+      "path": "data/splits/train.csv",
+      "sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+      "verification": "verified_current_bytes"
+    },
+    "val.csv": {
+      "bytes": 1222951,
+      "path": "data/splits/val.csv",
+      "sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb",
+      "verification": "verified_current_bytes"
+    }
+  },
+  "status": "PASS",
+  "target_effective_batch_size": 32,
+  "timing_scope": "end-to-end iterator next/load/augmentation, device transfer, forward/backward, and optimizer work",
+  "versions": {
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.3",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.1",
+    "torchvision": "0.27.1"
+  }
+}

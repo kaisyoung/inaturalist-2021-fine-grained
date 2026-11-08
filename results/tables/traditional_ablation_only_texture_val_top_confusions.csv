@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,142,Mola mola,166,Brachyramphus marmoratus,5,0,5
+2,154,Accipiter trivirgatus,157,Elanoides forficatus,5,0,5
+3,367,Ferocactus cylindraceus,426,Lavandula stoechas,0,5,5
+4,161,Bucephala islandica,166,Brachyramphus marmoratus,4,1,5
+5,135,Bodianus diplotaenia,267,Phyllidia ocellata,0,4,4
+6,152,Pseudotriton ruber,277,Umbilicaria mammulata,4,0,4
+7,166,Brachyramphus marmoratus,318,Typha domingensis,0,4,4
+8,237,Sylvilagus bachmani,367,Ferocactus cylindraceus,4,0,4
+9,265,Peltodoris nobilis,266,Acanthodoris rhodoceras,4,0,4
+10,291,Brodiaea terrestris,320,Lycopodium volubile,4,0,4
+11,292,Triteleia hyacinthina,430,Triphysaria eriantha,4,0,4
+12,293,Yucca rupicola,398,Myrsine salicina,0,4,4
+13,321,Phlegmariurus varius,367,Ferocactus cylindraceus,4,0,4
+14,329,Adenophyllum porophylloides,367,Ferocactus cylindraceus,4,0,4
+15,337,Diaperia prolifera,367,Ferocactus cylindraceus,4,0,4
+16,367,Ferocactus cylindraceus,368,Ferocactus wislizeni,0,4,4
+17,367,Ferocactus cylindraceus,369,Homalocephala polycephala,0,4,4
+18,370,Lophocereus schottii,371,Stenocereus gummosus,0,4,4
+19,55,Didymoctenia exsuperata,58,Gastrina cristaria,3,1,4
+20,166,Brachyramphus marmoratus,234,Eschrichtius robustus,1,3,4

@@ -1,0 +1,261 @@
+{
+  "corruptions": {
+    "gaussian_blur": {
+      "parameter": "kernel_size",
+      "severities": [
+        3,
+        5,
+        9,
+        15
+      ]
+    },
+    "gaussian_noise": {
+      "parameter": "sigma",
+      "severities": [
+        0.02,
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "jpeg_compression": {
+      "parameter": "quality",
+      "severities": [
+        80,
+        50,
+        30,
+        10
+      ]
+    },
+    "motion_blur": {
+      "parameter": "kernel_length",
+      "severities": [
+        5,
+        9,
+        15,
+        25
+      ]
+    }
+  },
+  "created_at_utc": "2026-08-03T02:23:07.454163Z",
+  "expected_num_images_per_run": 5000,
+  "expected_run_count": 64,
+  "metrics": [
+    "top1_accuracy",
+    "top5_accuracy",
+    "overall_accuracy",
+    "macro_precision",
+    "macro_recall",
+    "macro_f1",
+    "full_evaluation_wall_seconds",
+    "model_forward_seconds",
+    "num_samples"
+  ],
+  "model_order": [
+    "traditional_random_forest",
+    "resnet18_scratch_basic",
+    "resnet18_pretrained_strong_aug",
+    "efficientnet_b0_pretrained_strong_aug"
+  ],
+  "models": {
+    "efficientnet_b0_pretrained_strong_aug": {
+      "architecture": "efficientnet_b0",
+      "artifact": {
+        "bytes": 56336203,
+        "path": "results/models/deep_learning/efficientnet_b0_pretrained_strong_aug_best.pt",
+        "sha256": "787bc18b24b02e7671eea4197af75be8f193c969331351d8173a84aad7cd7a97"
+      },
+      "clean_metrics": {
+        "bytes": 4390,
+        "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_test_metrics.json",
+        "sha256": "8aa987e53ce8a0051ad0be092a7b0f2280e0ca1563eabbeddde0278f97f0deb5"
+      },
+      "clean_predictions": {
+        "bytes": 3112275,
+        "path": "results/predictions/deep_learning/efficientnet_b0_pretrained_strong_aug_test_predictions.csv",
+        "sha256": "249c26898bd3bb0dbffb1cb02e4939b0c23f8dfd25ad5be637b3e37513e9401f"
+      },
+      "method_family": "deep_learning",
+      "pretrained": true,
+      "resolved_config": {
+        "bytes": 5785,
+        "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_resolved_config.json",
+        "sha256": "272e5d5f7e4b2dc800e893f2b19f944fd12c67e999f9fa25d5d9571275e6cd1c"
+      },
+      "source_config": {
+        "bytes": 642,
+        "path": "configs/deep_efficientnet_b0_pretrained.yaml",
+        "sha256": "e83acda6a2bcadfb88744e124c2deaaff0aac8ec1148076845e931ce2c4ae085"
+      }
+    },
+    "resnet18_pretrained_strong_aug": {
+      "architecture": "resnet18",
+      "artifact": {
+        "bytes": 137378404,
+        "path": "results/models/deep_learning/resnet18_pretrained_strong_aug_best.pt",
+        "sha256": "b8a371f0e9aa4c8b412b34884bf1a3ddfd9d2694346c23d29b6249b22ba6e4e5"
+      },
+      "clean_metrics": {
+        "bytes": 4316,
+        "path": "results/metrics/deep_learning/resnet18_pretrained_strong_aug_test_metrics.json",
+        "sha256": "86c93dc1423e4bba028024f1792fbcfcc8a39f42c389a4b95483e7c72e788cdc"
+      },
+      "clean_predictions": {
+        "bytes": 3117006,
+        "path": "results/predictions/deep_learning/resnet18_pretrained_strong_aug_test_predictions.csv",
+        "sha256": "202602338f015985f8c0a7dbaabab4fb557ca04e371abd88825e758fc3812362"
+      },
+      "method_family": "deep_learning",
+      "pretrained": true,
+      "resolved_config": {
+        "bytes": 5878,
+        "path": "results/metrics/deep_learning/resnet18_pretrained_strong_aug_resolved_config.json",
+        "sha256": "5eaebb707d216b0cc11869f870c2f658a597816d2e8fbd4efd0afc4111ebbcd6"
+      },
+      "source_config": {
+        "bytes": 628,
+        "path": "configs/deep_resnet18_pretrained_strong_aug.yaml",
+        "sha256": "fde8a11dc62115557037448b7947ddd62a87c57f3a391163aedfb85661397ffe"
+      }
+    },
+    "resnet18_scratch_basic": {
+      "architecture": "resnet18",
+      "artifact": {
+        "bytes": 137377580,
+        "path": "results/models/deep_learning/resnet18_scratch_basic_best.pt",
+        "sha256": "509dd62c39597ad868b9527ae8b2fc7e42f25fcb239f067310a3ad6e0bfa8bd6"
+      },
+      "clean_metrics": {
+        "bytes": 4218,
+        "path": "results/metrics/deep_learning/resnet18_scratch_basic_test_metrics.json",
+        "sha256": "a687264e411b5a0b97b5073006cdb0679b003e2b1c909ed2cd9cf45bd0aab86c"
+      },
+      "clean_predictions": {
+        "bytes": 3120318,
+        "path": "results/predictions/deep_learning/resnet18_scratch_basic_test_predictions.csv",
+        "sha256": "3f3a8050c4f8fb79eba7f021092ea31295af07436261b51733e53cb1371dcdaf"
+      },
+      "method_family": "deep_learning",
+      "pretrained": false,
+      "resolved_config": {
+        "bytes": 5530,
+        "path": "results/metrics/deep_learning/resnet18_scratch_basic_resolved_config.json",
+        "sha256": "f07990f366bfa329a266cc8d5aca429101ab9ae0104e479c2918cbe44cd35a4d"
+      },
+      "source_config": {
+        "bytes": 620,
+        "path": "configs/deep_resnet18_scratch.yaml",
+        "sha256": "9ff576c726d1b283ca26517403d1a3943d16aa81e33340ffda7a8d11e3772800"
+      }
+    },
+    "traditional_random_forest": {
+      "architecture": "random_forest",
+      "artifact": {
+        "bytes": 369210625,
+        "path": "results/models/traditional/random_forest.joblib",
+        "sha256": "346c4d48e505b71f019765d30bc2c54dc73a0e566a971cfc6ad65cf4a0946fda"
+      },
+      "clean_metrics": {
+        "bytes": 5407,
+        "path": "results/metrics/traditional_random_forest_metrics.json",
+        "sha256": "50fe3599a319fe85e9c8e8c6882aeda04d6f8f3f1aa8b552a334f1c06169e8af"
+      },
+      "clean_predictions": {
+        "bytes": 2124573,
+        "path": "results/predictions/traditional_random_forest_test_predictions.csv",
+        "sha256": "b946fa8588af34fcd5b1017005c524de68f553f39d0b86f46aab51fc5268eaaf"
+      },
+      "feature_config": {
+        "bytes": 4761,
+        "path": "results/features/traditional_feature_config.json",
+        "sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea"
+      },
+      "method_family": "traditional",
+      "model_metadata": {
+        "bytes": 8596,
+        "path": "results/models/traditional/random_forest.metadata.json",
+        "sha256": "af1a6c6d66f879477acd1b6f20b8bac1e11ec42631f5ca9a3788ad4b840475cc"
+      },
+      "pretrained": false
+    }
+  },
+  "policy": {
+    "corrupted_images_persisted": false,
+    "corruptions_applied_on_the_fly": true,
+    "image_order": "unchanged Stage 1 test.csv manifest order",
+    "model_selection_locked_before_robustness": true,
+    "no_retraining_or_weight_updates": true,
+    "no_test_tuning": true
+  },
+  "schema_version": 1,
+  "seed": 42,
+  "split": "test",
+  "stage": "stage4_robustness",
+  "stage1_artifacts": {
+    "class_mapping.json": {
+      "bytes": 279280,
+      "path": "data/splits/class_mapping.json",
+      "sha256": "2d6e60104b133d2758dffd585d373b085ddb42845d0b4b2c93bf5277ef9a0a1b"
+    },
+    "selected_classes_seed42.txt": {
+      "bytes": 2450,
+      "path": "data/splits/selected_classes_seed42.txt",
+      "sha256": "3c2af417a5c174ef14f2be117a00880b0a08f8dce0c24fad6aaa8ea5dcde8141"
+    },
+    "split_summary.json": {
+      "bytes": 2063,
+      "path": "data/splits/split_summary.json",
+      "sha256": "324413fb3d8d3affe611f8fd1454358cf54f2e6fcd81ef961994be0cc19f0b76"
+    },
+    "test.csv": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+    },
+    "train.csv": {
+      "bytes": 4971333,
+      "path": "data/splits/train.csv",
+      "sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+    },
+    "val.csv": {
+      "bytes": 1222951,
+      "path": "data/splits/val.csv",
+      "sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb"
+    }
+  },
+  "stage2_evidence": {
+    "results/metrics/stage2_freeze.json": {
+      "bytes": 16287,
+      "path": "results/metrics/stage2_freeze.json",
+      "sha256": "f5b908ce68b0cfb95b3047c2ba5a875fb975e56026b6337c966d5c326140562d"
+    },
+    "results/tables/stage2_feature_ablation_results.csv": {
+      "bytes": 705,
+      "path": "results/tables/stage2_feature_ablation_results.csv",
+      "sha256": "ba723a0a362bd50a569a12bbcb6f56578ed37f1a6f351daed793c74ad692e2ce"
+    },
+    "results/tables/stage2_traditional_results.csv": {
+      "bytes": 934,
+      "path": "results/tables/stage2_traditional_results.csv",
+      "sha256": "b2a2d554975c06e28639a39d44b80e120e36dc5eb8e23bc0d75715a8ac15768c"
+    }
+  },
+  "stage3_evidence": {
+    "results/metrics/deep_learning/stage3_freeze.json": {
+      "bytes": 21726,
+      "path": "results/metrics/deep_learning/stage3_freeze.json",
+      "sha256": "bea68b307fb7ff5db4f066b47ff00ade462bd71609ed9735c4faff125ce2257f"
+    },
+    "results/metrics/deep_learning/stage3_test_access.json": {
+      "bytes": 8072,
+      "path": "results/metrics/deep_learning/stage3_test_access.json",
+      "sha256": "04420ab5eb9bca3f5a6e56f6015fd2ce158ba9121d0e328b076912bac2292f2b"
+    },
+    "results/tables/stage3_deep_learning_results.csv": {
+      "bytes": 1839,
+      "path": "results/tables/stage3_deep_learning_results.csv",
+      "sha256": "5f5434e5a571f9e5f033594cdb25031483ccd6f2d3efe8e8166bdbc5038a911d"
+    }
+  },
+  "status": "frozen"
+}

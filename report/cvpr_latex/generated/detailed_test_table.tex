@@ -1,0 +1,19 @@
+% Generated from frozen evidence. Do not edit by hand.
+\begin{table*}[t]
+\centering
+\caption{Held-out macro metrics and measured fit/test timings. Overall accuracy equals top-1 for this single-label task; timing boundaries differ between cached-feature and end-to-end neural evaluation (Section~\ref{sec:setup}).}
+\label{tab:test-details}
+\small
+\begin{tabularx}{\textwidth}{@{}Xccccr@{}}
+\toprule
+Method & Macro precision & Macro recall & Macro F1 & Train (s) & Test (s) \\
+\midrule
+Handcrafted + BoVW (LinearSVC) & 0.109007 & 0.125200 & 0.111589 & 1323.2 & 0.190 \\
+Random Forest & 0.068343 & 0.082200 & 0.065407 & 870.5 & 1.370 \\
+SIFT-BoVW (LinearSVC) & 0.038986 & 0.047600 & 0.041405 & 378.8 & 0.075 \\
+ResNet18 (scratch) & 0.305342 & 0.298800 & 0.292782 & 2772.5 & 7.027 \\
+ResNet18 (ImageNet pretrained) & 0.691092 & 0.676000 & 0.672752 & 1453.2 & 6.856 \\
+EfficientNet-B0 (ImageNet pretrained) & 0.739866 & 0.727400 & 0.723535 & 2421.3 & 8.832 \\
+\bottomrule
+\end{tabularx}
+\end{table*}

@@ -1,0 +1,146 @@
+{
+  "classifier": "LinearSVC",
+  "estimator_diagnostics": {
+    "classifier": "LinearSVC",
+    "converged": true,
+    "max_iter": 5000,
+    "n_iter": 23
+  },
+  "estimator_parameters": {
+    "classifier": {
+      "class": "sklearn.svm._classes.LinearSVC",
+      "repr": "LinearSVC(max_iter=5000, random_state=42)"
+    },
+    "classifier__C": 1.0,
+    "classifier__class_weight": null,
+    "classifier__dual": "auto",
+    "classifier__fit_intercept": true,
+    "classifier__intercept_scaling": 1,
+    "classifier__loss": "squared_hinge",
+    "classifier__max_iter": 5000,
+    "classifier__multi_class": "ovr",
+    "classifier__penalty": "l2",
+    "classifier__random_state": 42,
+    "classifier__tol": 0.0001,
+    "classifier__verbose": 0,
+    "memory": null,
+    "normalise": {
+      "class": "src.traditional.normalize.PowerNormalizer",
+      "repr": "PowerNormalizer(blocks=[(0, 1280)])"
+    },
+    "normalise__alpha": 0.3,
+    "normalise__blocks": [
+      [
+        0,
+        1280
+      ]
+    ],
+    "normalise__blockwise": true,
+    "normalise__weights": null,
+    "steps": [
+      [
+        "normalise",
+        {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 1280)])"
+        }
+      ],
+      [
+        "classifier",
+        {
+          "class": "sklearn.svm._classes.LinearSVC",
+          "repr": "LinearSVC(max_iter=5000, random_state=42)"
+        }
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false
+  },
+  "experiment_name": "sift_bovw_svm",
+  "feature_components": [
+    "bovw"
+  ],
+  "feature_dim": 1280,
+  "feature_set": "bovw",
+  "feature_type": "sift_bovw",
+  "image_size": "max side 256",
+  "model_name": "sift_bovw_svm",
+  "model_type": "linear_svm",
+  "normalisation": {
+    "alpha": 0.3,
+    "blocks": [
+      [
+        0,
+        1280
+      ]
+    ],
+    "blockwise": true
+  },
+  "provenance": {
+    "feature_bindings": [
+      {
+        "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+        "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+        "feature_dim": 1280,
+        "role": "bovw",
+        "train_feature_path": "results/features/bovw/bovw_train_features.npz",
+        "train_feature_sha256": "3f8bae0f39dd90f9c002bf3b7c4021a01985f481e4425d417546c68afb0f44ea",
+        "train_manifest_file_name": "train.csv",
+        "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3",
+        "vocabulary_training_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+      }
+    ],
+    "feature_caches": [
+      {
+        "config_path": "results/features/bovw/bovw_test_feature_config.json",
+        "config_sha256": "db5be2bb811946a4b60351ae44328a56cd35f12876c5bf45396cef744b34a7c1",
+        "feature_file_path": "results/features/bovw/bovw_test_features.npz",
+        "feature_file_sha256": "b238465c835a01b482dbf5e36feb8a7199aaf583450e7c6c147db1155255c635",
+        "role": "bovw",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3"
+      }
+    ],
+    "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+    "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+    "model_path": "results/models/traditional/sift_bovw_svm.joblib",
+    "model_sha256": "53a815b01a0b459d00b5e4efe9a94500468dcc6b9cae2e35d2862f14eb1ff1f7",
+    "selection_manifest_path": "results/metrics/stage2_selection_manifest.json",
+    "selection_manifest_sha256": "5b39108a92ab34d052010e99b8cbcb5c7af5ba685889ad5f143ae6d26f8c8f05",
+    "split_manifest": "test.csv",
+    "split_manifest_sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+  },
+  "schema_version": 2,
+  "score_type": "decision_function",
+  "status": "complete",
+  "svm_backend": "linearsvc",
+  "test": {
+    "inference_time_seconds": 0.07455304200993851,
+    "macro_f1": 0.04140454787090033,
+    "macro_precision": 0.038986217603507956,
+    "macro_recall": 0.04760000000000001,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.0476,
+    "seconds_per_image": 1.4910608401987701e-05,
+    "top1_accuracy": 0.0476,
+    "top5_accuracy": 0.1082
+  },
+  "training_time_seconds": 378.838756208017,
+  "validation": {
+    "inference_time_seconds": 0.1394522080081515,
+    "macro_f1": 0.04127097860359536,
+    "macro_precision": 0.03879952619149146,
+    "macro_recall": 0.047200000000000006,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.0472,
+    "seconds_per_image": 2.78904416016303e-05,
+    "top1_accuracy": 0.0472,
+    "top5_accuracy": 0.113
+  },
+  "validation_metrics_path": "results/metrics/traditional_sift_bovw_svm_val_metrics.json",
+  "validation_metrics_sha256": "eb71edbacb9dbb93438d04280b1ef9732c897085a1b6cf92360d806fbece6c06"
+}

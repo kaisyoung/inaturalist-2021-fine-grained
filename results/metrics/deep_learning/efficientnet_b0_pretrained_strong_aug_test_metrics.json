@@ -1,0 +1,104 @@
+{
+  "artifacts": {
+    "confusion": {
+      "bytes": 8409,
+      "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_test_confusion.npz",
+      "sha256": "3cdcc5d1b73a985411a5cf9f708e3c10ecd91fc499f63b8e706594ea0c570fc4"
+    },
+    "confusion_figure": {
+      "bytes": 82349,
+      "path": "results/figures/deep_learning/efficientnet_b0_pretrained_strong_aug_test_confusion_matrix.png",
+      "sha256": "1d8ed9a0e217f6920e23712ca5c56e3a14b9bf2e12cca302186b58751c6b56ca"
+    },
+    "pairs": {
+      "bytes": 2801,
+      "path": "results/tables/deep_learning/efficientnet_b0_pretrained_strong_aug_test_top_confusions.csv",
+      "sha256": "edc91be3f5ce7902f94a6133b66bfd50eba230cacecc6073bcb25f67acf7a397"
+    },
+    "pairs_figure": {
+      "bytes": 157637,
+      "path": "results/figures/deep_learning/efficientnet_b0_pretrained_strong_aug_test_top_confusions.png",
+      "sha256": "3042eb2ed9d42f981c8ca3817b509c50444c09abddbeec2e9542c78eee3f2175"
+    },
+    "per_class": {
+      "bytes": 42557,
+      "path": "results/tables/deep_learning/efficientnet_b0_pretrained_strong_aug_test_per_class_metrics.csv",
+      "sha256": "dd36d46e54dc42e7b8a2ee775ab91ad225926d64ccd9d072ee3b76635ea3430c"
+    },
+    "predictions": {
+      "bytes": 3112275,
+      "path": "results/predictions/deep_learning/efficientnet_b0_pretrained_strong_aug_test_predictions.csv",
+      "sha256": "249c26898bd3bb0dbffb1cb02e4939b0c23f8dfd25ad5be637b3e37513e9401f"
+    }
+  },
+  "best_epoch": 14,
+  "experiment_name": "efficientnet_b0_pretrained_strong_aug",
+  "freeze_backbone": false,
+  "image_size": 224,
+  "metrics": {
+    "evaluation_wall_time_seconds": 9.380818792000355,
+    "loss": 1.1144314491271972,
+    "macro_f1": 0.7235350515945492,
+    "macro_precision": 0.7398663456426615,
+    "macro_recall": 0.7274,
+    "model_forward_time_seconds": 8.831769418997283,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.7274,
+    "seconds_per_image": 0.0017663538837994566,
+    "test_time_seconds": 8.831769418997283,
+    "top1_accuracy": 0.7274,
+    "top5_accuracy": 0.9026
+  },
+  "model_name": "efficientnet_b0",
+  "num_classes": 500,
+  "pretrained": true,
+  "provenance": {
+    "checkpoint_path": "results/models/deep_learning/efficientnet_b0_pretrained_strong_aug_best.pt",
+    "checkpoint_sha256": "787bc18b24b02e7671eea4197af75be8f193c969331351d8173a84aad7cd7a97",
+    "device": "mps",
+    "freeze_manifest_path": "results/metrics/deep_learning/stage3_freeze.json",
+    "freeze_manifest_sha256": "bea68b307fb7ff5db4f066b47ff00ade462bd71609ed9735c4faff125ce2257f",
+    "resolved_config_path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_resolved_config.json",
+    "resolved_config_sha256": "272e5d5f7e4b2dc800e893f2b19f944fd12c67e999f9fa25d5d9571275e6cd1c",
+    "source_config_path": "configs/deep_efficientnet_b0_pretrained.yaml",
+    "source_config_sha256": "e83acda6a2bcadfb88744e124c2deaaff0aac8ec1148076845e931ce2c4ae085",
+    "split_manifest": "test.csv",
+    "split_manifest_sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91",
+    "stored_best_metrics_path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_best_val_metrics.json",
+    "stored_best_metrics_sha256": "e006e0cc12990d08d4c56b39be9693ab59b2f4fde9d7fe68f9018cba55a7b23b",
+    "test_access_record_path": "results/metrics/deep_learning/stage3_test_access.json",
+    "versions": {
+      "Pillow": "12.3.0",
+      "PyYAML": "6.0.3",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "platform": "macOS-27.0-arm64-arm-64bit",
+      "python": "3.12.13",
+      "scikit_learn": "1.7.2",
+      "torch": "2.12.1",
+      "torchvision": "0.27.1"
+    }
+  },
+  "schema_version": 1,
+  "score_type": "softmax_probability",
+  "split": "test",
+  "status": "complete",
+  "training_time_seconds": 2421.252361708008,
+  "validation": {
+    "loss": 1.1044400253295898,
+    "macro_f1": 0.732628022230847,
+    "macro_precision": 0.7518959521902245,
+    "macro_recall": 0.7367999999999999,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.7368,
+    "top1_accuracy": 0.7368,
+    "top5_accuracy": 0.902
+  },
+  "validation_recheck": {
+    "agrees_with_stored_best": true,
+    "source": "frozen independent validation",
+    "validation_metrics_sha256": "7cb43b4d4875d9f172b42dca22ca9c1195533ee26977b571b08b5380274708e2"
+  }
+}

@@ -1,0 +1,57 @@
+\section{Literature Review}
+\label{sec:literature}
+
+\paragraph{Fine-grained recognition and natural-world data.}
+Fine-grained visual categorisation differs from generic object recognition
+because between-class variation can be smaller than within-class variation.
+Pose, life stage, sex, season, and viewpoint may transform an organism's
+appearance, while sibling species differ only in local structure.  The
+iNaturalist 2018 dataset established a large, naturally imbalanced benchmark
+for species classification and detection \cite{vanhorn2018inaturalist}.  The
+2021 benchmark expanded this setting and highlighted the importance of
+representations that transfer across the long-tailed visual world
+\cite{vanhorn2021benchmarking}.  Our balanced subset does not reproduce the
+full long tail, but retains the taxonomic diversity and uncontrolled image
+conditions that make the benchmark difficult.
+
+\paragraph{Handcrafted representations.}
+Before end-to-end representation learning, recognition pipelines separated
+feature design from classification.  SIFT describes local gradient structure
+and is robust to scale and rotation changes \cite{lowe2004distinctive}; BoVW
+quantises local descriptors into a fixed-length image histogram
+\cite{csurka2004visual}.  HOG aggregates oriented gradients over spatial cells
+and captures object shape \cite{dalal2005histograms}, whereas uniform LBP
+encodes local texture transitions \cite{ojala2002multiresolution}.  Colour
+histograms add information these grayscale descriptors omit.  Linear support
+vector machines learn a maximum-margin decision boundary
+\cite{cortes1995support}, and random forests combine decorrelated decision
+trees \cite{breiman2001random}.  These methods offer low-cost, interpretable
+reference points, but their fixed statistics cannot adapt to the hierarchy of
+parts, textures, and context needed for hundreds of species.
+
+\paragraph{Deep transfer learning.}
+ImageNet enabled supervised pretraining at a scale sufficient to learn broadly
+useful visual primitives \cite{deng2009imagenet}.  Residual connections make
+deeper networks easier to optimise \cite{he2016deep}, while EfficientNet uses
+compound depth/width/resolution scaling to improve parameter efficiency
+\cite{tan2019efficientnet}.  Features learned on a source task can transfer to
+a related target, although transferability generally decreases with task and
+layer distance \cite{yosinski2014transferable}.  Data augmentation reduces
+overfitting by encoding nuisance invariances; random cropping, colour
+perturbation, and erasing are common choices
+\cite{shorten2019survey,zhong2020random}.  We test both full fine-tuning and a
+frozen-backbone linear-head regime, because the latter reveals how much of the
+target task is already linearly separable in ImageNet features.
+
+\paragraph{Robustness and explanation.}
+Standard test sets can conceal brittleness to blur, noise, and compression.
+Image-corruption benchmarks formalise this concern by evaluating fixed models
+under parameterised degradations \cite{hendrycks2019benchmarking}.  Our study
+adopts the same principle, though with a project-specific corruption suite and
+severity schedule applied to every held-out image.  Grad-CAM instead probes
+spatial evidence: gradients of a target score weight convolutional feature
+maps to produce a coarse localisation heatmap \cite{selvaraju2017gradcam}.
+Such maps are useful diagnostic evidence, but they do not prove causal feature
+use or explanation faithfulness.  We therefore interpret them jointly with
+persisted predictions, true-target maps, and confusion statistics rather than
+as standalone explanations.

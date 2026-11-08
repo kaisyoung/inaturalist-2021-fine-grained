@@ -1,0 +1,193 @@
+{
+  "classifier": "LinearSVC",
+  "estimator_diagnostics": {
+    "classifier": "LinearSVC",
+    "converged": true,
+    "max_iter": 5000,
+    "n_iter": 30
+  },
+  "estimator_parameters": {
+    "classifier": {
+      "class": "sklearn.svm._classes.LinearSVC",
+      "repr": "LinearSVC(max_iter=5000, random_state=42)"
+    },
+    "classifier__C": 1.0,
+    "classifier__class_weight": null,
+    "classifier__dual": "auto",
+    "classifier__fit_intercept": true,
+    "classifier__intercept_scaling": 1,
+    "classifier__loss": "squared_hinge",
+    "classifier__max_iter": 5000,
+    "classifier__multi_class": "ovr",
+    "classifier__penalty": "l2",
+    "classifier__random_state": 42,
+    "classifier__tol": 0.0001,
+    "classifier__verbose": 0,
+    "memory": null,
+    "normalise": {
+      "class": "src.traditional.normalize.PowerNormalizer",
+      "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424), (2424, 3704)])"
+    },
+    "normalise__alpha": 0.3,
+    "normalise__blocks": [
+      [
+        0,
+        520
+      ],
+      [
+        520,
+        660
+      ],
+      [
+        660,
+        2424
+      ],
+      [
+        2424,
+        3704
+      ]
+    ],
+    "normalise__blockwise": true,
+    "normalise__weights": null,
+    "steps": [
+      [
+        "normalise",
+        {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424), (2424, 3704)])"
+        }
+      ],
+      [
+        "classifier",
+        {
+          "class": "sklearn.svm._classes.LinearSVC",
+          "repr": "LinearSVC(max_iter=5000, random_state=42)"
+        }
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false
+  },
+  "experiment_name": "linear_svm",
+  "feature_components": [
+    "color",
+    "texture",
+    "hog",
+    "bovw"
+  ],
+  "feature_dim": 3704,
+  "feature_set": "combined",
+  "feature_type": "color_texture_hog_sift_bovw",
+  "image_size": [
+    128,
+    128
+  ],
+  "model_name": "linear_svm",
+  "model_type": "linear_svm",
+  "normalisation": {
+    "alpha": 0.3,
+    "blocks": [
+      [
+        0,
+        520
+      ],
+      [
+        520,
+        660
+      ],
+      [
+        660,
+        2424
+      ],
+      [
+        2424,
+        3704
+      ]
+    ],
+    "blockwise": true
+  },
+  "provenance": {
+    "feature_bindings": [
+      {
+        "feature_config_path": "results/features/traditional_feature_config.json",
+        "feature_config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+        "feature_dim": 2424,
+        "role": "handcrafted",
+        "train_feature_path": "results/features/traditional_train_features.npz",
+        "train_feature_sha256": "8e6b7a623153840b52abdd3d9159fedb26b63c1321920ab962b5fdbc3edc28f4",
+        "train_manifest_file_name": "train.csv",
+        "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+      },
+      {
+        "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+        "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+        "feature_dim": 1280,
+        "role": "bovw",
+        "train_feature_path": "results/features/bovw/bovw_train_features.npz",
+        "train_feature_sha256": "3f8bae0f39dd90f9c002bf3b7c4021a01985f481e4425d417546c68afb0f44ea",
+        "train_manifest_file_name": "train.csv",
+        "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3",
+        "vocabulary_training_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+      }
+    ],
+    "feature_caches": [
+      {
+        "config_path": "results/features/traditional_test_feature_config.json",
+        "config_sha256": "4809effaca9b49b8f06e09ea9d5cd6555323084f5c84c1e7577e0abc0a57157f",
+        "feature_file_path": "results/features/traditional_test_features.npz",
+        "feature_file_sha256": "acbdb020ed045f6d9a4795569f5ad4fc2565c30b03841f5c63569c07b4cf2f8f",
+        "role": "handcrafted"
+      },
+      {
+        "config_path": "results/features/bovw/bovw_test_feature_config.json",
+        "config_sha256": "db5be2bb811946a4b60351ae44328a56cd35f12876c5bf45396cef744b34a7c1",
+        "feature_file_path": "results/features/bovw/bovw_test_features.npz",
+        "feature_file_sha256": "b238465c835a01b482dbf5e36feb8a7199aaf583450e7c6c147db1155255c635",
+        "role": "bovw",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3"
+      }
+    ],
+    "feature_config_path": "results/models/traditional/linear_svm.feature_contract.json",
+    "feature_config_sha256": "63199404c4d2a5f8a66ee1b2b5ed9bacb3163f1569a7b391921386462f678415",
+    "model_path": "results/models/traditional/linear_svm.joblib",
+    "model_sha256": "9d8c5cf61fe5a79d5576f0ab244f36bcb5042d7ef0f484d714b9c8d81d3ec7d3",
+    "selection_manifest_path": "results/metrics/stage2_selection_manifest.json",
+    "selection_manifest_sha256": "5b39108a92ab34d052010e99b8cbcb5c7af5ba685889ad5f143ae6d26f8c8f05",
+    "split_manifest": "test.csv",
+    "split_manifest_sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+  },
+  "schema_version": 2,
+  "score_type": "decision_function",
+  "status": "complete",
+  "svm_backend": "linearsvc",
+  "test": {
+    "inference_time_seconds": 0.18976783304242417,
+    "macro_f1": 0.11158902454468898,
+    "macro_precision": 0.10900654467078616,
+    "macro_recall": 0.1252,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.1252,
+    "seconds_per_image": 3.7953566608484836e-05,
+    "top1_accuracy": 0.1252,
+    "top5_accuracy": 0.2678
+  },
+  "training_time_seconds": 1323.2266242500045,
+  "validation": {
+    "inference_time_seconds": 0.21828695898875594,
+    "macro_f1": 0.11540098182516943,
+    "macro_precision": 0.11147213069008734,
+    "macro_recall": 0.12940000000000002,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.1294,
+    "seconds_per_image": 4.365739179775119e-05,
+    "top1_accuracy": 0.1294,
+    "top5_accuracy": 0.2702
+  },
+  "validation_metrics_path": "results/metrics/traditional_linear_svm_val_metrics.json",
+  "validation_metrics_sha256": "b8f75ab426159b62ce0b0495ec9f5e90b586ca098451dde6a27eaefb4822e904"
+}

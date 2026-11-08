@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,56,Epyaxa rosearia,57,Eulithis explanata,4,1,5
+2,41,Herpetogramma phaeopteralis,54,Chloraspilates bicoloraria,1,2,3
+3,207,Cistothorus platensis,208,Turdus philomelos,1,2,3
+4,215,Pitangus sulphuratus,227,Psittacula krameri,2,1,3
+5,229,Megascops kennicottii,230,Anhinga novaehollandiae,1,2,3
+6,287,Dicranum scoparium,363,Cylindropuntia ramosissima,2,1,3
+7,289,Marchantia polymorpha,445,Viola sempervirens,2,1,3
+8,294,Yucca schidigera,370,Lophocereus schottii,2,1,3
+9,373,Saponaria ocymoides,396,Phlox diffusa,1,2,3
+10,6,Blatta orientalis,8,Cicindela scutellaris,0,2,2
+11,14,Xanthogaleruca luteola,19,Necrodes surinamensis,2,0,2
+12,15,Coleomegilla maculata,111,Climaciella brunnea,2,0,2
+13,15,Coleomegilla maculata,407,Lathyrus palustris,2,0,2
+14,24,Banasa dimidiata,84,Eudryas grata,2,0,2
+15,31,Isodontia mexicana,34,Polistes annularis,0,2,2
+16,35,Vespa affinis,350,Lobelia cardinalis,2,0,2
+17,40,Desmia funeralis,93,Anthanassa tulcis,2,0,2
+18,41,Herpetogramma phaeopteralis,50,Lascoria ambigualis,0,2,2
+19,52,Panopoda carneicosta,56,Epyaxa rosearia,2,0,2
+20,54,Chloraspilates bicoloraria,56,Epyaxa rosearia,2,0,2

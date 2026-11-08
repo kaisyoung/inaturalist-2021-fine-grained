@@ -1,0 +1,57 @@
+\section{Dataset and Protocol}
+\label{sec:dataset}
+
+\subsection{Frozen 500-species subset}
+
+We use \dataset{} \cite{vanhorn2021benchmarking}.  From the COCO-style
+annotations, a class is eligible only if it contains at least 50 images in
+\texttt{train\_mini} and 10 images in the official validation archive.  All
+10,000 categories satisfy this threshold.  We sort original category IDs,
+sample exactly 500 without replacement using NumPy PCG64 with seed 42, then
+sort the selected IDs and map them contiguously to labels 0--499.  For each
+class, a class-specific deterministic permutation selects 50
+\texttt{train\_mini} images: 40 become training data and 10 become internal
+validation data.  Ten images from the official validation archive form the
+held-out test partition.
+
+The resulting manifests contain 20,000 training, 5,000 validation, and 5,000
+test rows.  Scientific/common names, original category IDs, image IDs, source
+splits, and portable local paths are retained.  Automated validation checks
+exact per-class counts, contiguous labels, annotation provenance, safe paths,
+file existence, and duplicates by path, image ID, and UUID filename.  No
+duplicate or cross-partition record was observed.  Figure~\ref{fig:dataset}
+shows deterministic samples and illustrates the substantial changes in
+object scale, viewpoint, background, and taxonomic kingdom.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{dataset_examples.jpg}
+  \caption{Examples from the frozen partitions.  Images are EXIF-oriented for
+  decoding; labels and assignments remain unchanged.}
+  \label{fig:dataset}
+\end{figure}
+
+\subsection{Leakage controls and test isolation}
+
+All preprocessing that can learn from data is fitted on the training manifest
+only.  This includes feature scaling, the SIFT vocabulary, linear and forest
+classifiers, and neural-network optimisation.  Validation images determine
+early stopping, feature ablations, and the choice between pretrained
+augmentation variants.  Train-only pilots determine solver, memory, and
+runtime feasibility.  The official test manifest is not read by training or
+validation commands.  Stage~3 binds selected checkpoints and configurations to
+cryptographic hashes before test evaluation.  The restored Stage~2 selection
+gate now enforces the same ordering for all future evaluations, although the
+repository cannot independently prove that this gate preceded the traditional
+test artifacts already present when the rewrite was integrated.
+Robustness and Grad-CAM operate only after this clean-test evaluation and never
+feed changes back into a model.  This protocol prevents direct training-time
+image leakage and future iteration on held-out scores; the retrospective
+Stage~2 chronology limitation remains explicit.
+
+Because the subset is class-balanced, overall accuracy and macro recall are
+numerically equal here, but we retain both concepts in the evaluation code.
+Balanced sampling also means every class contributes equally to macro metrics.
+It does not make the task easy: each species has only 40 learning examples,
+and the held-out per-class recall is quantised in increments of 0.1 because
+there are ten test examples per class.

@@ -1,0 +1,187 @@
+{
+  "analysis_model": "efficientnet_b0_pretrained_strong_aug",
+  "attempt_number": 1,
+  "attempts": {
+    "efficientnet_b0_pretrained_strong_aug": {
+      "artifacts": {
+        "confusion": {
+          "bytes": 8409,
+          "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_test_confusion.npz",
+          "sha256": "3cdcc5d1b73a985411a5cf9f708e3c10ecd91fc499f63b8e706594ea0c570fc4"
+        },
+        "confusion_figure": {
+          "bytes": 82349,
+          "path": "results/figures/deep_learning/efficientnet_b0_pretrained_strong_aug_test_confusion_matrix.png",
+          "sha256": "1d8ed9a0e217f6920e23712ca5c56e3a14b9bf2e12cca302186b58751c6b56ca"
+        },
+        "metrics": {
+          "bytes": 4390,
+          "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_test_metrics.json",
+          "sha256": "8aa987e53ce8a0051ad0be092a7b0f2280e0ca1563eabbeddde0278f97f0deb5"
+        },
+        "pairs": {
+          "bytes": 2801,
+          "path": "results/tables/deep_learning/efficientnet_b0_pretrained_strong_aug_test_top_confusions.csv",
+          "sha256": "edc91be3f5ce7902f94a6133b66bfd50eba230cacecc6073bcb25f67acf7a397"
+        },
+        "pairs_figure": {
+          "bytes": 157637,
+          "path": "results/figures/deep_learning/efficientnet_b0_pretrained_strong_aug_test_top_confusions.png",
+          "sha256": "3042eb2ed9d42f981c8ca3817b509c50444c09abddbeec2e9542c78eee3f2175"
+        },
+        "per_class": {
+          "bytes": 42557,
+          "path": "results/tables/deep_learning/efficientnet_b0_pretrained_strong_aug_test_per_class_metrics.csv",
+          "sha256": "dd36d46e54dc42e7b8a2ee775ab91ad225926d64ccd9d072ee3b76635ea3430c"
+        },
+        "predictions": {
+          "bytes": 3112275,
+          "path": "results/predictions/deep_learning/efficientnet_b0_pretrained_strong_aug_test_predictions.csv",
+          "sha256": "249c26898bd3bb0dbffb1cb02e4939b0c23f8dfd25ad5be637b3e37513e9401f"
+        }
+      },
+      "metrics": {
+        "evaluation_wall_time_seconds": 9.380818792000355,
+        "loss": 1.1144314491271972,
+        "macro_f1": 0.7235350515945492,
+        "macro_precision": 0.7398663456426615,
+        "macro_recall": 0.7274,
+        "model_forward_time_seconds": 8.831769418997283,
+        "num_classes": 500,
+        "num_samples": 5000,
+        "overall_accuracy": 0.7274,
+        "seconds_per_image": 0.0017663538837994566,
+        "test_time_seconds": 8.831769418997283,
+        "top1_accuracy": 0.7274,
+        "top5_accuracy": 0.9026
+      },
+      "status": "complete",
+      "wall_time_seconds": 10.006679375001113
+    },
+    "resnet18_pretrained_strong_aug": {
+      "artifacts": {
+        "confusion": {
+          "bytes": 9055,
+          "path": "results/metrics/deep_learning/resnet18_pretrained_strong_aug_test_confusion.npz",
+          "sha256": "6e582ea7dd26ff4f07d93e9be2e3a5fcb6047f5b54ce4bc26d80e7ec6c17f78f"
+        },
+        "confusion_figure": {
+          "bytes": 83328,
+          "path": "results/figures/deep_learning/resnet18_pretrained_strong_aug_test_confusion_matrix.png",
+          "sha256": "9c792c88c08497c1f00cfab6cfcf4a1a67e55d929d00a383e07db88a2d29c45b"
+        },
+        "metrics": {
+          "bytes": 4316,
+          "path": "results/metrics/deep_learning/resnet18_pretrained_strong_aug_test_metrics.json",
+          "sha256": "86c93dc1423e4bba028024f1792fbcfcc8a39f42c389a4b95483e7c72e788cdc"
+        },
+        "pairs": {
+          "bytes": 2822,
+          "path": "results/tables/deep_learning/resnet18_pretrained_strong_aug_test_top_confusions.csv",
+          "sha256": "138812b588d9092ecff0f7f1f1adaf72120339157f9d4770defbde33af5ad3e4"
+        },
+        "pairs_figure": {
+          "bytes": 159127,
+          "path": "results/figures/deep_learning/resnet18_pretrained_strong_aug_test_top_confusions.png",
+          "sha256": "c8d4c12fdd1576b5d417a56a85564990e1a74ab9ec48fb912e2eff261276a1cc"
+        },
+        "per_class": {
+          "bytes": 42701,
+          "path": "results/tables/deep_learning/resnet18_pretrained_strong_aug_test_per_class_metrics.csv",
+          "sha256": "e2cecb8f1e8bb6b87065885ef6c789683d4add5057c38c1caeb08c91872c288b"
+        },
+        "predictions": {
+          "bytes": 3117006,
+          "path": "results/predictions/deep_learning/resnet18_pretrained_strong_aug_test_predictions.csv",
+          "sha256": "202602338f015985f8c0a7dbaabab4fb557ca04e371abd88825e758fc3812362"
+        }
+      },
+      "metrics": {
+        "evaluation_wall_time_seconds": 7.53202620799857,
+        "loss": 1.4104158935546875,
+        "macro_f1": 0.6727522280355102,
+        "macro_precision": 0.6910919483938834,
+        "macro_recall": 0.676,
+        "model_forward_time_seconds": 6.856243042057031,
+        "num_classes": 500,
+        "num_samples": 5000,
+        "overall_accuracy": 0.676,
+        "seconds_per_image": 0.0013712486084114061,
+        "test_time_seconds": 6.856243042057031,
+        "top1_accuracy": 0.676,
+        "top5_accuracy": 0.8624
+      },
+      "status": "complete",
+      "wall_time_seconds": 8.189459125002031
+    },
+    "resnet18_scratch_basic": {
+      "artifacts": {
+        "confusion": {
+          "bytes": 12920,
+          "path": "results/metrics/deep_learning/resnet18_scratch_basic_test_confusion.npz",
+          "sha256": "ddc24ac0d10db0bce932e8e17617f09208c0e98054218af0f7d15215276d37d2"
+        },
+        "confusion_figure": {
+          "bytes": 95041,
+          "path": "results/figures/deep_learning/resnet18_scratch_basic_test_confusion_matrix.png",
+          "sha256": "a101b08227036926e5bbc98be5b49011c8dcc4ac7820f7bb493a49a4f69c76be"
+        },
+        "metrics": {
+          "bytes": 4218,
+          "path": "results/metrics/deep_learning/resnet18_scratch_basic_test_metrics.json",
+          "sha256": "a687264e411b5a0b97b5073006cdb0679b003e2b1c909ed2cd9cf45bd0aab86c"
+        },
+        "pairs": {
+          "bytes": 2899,
+          "path": "results/tables/deep_learning/resnet18_scratch_basic_test_top_confusions.csv",
+          "sha256": "11e90273444f717184928496df7186ec4975ea76003546cee8b77c5159753366"
+        },
+        "pairs_figure": {
+          "bytes": 151294,
+          "path": "results/figures/deep_learning/resnet18_scratch_basic_test_top_confusions.png",
+          "sha256": "6d825b9e22fd5dc1d6b5b1748cd40d81c278e27c21004cfa9f6aedb6a300a02a"
+        },
+        "per_class": {
+          "bytes": 42284,
+          "path": "results/tables/deep_learning/resnet18_scratch_basic_test_per_class_metrics.csv",
+          "sha256": "29fc2da60d71e45a6a9f38a0879d129754e075ecf898483a4369c54d5bd34920"
+        },
+        "predictions": {
+          "bytes": 3120318,
+          "path": "results/predictions/deep_learning/resnet18_scratch_basic_test_predictions.csv",
+          "sha256": "3f3a8050c4f8fb79eba7f021092ea31295af07436261b51733e53cb1371dcdaf"
+        }
+      },
+      "metrics": {
+        "evaluation_wall_time_seconds": 14.461283541997545,
+        "loss": 3.497968946838379,
+        "macro_f1": 0.2927815784849488,
+        "macro_precision": 0.30534177542107616,
+        "macro_recall": 0.2988,
+        "model_forward_time_seconds": 7.0270640879898565,
+        "num_classes": 500,
+        "num_samples": 5000,
+        "overall_accuracy": 0.2988,
+        "seconds_per_image": 0.0014054128175979713,
+        "test_time_seconds": 7.0270640879898565,
+        "top1_accuracy": 0.2988,
+        "top5_accuracy": 0.5364
+      },
+      "status": "complete",
+      "wall_time_seconds": 15.124569457999314
+    }
+  },
+  "batch_wall_time_seconds": 34.2308506249974,
+  "completed_at_utc": "2026-07-15T13:55:44.423145Z",
+  "freeze_manifest_path": "results/metrics/deep_learning/stage3_freeze.json",
+  "freeze_manifest_sha256": "bea68b307fb7ff5db4f066b47ff00ade462bd71609ed9735c4faff125ce2257f",
+  "outcome": "complete",
+  "schema_version": 1,
+  "selected_experiments": [
+    "resnet18_scratch_basic",
+    "resnet18_pretrained_strong_aug",
+    "efficientnet_b0_pretrained_strong_aug"
+  ],
+  "started_at_utc": "2026-07-15T13:55:10.191019Z",
+  "status": "completed"
+}

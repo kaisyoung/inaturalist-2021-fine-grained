@@ -1,0 +1,119 @@
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Traditional computer vision}
+
+\paragraph{Block-structured handcrafted descriptor.}
+After EXIF correction and RGB conversion, each image is resized bilinearly to
+$128\!\times\!128$.  Three non-negative blocks are concatenated in the fixed
+order colour, texture, and HOG.  Colour uses a joint hue--saturation histogram
+($12\!\times\!8$ bins) plus an eight-bin value histogram.  Texture uses
+uniform LBP at $(P{=}8,R{=}1)$ and $(P{=}16,R{=}2)$.  The colour and texture
+histograms are pooled over the whole image and a $2\!\times\!2$ grid, yielding
+520 and 140 dimensions respectively.  HOG uses nine orientations,
+$16\!\times\!16$-pixel cells, $2\!\times\!2$-cell blocks, square-root input,
+and L2-Hys normalisation, producing 1,764 values.  The complete per-image
+handcrafted vector is therefore 2,424-D.  Caches retain the raw blocks in
+manifest order; fitted normalisation remains inside each estimator pipeline.
+
+\paragraph{SIFT--BoVW.}
+We preserve aspect ratio while limiting the longest side to 256 pixels, convert
+to grayscale, and retain at most 300 SIFT keypoints per image
+\cite{lowe2004distinctive}.  A 256-word visual vocabulary is learned by
+mini-batch $k$-means from at most 100 descriptors from four deterministic
+\emph{training} images per class.  Neither validation nor test descriptors
+contribute to vocabulary fitting.  Each local descriptor uses top-3 soft
+assignment to its three nearest words with Gaussian weights whose bandwidth is the
+median nearest-centre distance on sampled training descriptors, reducing
+visual-word boundary ambiguity \cite{vangemert2010visual}.  Counts are pooled
+over the whole image and a $2\!\times\!2$ spatial grid
+\cite{lazebnik2006beyond}, so the BoVW block has
+$256\!\times\!5=1{,}280$ dimensions.  Images without keypoints receive an
+all-zero block.
+
+\paragraph{Normalisation and classifier selection.}
+Each selected block is independently $\ell_1$ normalised, raised element-wise
+to a power $\alpha$, and $\ell_2$ normalised.  At $\alpha{=}0.5$ this is the
+Hellinger map \cite{arandjelovic2012three}; more generally, power
+normalisation suppresses dominating histogram bins
+\cite{perronnin2010improving}.  Among 19 recorded validation configurations,
+the selected primary pipeline uses $\alpha{=}0.3$, block-wise normalisation,
+and all four blocks.  Its 3,704-D input is the 2,424-D handcrafted descriptor
+plus 1,280-D BoVW, followed by \texttt{LinearSVC} (liblinear, $C{=}1$).  The
+separate BoVW-only comparator applies \texttt{LinearSVC} to 1,280 dimensions.
+The Random Forest uses 300 trees, square-root feature subsampling, minimum leaf
+size 2, and only the 2,424-D colour--texture--HOG descriptor.
+
+The primary Stage~2 traditional comparison is the 3,704-D LinearSVC.  Stage~4
+instead uses the 2,424-D, 300-tree handcrafted Random Forest without BoVW as
+its canonical traditional robustness comparator: the corruption evaluator
+recomputes per-image handcrafted descriptors and applies the fitted pipeline,
+but it does not independently reconstruct the training-fitted SIFT vocabulary
+required for BoVW.  The two traditional roles are therefore deliberately
+distinct.
+
+\subsection{Deep networks}
+
+We evaluate ResNet18 \cite{he2016deep} and EfficientNet-B0
+\cite{tan2019efficientnet}.  Each classifier head is replaced by a 500-output
+linear layer.  The scratch ResNet18 starts from random weights.  Transfer
+experiments initialise the backbone with the corresponding ImageNet weights
+and randomly initialise the new head.  A frozen-head ablation holds the entire
+pretrained backbone fixed and keeps its BatchNorm layers in evaluation mode;
+the remaining experiments fine-tune every parameter.
+
+At evaluation time, images are EXIF-oriented, converted to RGB, bicubically
+resized to 256 pixels, centre-cropped to $224\!\times\!224$, converted to a
+tensor, and normalised by ImageNet channel statistics.  Basic training uses a
+random resized crop (scale 0.7--1.0) and horizontal flip.  Strong training
+widens the crop scale to 0.5--1.0 and adds moderate colour jitter, a
+$\pm15^{\circ}$ affine/rotation perturbation, and random erasing with
+probability 0.25.  We intentionally omit vertical flips and extreme crops that
+could change biologically meaningful orientation or remove diagnostic parts.
+
+For parameters $\theta$ and a labelled mini-batch, all networks minimise
+multiclass cross entropy,
+\begin{equation}
+  \mathcal{L}(\theta)=-\frac{1}{B}\sum_{i=1}^{B}
+  \log\frac{\exp z_{i,y_i}}{\sum_{c=0}^{499}\exp z_{i,c}},
+  \label{eq:crossentropy}
+\end{equation}
+using AdamW, cosine learning-rate annealing, weight decay $10^{-4}$, and
+gradient-norm clipping at 1.0.  Effective batch size is 32.  Scratch training
+uses learning rate $10^{-3}$ for at most 25 epochs; fully fine-tuned pretrained
+models use $10^{-4}$ for at most 15 epochs; the frozen-head run uses
+$10^{-3}$ for at most 10 epochs.  Validation macro F1 controls checkpointing,
+with top-1, top-5, loss, and earlier epoch as deterministic tie-breakers.
+
+\subsection{Robustness analysis}
+
+Let $m_0$ be a model's clean metric and $m_{k,s}$ its metric for corruption
+type $k$ at severity $s$.  We report absolute drop
+$\Delta_{k,s}=m_0-m_{k,s}$, relative drop $\Delta_{k,s}/m_0$, mean corrupted
+performance across 16 conditions, and the worst observed condition.
+The fixed suite contains Gaussian blur, Gaussian noise, JPEG compression, and
+motion blur, each at four increasing severities.  Corruptions are deterministic
+and applied to all 5,000 test images; model parameters and normalisation remain
+unchanged.  This isolates sensitivity to acquisition quality from retraining
+or test-time adaptation.
+
+\subsection{Grad-CAM}
+
+For target class $c$, Grad-CAM weights convolutional channel $k$ by the
+spatially averaged target-score gradient,
+\begin{equation}
+  \alpha_k^c=\frac{1}{Z}\sum_{u,v}
+  \frac{\partial z_c}{\partial A_{uv}^{k}}, \qquad
+  L^c=\operatorname{ReLU}\!\left(\sum_k\alpha_k^c A^k\right).
+  \label{eq:gradcam}
+\end{equation}
+We compute maps at EfficientNet-B0 layer \texttt{features.8}, upsample the
+activation map to the model crop, and align it back to the full image using the
+recorded centre-crop geometry.  The analysis set is selected deterministically
+from persisted predictions: 12 high-confidence correct cases, 12
+high-confidence errors, and nine representatives of top bidirectional
+confusion pairs (33 images, 54 target maps).  Correct cases use the predicted
+target; errors include both predicted- and true-class targets.  This
+target-specific pairing helps distinguish ``where the predicted class scores''
+from ``where the true class would score'', but remains a diagnostic rather than
+a causal proof.

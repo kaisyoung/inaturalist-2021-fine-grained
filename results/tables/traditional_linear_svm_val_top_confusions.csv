@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,19,Necrodes surinamensis,125,Gryllus bimaculatus,3,1,4
+2,21,Physocephala tibialis,31,Isodontia mexicana,1,3,4
+3,55,Didymoctenia exsuperata,59,Horisme intestinata,1,3,4
+4,136,Ocyurus chrysurus,137,Abudefduf saxatilis,1,3,4
+5,142,Mola mola,234,Eschrichtius robustus,1,3,4
+6,220,Colaptes punctigula,223,Pteroglossus torquatus,1,3,4
+7,171,Jabiru mycteria,178,Anthropoides paradiseus,2,2,4
+8,10,Agapanthia villosoviridescens,114,Chromagrion conditum,0,3,3
+9,30,Tetramorium immigrans,369,Homalocephala polycephala,3,0,3
+10,81,Anaplectoides prasina,107,Lapara bombycoides,3,0,3
+11,134,Lepisosteus platyrhincus,246,Trichechus manatus,0,3,3
+12,155,Aegypius monachus,158,Haliaeetus leucogaster,0,3,3
+13,261,Donax gouldii,263,Nucella lapillus,0,3,3
+14,345,Rudbeckia amplexicaulis,348,Solidago rigida,0,3,3
+15,50,Lascoria ambigualis,52,Panopoda carneicosta,2,1,3
+16,58,Gastrina cristaria,62,Pseudocoremia suavis,1,2,3
+17,116,Ischnura senegalensis,119,Orthetrum chrysis,2,1,3
+18,265,Peltodoris nobilis,267,Phyllidia ocellata,1,2,3
+19,291,Brodiaea terrestris,457,Pulsatilla patens,1,2,3
+20,294,Yucca schidigera,370,Lophocereus schottii,2,1,3

@@ -1,0 +1,108 @@
+{
+  "architecture": "random_forest",
+  "artifacts": {
+    "predictions": {
+      "bytes": 1687709,
+      "path": "results/predictions/robustness/traditional_random_forest_jpeg_compression_s4_predictions.csv",
+      "sha256": "cc5166592621276a9f0911c58e8b4a220f3dc796ed562b459aacd81a5f3de760"
+    }
+  },
+  "corruption": {
+    "determinism": "deterministic operation",
+    "parameter": "quality",
+    "parameter_value": 10,
+    "seed": 42,
+    "severity_index": 4,
+    "type": "jpeg_compression"
+  },
+  "created_at_utc": "2026-08-03T02:29:56Z",
+  "evaluation": {
+    "batch_size": 32,
+    "labels": "exactly 0..499",
+    "max_samples": null,
+    "num_workers": 4,
+    "sample_selection": "complete manifest",
+    "score_type": "predict_proba",
+    "stable_tie_break": "lower new_label first",
+    "weight_update_operations": 0
+  },
+  "inputs": {
+    "clean_metrics": {
+      "bytes": 5407,
+      "path": "results/metrics/traditional_random_forest_metrics.json",
+      "sha256": "50fe3599a319fe85e9c8e8c6882aeda04d6f8f3f1aa8b552a334f1c06169e8af"
+    },
+    "clean_predictions": {
+      "bytes": 2124573,
+      "path": "results/predictions/traditional_random_forest_test_predictions.csv",
+      "sha256": "b946fa8588af34fcd5b1017005c524de68f553f39d0b86f46aab51fc5268eaaf"
+    },
+    "manifest": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91"
+    },
+    "model_artifact": {
+      "bytes": 369210625,
+      "path": "results/models/traditional/random_forest.joblib",
+      "sha256": "346c4d48e505b71f019765d30bc2c54dc73a0e566a971cfc6ad65cf4a0946fda"
+    },
+    "model_support_artifacts": {
+      "feature_config": {
+        "bytes": 4761,
+        "path": "results/features/traditional_feature_config.json",
+        "sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea"
+      },
+      "model_metadata": {
+        "bytes": 8596,
+        "path": "results/models/traditional/random_forest.metadata.json",
+        "sha256": "af1a6c6d66f879477acd1b6f20b8bac1e11ec42631f5ca9a3788ad4b840475cc"
+      }
+    }
+  },
+  "method_family": "traditional",
+  "metrics": {
+    "evaluation_wall_time_seconds": 13.220593000005465,
+    "feature_extraction_time_seconds": 12.140928334032651,
+    "inference_time_seconds": 1.0753744170069695,
+    "macro_f1": 0.04285185403114638,
+    "macro_precision": 0.04645825684050921,
+    "macro_recall": 0.058,
+    "model_forward_time_seconds": 1.0753744170069695,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.058,
+    "seconds_per_image": 0.0002150748834013939,
+    "top1_accuracy": 0.058,
+    "top5_accuracy": 0.1608
+  },
+  "model_name": "traditional_random_forest",
+  "package_versions": {
+    "Pillow": "12.3.0",
+    "joblib": "1.5.3",
+    "numpy": "2.2.6",
+    "opencv_python_headless": "4.13.0.92",
+    "pandas": "2.3.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13",
+    "scikit_image": "0.25.2",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.1",
+    "torchvision": "0.27.1"
+  },
+  "protocol": {
+    "path": "results/metrics/stage4_robustness_protocol.json",
+    "sha256": "0dcbc3f7d7380367cb2a9522ee28e4dc2239307575fe57892f13556a607f5233"
+  },
+  "run_type": "canonical_full",
+  "schema_version": 1,
+  "split": "test",
+  "stage": "stage4_robustness",
+  "status": "complete",
+  "timing": {
+    "definition": "full wall includes image decode, on-the-fly corruption, preprocessing, feature extraction/transfer, and one model score call; serialization and metrics excluded. model_forward_seconds covers only predict_proba/decision_function or synchronized neural forward passes.",
+    "feature_extraction_seconds": 12.140928334032651,
+    "full_evaluation_wall_seconds": 13.220593000005465,
+    "model_forward_seconds": 1.0753744170069695
+  }
+}

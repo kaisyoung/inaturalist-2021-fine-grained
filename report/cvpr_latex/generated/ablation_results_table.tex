@@ -1,0 +1,21 @@
+% Generated from frozen validation evidence. Do not edit by hand.
+\begin{table*}[t]
+\centering
+\caption{Validation-only traditional and deep-learning ablations.}
+\label{tab:ablations}
+\small
+\begin{tabularx}{\textwidth}{@{}lXccc@{}}
+\toprule
+Study membership & Experiment & Val top-1 & Val top-5 & Val macro-F1 \\
+\midrule
+Feature reference & All blocks + BoVW & 0.1294 & 0.2702 & 0.115401 \\
+Feature ablation & Colour only & 0.0608 & 0.1542 & 0.040555 \\
+Feature ablation & Texture (LBP) only & 0.0356 & 0.1188 & 0.017688 \\
+Feature ablation & HOG only & 0.0292 & 0.0852 & 0.019803 \\
+Pretraining & ResNet18 scratch / basic & 0.2874 & 0.5274 & 0.279552 \\
+Pretrain / aug. / tuning ref. & ResNet18 pretrained / basic & 0.6616 & 0.8538 & 0.660844 \\
+Augmentation & ResNet18 pretrained / strong & 0.6754 & 0.8646 & 0.673652 \\
+Frozen head & ResNet18 frozen backbone & 0.5746 & 0.7934 & 0.572458 \\
+\bottomrule
+\end{tabularx}
+\end{table*}

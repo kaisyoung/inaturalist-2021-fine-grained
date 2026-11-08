@@ -1,0 +1,25 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We developed and evaluated a complete 500-species recognition pipeline on a
+deterministic iNaturalist subset.  The rewritten primary traditional model
+combines colour, texture, HOG, and spatial SIFT-BoVW in a 3,704-D LinearSVC and
+reaches \PrimaryTraditionalTestTopOnePercent\% held-out top-1.  ResNet18
+trained from scratch reaches 29.88\%, while ImageNet transfer raises the best
+ResNet18 result to 67.60\%.  Pretrained EfficientNet-B0 is the strongest model
+at \BestTestTopOnePercent\% top-1, \BestTestTopFivePercent\% top-5, and
+\BestTestMacroFOnePercent\% macro F1.  A matched ablation finds a 1.38-point
+validation gain from stronger augmentation.
+
+The advanced studies qualify that success.  The corruption analysis uses a
+distinct 2,424-D, 300-tree handcrafted Random Forest without BoVW as the
+traditional comparator and derives every aggregate only after all 64 cells are
+regenerated.  Confusion pairs concentrate among visually similar species, and
+Grad-CAM examples suggest both meaningful organism localisation and possible
+colour/texture shortcuts.  The main lesson is therefore two-sided: transfer
+learning and efficient convolutional architecture provide a large practical
+advance, but reliability requires evaluation beyond the clean test set.  The
+current selection manifest, persisted predictions, and reproducible analyses
+provide a sound basis for future higher-resolution, corruption-aware, and
+taxonomy-informed methods, while the retrospective Stage~2 locking limitation
+remains part of the evidence record.

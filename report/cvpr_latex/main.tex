@@ -1,0 +1,62 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[pagenumbers]{cvpr}
+\input{preamble}
+
+\title{Fine-Grained Species Recognition at Scale:\\
+Traditional Baselines, Transfer Learning, Robustness, and Grad-CAM}
+
+\author{
+Yuan Cao \quad
+Kaishi Yang\\
+Aditya Winata \quad
+Jialin Guo\\
+Yuzhe Qiu\\
+COMP9517 Computer Vision Group Project
+}
+
+\begin{document}
+\maketitle
+\input{generated/result_macros.tex}
+
+\begin{abstract}
+Fine-grained species recognition must separate visually similar taxa while
+remaining reliable across pose, scale, background, and image quality.  We
+study this problem on a deterministic 500-species subset of iNaturalist 2021
+Mini containing 20,000 training, 5,000 internal-validation, and 5,000 held-out
+test images.  A split-controlled protocol compares handcrafted colour, texture,
+shape, and SIFT bag-of-visual-words pipelines with convolutional networks
+trained from scratch and with ImageNet transfer.  The primary traditional
+model is a 3,704-D LinearSVC combining a 2,424-D handcrafted descriptor with
+1,280-D spatial SIFT-BoVW, reaching
+\PrimaryTraditionalTestTopOnePercent\% held-out top-1 accuracy.  A pretrained
+EfficientNet-B0 reaches \BestTestTopOnePercent\% top-1,
+\BestTestTopFivePercent\% top-5, and \BestTestMacroFOnePercent\% macro F1.
+The fixed 64-condition corruption study uses a distinct 2,424-D, 300-tree
+handcrafted Random Forest without BoVW as its traditional comparator and
+otherwise retains the frozen deep models.  Confusion analysis and Grad-CAM
+expose fine-grained look-alikes as well as plausible colour and texture
+shortcuts.  Together, the evidence establishes transfer learning as the
+strongest approach in this setting while identifying robustness,
+protocol-provenance, and explanation limitations that clean accuracy alone
+conceals.
+\end{abstract}
+
+\input{sections/01_introduction}
+\input{sections/02_literature_review}
+\input{sections/03_dataset_protocol}
+\input{sections/04_methods}
+\input{sections/05_experimental_setup}
+\input{sections/06_results}
+\input{sections/07_discussion}
+\input{sections/08_conclusion}
+
+\FloatBarrier
+\label{LastPageMainText}
+\clearpage
+{\small
+\bibliographystyle{ieeenat_fullname}
+\bibliography{references}
+}
+
+\end{document}

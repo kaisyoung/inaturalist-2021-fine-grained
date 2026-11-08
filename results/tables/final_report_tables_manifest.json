@@ -1,0 +1,31 @@
+{
+  "outputs": {
+    "report/cvpr_latex/generated/ablation_results_table.tex": "b1b673165ac3a9908991d2ff062b846670fc7eedacad53f0f1ef6e152749c6a5",
+    "report/cvpr_latex/generated/detailed_test_table.tex": "4598533eee939736aacfa64217f485faa8a24f93bba718226c035e7facd0a280",
+    "report/cvpr_latex/generated/main_results_table.tex": "50cb498a984c98ba86eddc3bcfa4274d7be25dcaf58e1014ed3def0fe7e48397",
+    "report/cvpr_latex/generated/result_macros.tex": "ad873a84b37fe113d8d0da8c9eae9cad81dcc2d6a860e8eef6217a4ef94d24f9",
+    "report/cvpr_latex/generated/robustness_summary_table.tex": "474c6d8af6c174a4010fb633dacd072c978d0160695d789568bdab4bb6319dc7",
+    "results/tables/final_report_ablation_results.csv": "20884beb50c6d7ab08c9a78286a0f85d236a72b8fd9324371b8b9cea25653e95",
+    "results/tables/final_report_main_results.csv": "5e5b12162319344bab89306aa28e131d85be1787edd045e6616785dfd92fd39a",
+    "results/tables/final_report_robustness_summary.csv": "a3f4b9fe957c12adf6eb269c0365bd7b7aa35dd9490afd649fd5023a5d1d2ae3"
+  },
+  "policy": {
+    "frozen_evidence_only": true,
+    "training_or_inference_performed": false,
+    "unavailable_values": "empty CSV field / LaTeX --; never zero-filled"
+  },
+  "row_counts": {
+    "ablation_results": 8,
+    "main_results": 6,
+    "robustness_summary": 4
+  },
+  "schema_version": 1,
+  "sources": {
+    "results/tables/final_model_comparison.csv": "322f88ce28f9c919b09a068ee55f9c87b537e4d36c9995994386f618d3ab39d5",
+    "results/tables/robustness_drop_summary.csv": "81d962333b1a114e638c1709a645f26efb68811695959cf86c00e0f892a4b018",
+    "results/tables/robustness_model_ranking.csv": "d2677b44bdd21c540fbb67287ad61bb6a6a5a53669bd43f11e2fb102d0e89245",
+    "results/tables/stage2_feature_ablation_results.csv": "ba723a0a362bd50a569a12bbcb6f56578ed37f1a6f351daed793c74ad692e2ce",
+    "results/tables/stage3_ablation_results.csv": "79cf56f87fef800632adbaec8d9a4ab80686ff4f89db75dc25321cd47fc35b93",
+    "results/tables/stage4_summary.csv": "7d7bd7b960ec43714cfbff1238f5dbc7b7b13ef00e1f0fcdf6d05a8d98741bf9"
+  }
+}

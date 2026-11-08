@@ -1,0 +1,160 @@
+{
+  "classifier": "LinearSVC",
+  "estimator_diagnostics": {
+    "classifier": "LinearSVC",
+    "converged": true,
+    "max_iter": 5000,
+    "n_iter": 25
+  },
+  "estimator_parameters": {
+    "classifier": {
+      "class": "sklearn.svm._classes.LinearSVC",
+      "repr": "LinearSVC(max_iter=5000, random_state=42)"
+    },
+    "classifier__C": 1.0,
+    "classifier__class_weight": null,
+    "classifier__dual": "auto",
+    "classifier__fit_intercept": true,
+    "classifier__intercept_scaling": 1,
+    "classifier__loss": "squared_hinge",
+    "classifier__max_iter": 5000,
+    "classifier__multi_class": "ovr",
+    "classifier__penalty": "l2",
+    "classifier__random_state": 42,
+    "classifier__tol": 0.0001,
+    "classifier__verbose": 0,
+    "memory": null,
+    "normalise": {
+      "class": "src.traditional.normalize.PowerNormalizer",
+      "repr": "PowerNormalizer(blocks=[(0, 520), (520, 1800)])"
+    },
+    "normalise__alpha": 0.3,
+    "normalise__blocks": [
+      [
+        0,
+        520
+      ],
+      [
+        520,
+        1800
+      ]
+    ],
+    "normalise__blockwise": true,
+    "normalise__weights": null,
+    "steps": [
+      [
+        "normalise",
+        {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 520), (520, 1800)])"
+        }
+      ],
+      [
+        "classifier",
+        {
+          "class": "sklearn.svm._classes.LinearSVC",
+          "repr": "LinearSVC(max_iter=5000, random_state=42)"
+        }
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false
+  },
+  "experiment_name": "ablation_cb_color_bovw_a03",
+  "feature_components": [
+    "color",
+    "bovw"
+  ],
+  "feature_dim": 1800,
+  "feature_set": "combined",
+  "feature_type": "color_texture_hog_sift_bovw",
+  "image_size": [
+    128,
+    128
+  ],
+  "metrics": {
+    "inference_time_seconds": 0.14782324997941032,
+    "macro_f1": 0.0999242240651929,
+    "macro_precision": 0.09831117144263732,
+    "macro_recall": 0.11120000000000002,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.1112,
+    "seconds_per_image": 2.9564649995882063e-05,
+    "top1_accuracy": 0.1112,
+    "top5_accuracy": 0.2392
+  },
+  "model_name": "ablation_cb_color_bovw_a03",
+  "model_type": "linear_svm",
+  "normalisation": {
+    "alpha": 0.3,
+    "blocks": [
+      [
+        0,
+        520
+      ],
+      [
+        520,
+        1800
+      ]
+    ],
+    "blockwise": true
+  },
+  "provenance": {
+    "feature_bindings": [
+      {
+        "feature_config_path": "results/features/traditional_feature_config.json",
+        "feature_config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+        "feature_dim": 2424,
+        "role": "handcrafted",
+        "train_feature_path": "results/features/traditional_train_features.npz",
+        "train_feature_sha256": "8e6b7a623153840b52abdd3d9159fedb26b63c1321920ab962b5fdbc3edc28f4",
+        "train_manifest_file_name": "train.csv",
+        "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+      },
+      {
+        "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+        "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+        "feature_dim": 1280,
+        "role": "bovw",
+        "train_feature_path": "results/features/bovw/bovw_train_features.npz",
+        "train_feature_sha256": "3f8bae0f39dd90f9c002bf3b7c4021a01985f481e4425d417546c68afb0f44ea",
+        "train_manifest_file_name": "train.csv",
+        "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3",
+        "vocabulary_training_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+      }
+    ],
+    "feature_caches": [
+      {
+        "config_path": "results/features/traditional_feature_config.json",
+        "config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+        "feature_file_path": "results/features/traditional_val_features.npz",
+        "feature_file_sha256": "6b47f178712947ee336804c0fc30025f1801d138854fa4dd0a2a63bcf0f80478",
+        "role": "handcrafted"
+      },
+      {
+        "config_path": "results/features/bovw/bovw_feature_config.json",
+        "config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+        "feature_file_path": "results/features/bovw/bovw_val_features.npz",
+        "feature_file_sha256": "68cdb81ec2284cf14d6e4ed47d36b1806ac6c4a0e08d33449d550e41a4f82bd7",
+        "role": "bovw",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3"
+      }
+    ],
+    "feature_config_path": "results/models/traditional/ablation_cb_color_bovw_a03.feature_contract.json",
+    "feature_config_sha256": "63199404c4d2a5f8a66ee1b2b5ed9bacb3163f1569a7b391921386462f678415",
+    "model_path": "results/models/traditional/ablation_cb_color_bovw_a03.joblib",
+    "model_sha256": "e2efa3eaa3fb7564316e4aa89e7345ead58d270f6a1db6576226732affba85c9",
+    "split_manifest": "val.csv",
+    "split_manifest_sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb"
+  },
+  "schema_version": 2,
+  "score_type": "decision_function",
+  "split": "val",
+  "status": "complete",
+  "svm_backend": "linearsvc",
+  "training_time_seconds": 473.30593141698046
+}

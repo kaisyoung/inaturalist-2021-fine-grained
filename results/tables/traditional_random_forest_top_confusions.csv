@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,158,Haliaeetus leucogaster,163,Apus apus,5,0,5
+2,157,Elanoides forficatus,209,Contopus cooperi,1,4,5
+3,157,Elanoides forficatus,158,Haliaeetus leucogaster,0,4,4
+4,303,Tradescantia pallida,373,Saponaria ocymoides,4,0,4
+5,365,Echinocereus dasyacanthus,450,Eschscholzia parishii,4,0,4
+6,136,Ocyurus chrysurus,140,Zanclus cornutus,3,1,4
+7,137,Abudefduf saxatilis,140,Zanclus cornutus,3,1,4
+8,291,Brodiaea terrestris,338,Dieteria canescens,1,3,4
+9,304,Dioscorea bulbifera,413,Castanea dentata,3,1,4
+10,409,Lotus pedunculatus,458,Ranunculus bulbosus,1,3,4
+11,91,Peridea basitriens,108,Isotenes miserana,2,2,4
+12,322,Polytaenia texana,460,Thalictrum lucidum,2,2,4
+13,24,Banasa dimidiata,75,Heliophorus epicles,3,0,3
+14,52,Panopoda carneicosta,58,Gastrina cristaria,3,0,3
+15,85,Marimatha nigrofimbria,108,Isotenes miserana,3,0,3
+16,129,Grapsus grapsus,267,Phyllidia ocellata,3,0,3
+17,142,Mola mola,166,Brachyramphus marmoratus,3,0,3
+18,154,Accipiter trivirgatus,209,Contopus cooperi,3,0,3
+19,156,Aquila heliaca,157,Elanoides forficatus,3,0,3
+20,156,Aquila heliaca,163,Apus apus,3,0,3

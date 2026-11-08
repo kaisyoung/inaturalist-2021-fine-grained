@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,142,Mola mola,234,Eschrichtius robustus,4,2,6
+2,136,Ocyurus chrysurus,137,Abudefduf saxatilis,2,3,5
+3,136,Ocyurus chrysurus,140,Zanclus cornutus,3,1,4
+4,335,Cirsium oleraceum,460,Thalictrum lucidum,3,1,4
+5,405,Lathyrus japonicus,406,Lathyrus latifolius,3,1,4
+6,17,Lucanus capreolus,281,Cruentomycena viscidocruenta,3,0,3
+7,61,Iridopsis defectaria,128,Ctenolepisma lineata,0,3,3
+8,95,Chlosyne janais,146,Oophaga pumilio,3,0,3
+9,294,Yucca schidigera,466,Cercocarpus ledifolius,0,3,3
+10,296,Dipodium roseum,392,Impatiens walleriana,3,0,3
+11,301,Tinantia anomala,397,Polemonium californicum,0,3,3
+12,306,Calochortus catalinae,343,Malacothrix saxatilis,0,3,3
+13,363,Cylindropuntia ramosissima,385,Mentzelia laevicaulis,0,3,3
+14,385,Mentzelia laevicaulis,450,Eschscholzia parishii,3,0,3
+15,450,Eschscholzia parishii,459,Ranunculus fascicularis,0,3,3
+16,4,Dermacentor occidentalis,142,Mola mola,2,1,3
+17,28,Andricus kingi,433,Penstemon rostriflorus,2,1,3
+18,39,Cnaphalocrocis poeyalis,42,Hileithia magualis,1,2,3
+19,55,Didymoctenia exsuperata,58,Gastrina cristaria,2,1,3
+20,119,Orthetrum chrysis,392,Impatiens walleriana,1,2,3

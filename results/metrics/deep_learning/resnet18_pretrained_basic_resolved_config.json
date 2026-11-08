@@ -1,0 +1,159 @@
+{
+  "amp": "auto",
+  "augmentation": "basic_train",
+  "augmentation_seed_contract": "sha256(base_seed, epoch, manifest_index)",
+  "batch_size": 32,
+  "d2_ablation_provenance": {
+    "comparable_pair": [
+      "resnet18_pretrained_basic",
+      "resnet18_pretrained_strong_aug"
+    ],
+    "contract_excluding_experiment_and_augmentation": {
+      "amp": "auto",
+      "batch_size": 32,
+      "device": "mps",
+      "epochs": 15,
+      "figure_dir": "results/figures/deep_learning",
+      "freeze_backbone": false,
+      "gradient_clip_norm": 1.0,
+      "image_root": "data/processed/images",
+      "image_size": 224,
+      "learning_rate": 0.0001,
+      "log_dir": "results/logs/deep_learning",
+      "metrics_dir": "results/metrics/deep_learning",
+      "min_epochs": 5,
+      "model_dir": "results/models/deep_learning",
+      "model_name": "resnet18",
+      "num_classes": 500,
+      "num_workers": 4,
+      "optimizer": "adamw",
+      "patience": 4,
+      "preflight_batches": 10,
+      "pretrained": true,
+      "scheduler": "cosine",
+      "schema_version": 1,
+      "seed": 42,
+      "split_dir": "data/splits",
+      "weight_decay": 0.0001
+    },
+    "contract_sha256": "27e1a68c91e01385beb450293d9e4aab23482b908adcf948f607d89910e51c39",
+    "dataset_size": 20000,
+    "epoch_1_sampler_order_sha256": "11efa6bdf8d1dd702ac0831c97c127532d4cdfd7143ff86f5ca8d33ec2dd993f",
+    "initial_model_state_sha256": "4cbfa912b487cc646f1a186957f6947e2cfc42d8b129cb1a430b06515940788d",
+    "policy": "D2 variants differ only in training transform",
+    "sampler_algorithm": "torch.randperm via RandomSampler with isolated generator",
+    "sampler_seed": 42
+  },
+  "d2_peer_check": {
+    "peer": "resnet18_pretrained_strong_aug",
+    "status": "peer_not_yet_available"
+  },
+  "device": "mps",
+  "epochs": 15,
+  "experiment_name": "resnet18_pretrained_basic",
+  "figure_dir": "results/figures/deep_learning",
+  "freeze_backbone": false,
+  "gradient_accumulation_steps": 1,
+  "gradient_clip_norm": 1.0,
+  "image_root": "data/processed/images",
+  "image_size": 224,
+  "implementation_hashes": {
+    "dataset.py": "e3206e753e0c3852c161d97387b0201119399c76ce279f05097d91e4a8e40ff5",
+    "models.py": "526c913de6c60ba908a72cd35a8311138f50a8ac550354858e4e536b5bacdc3e",
+    "train_deep.py": "a801a2cb93d3dc77f89a11aa297863f513f68215062d578564d22a0bcd0554fe",
+    "train_utils.py": "db7a5e358f482c61a1003a7a484a4c9e7d697d10b9901948b762570e60eab1b1",
+    "transforms.py": "2435058bd2a433156fe9734cd5b0dcdc1351c8be739a06795f2a4addc07c4950"
+  },
+  "initial_model_state_sha256": "4cbfa912b487cc646f1a186957f6947e2cfc42d8b129cb1a430b06515940788d",
+  "learning_rate": 0.0001,
+  "log_dir": "results/logs/deep_learning",
+  "metrics_dir": "results/metrics/deep_learning",
+  "micro_batch_size": 32,
+  "min_epochs": 5,
+  "model_dir": "results/models/deep_learning",
+  "model_metadata": {
+    "architecture": "resnet18",
+    "classifier_in_features": 512,
+    "classifier_path": "fc",
+    "freeze_backbone": false,
+    "num_classes": 500,
+    "pretrained": true,
+    "total_parameters": 11433012,
+    "trainable_parameters": 11433012,
+    "weight_file_name": "resnet18-f37072fd.pth",
+    "weight_file_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "weights_enum": "ResNet18_Weights.IMAGENET1K_V1",
+    "weights_url": "https://download.pytorch.org/models/resnet18-f37072fd.pth"
+  },
+  "model_name": "resnet18",
+  "num_classes": 500,
+  "num_workers": 4,
+  "optimizer": "adamw",
+  "patience": 4,
+  "preflight_batches": 10,
+  "preflight_projected_training_seconds": 1967.4991749687324,
+  "pretrained": true,
+  "resolved_device": "mps",
+  "scheduler": "cosine",
+  "schema_version": 1,
+  "seed": 42,
+  "seed_metadata": {
+    "deterministic_algorithms_requested": true,
+    "seed": 42,
+    "warnings": []
+  },
+  "source_config_path": "configs/deep_resnet18_pretrained_basic.yaml",
+  "source_config_sha256": "f7ad4a2742811b92c55ad9d42f3d1bdd4b0215b7b5dc2e80cb7624fcf61fa1dd",
+  "split_dir": "data/splits",
+  "stage1_artifacts": {
+    "class_mapping.json": {
+      "bytes": 279280,
+      "path": "data/splits/class_mapping.json",
+      "sha256": "2d6e60104b133d2758dffd585d373b085ddb42845d0b4b2c93bf5277ef9a0a1b",
+      "verification": "verified_current_bytes"
+    },
+    "selected_classes_seed42.txt": {
+      "bytes": 2450,
+      "path": "data/splits/selected_classes_seed42.txt",
+      "sha256": "3c2af417a5c174ef14f2be117a00880b0a08f8dce0c24fad6aaa8ea5dcde8141",
+      "verification": "verified_current_bytes"
+    },
+    "split_summary.json": {
+      "bytes": 2063,
+      "path": "data/splits/split_summary.json",
+      "sha256": "324413fb3d8d3affe611f8fd1454358cf54f2e6fcd81ef961994be0cc19f0b76",
+      "verification": "verified_current_bytes"
+    },
+    "test.csv": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91",
+      "verification": "accepted_precheck_digest; file not opened"
+    },
+    "train.csv": {
+      "bytes": 4971333,
+      "path": "data/splits/train.csv",
+      "sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+      "verification": "verified_current_bytes"
+    },
+    "val.csv": {
+      "bytes": 1222951,
+      "path": "data/splits/val.csv",
+      "sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb",
+      "verification": "verified_current_bytes"
+    }
+  },
+  "target_effective_batch_size": 32,
+  "versions": {
+    "Pillow": "12.3.0",
+    "PyYAML": "6.0.3",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "python": "3.12.13",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.1",
+    "torchvision": "0.27.1"
+  },
+  "weight_decay": 0.0001
+}

@@ -1,0 +1,12 @@
+{
+  "best_checkpoint_sha256": "787bc18b24b02e7671eea4197af75be8f193c969331351d8173a84aad7cd7a97",
+  "best_epoch": 14,
+  "completed_epochs": 15,
+  "device": "mps",
+  "experiment_name": "efficientnet_b0_pretrained_strong_aug",
+  "resolved_config_sha256": "272e5d5f7e4b2dc800e893f2b19f944fd12c67e999f9fa25d5d9571275e6cd1c",
+  "resume_checkpoint": null,
+  "schema_version": 1,
+  "status": "COMPLETE",
+  "training_time_seconds": 2421.252361708008
+}

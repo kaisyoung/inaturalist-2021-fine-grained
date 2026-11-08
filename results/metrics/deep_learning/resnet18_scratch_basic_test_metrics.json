@@ -1,0 +1,104 @@
+{
+  "artifacts": {
+    "confusion": {
+      "bytes": 12920,
+      "path": "results/metrics/deep_learning/resnet18_scratch_basic_test_confusion.npz",
+      "sha256": "ddc24ac0d10db0bce932e8e17617f09208c0e98054218af0f7d15215276d37d2"
+    },
+    "confusion_figure": {
+      "bytes": 95041,
+      "path": "results/figures/deep_learning/resnet18_scratch_basic_test_confusion_matrix.png",
+      "sha256": "a101b08227036926e5bbc98be5b49011c8dcc4ac7820f7bb493a49a4f69c76be"
+    },
+    "pairs": {
+      "bytes": 2899,
+      "path": "results/tables/deep_learning/resnet18_scratch_basic_test_top_confusions.csv",
+      "sha256": "11e90273444f717184928496df7186ec4975ea76003546cee8b77c5159753366"
+    },
+    "pairs_figure": {
+      "bytes": 151294,
+      "path": "results/figures/deep_learning/resnet18_scratch_basic_test_top_confusions.png",
+      "sha256": "6d825b9e22fd5dc1d6b5b1748cd40d81c278e27c21004cfa9f6aedb6a300a02a"
+    },
+    "per_class": {
+      "bytes": 42284,
+      "path": "results/tables/deep_learning/resnet18_scratch_basic_test_per_class_metrics.csv",
+      "sha256": "29fc2da60d71e45a6a9f38a0879d129754e075ecf898483a4369c54d5bd34920"
+    },
+    "predictions": {
+      "bytes": 3120318,
+      "path": "results/predictions/deep_learning/resnet18_scratch_basic_test_predictions.csv",
+      "sha256": "3f3a8050c4f8fb79eba7f021092ea31295af07436261b51733e53cb1371dcdaf"
+    }
+  },
+  "best_epoch": 23,
+  "experiment_name": "resnet18_scratch_basic",
+  "freeze_backbone": false,
+  "image_size": 224,
+  "metrics": {
+    "evaluation_wall_time_seconds": 14.461283541997545,
+    "loss": 3.497968946838379,
+    "macro_f1": 0.2927815784849488,
+    "macro_precision": 0.30534177542107616,
+    "macro_recall": 0.2988,
+    "model_forward_time_seconds": 7.0270640879898565,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.2988,
+    "seconds_per_image": 0.0014054128175979713,
+    "test_time_seconds": 7.0270640879898565,
+    "top1_accuracy": 0.2988,
+    "top5_accuracy": 0.5364
+  },
+  "model_name": "resnet18",
+  "num_classes": 500,
+  "pretrained": false,
+  "provenance": {
+    "checkpoint_path": "results/models/deep_learning/resnet18_scratch_basic_best.pt",
+    "checkpoint_sha256": "509dd62c39597ad868b9527ae8b2fc7e42f25fcb239f067310a3ad6e0bfa8bd6",
+    "device": "mps",
+    "freeze_manifest_path": "results/metrics/deep_learning/stage3_freeze.json",
+    "freeze_manifest_sha256": "bea68b307fb7ff5db4f066b47ff00ade462bd71609ed9735c4faff125ce2257f",
+    "resolved_config_path": "results/metrics/deep_learning/resnet18_scratch_basic_resolved_config.json",
+    "resolved_config_sha256": "f07990f366bfa329a266cc8d5aca429101ab9ae0104e479c2918cbe44cd35a4d",
+    "source_config_path": "configs/deep_resnet18_scratch.yaml",
+    "source_config_sha256": "9ff576c726d1b283ca26517403d1a3943d16aa81e33340ffda7a8d11e3772800",
+    "split_manifest": "test.csv",
+    "split_manifest_sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91",
+    "stored_best_metrics_path": "results/metrics/deep_learning/resnet18_scratch_basic_best_val_metrics.json",
+    "stored_best_metrics_sha256": "fdf56fc822eb10f4e3f777a5defeb6f16aea38b1145014956e0a874eac0f239b",
+    "test_access_record_path": "results/metrics/deep_learning/stage3_test_access.json",
+    "versions": {
+      "Pillow": "12.3.0",
+      "PyYAML": "6.0.3",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "platform": "macOS-27.0-arm64-arm-64bit",
+      "python": "3.12.13",
+      "scikit_learn": "1.7.2",
+      "torch": "2.12.1",
+      "torchvision": "0.27.1"
+    }
+  },
+  "schema_version": 1,
+  "score_type": "softmax_probability",
+  "split": "test",
+  "status": "complete",
+  "training_time_seconds": 2772.483812662991,
+  "validation": {
+    "loss": 3.534687925720215,
+    "macro_f1": 0.27955193632575925,
+    "macro_precision": 0.2909119259249896,
+    "macro_recall": 0.2874,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.2874,
+    "top1_accuracy": 0.2874,
+    "top5_accuracy": 0.5274
+  },
+  "validation_recheck": {
+    "agrees_with_stored_best": true,
+    "source": "frozen independent validation",
+    "validation_metrics_sha256": "0954296aa879d479f62988ad5dc07f42ef56927706dc85e6900c8bc6c66c1df8"
+  }
+}

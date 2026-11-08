@@ -1,0 +1,501 @@
+new_label,original_category_id,scientific_name,common_name,precision,recall,f1,support,predicted_count,true_positives
+0,52,Nyssus coloripes,Spotted ground swift,0.0,0.0,0.0,10,4,0
+1,64,Holocnemus pluchei,Marbled Cellar Spider,0.0,0.0,0.0,10,12,0
+2,70,Dolomedes triton,Six-spotted Fishing Spider,0.0,0.0,0.0,10,5,0
+3,97,Plexippus paykulli,Pantropical Jumper,0.0,0.0,0.0,10,11,0
+4,138,Dermacentor occidentalis,Pacific Coast Tick,0.0,0.0,0.0,10,10,0
+5,177,Pycnoscelus surinamensis,Surinam Cockroach,0.0,0.0,0.0,10,2,0
+6,178,Blatta orientalis,Oriental Cockroach,0.0,0.0,0.0,10,10,0
+7,190,Cantharis rustica,Rustic Sailor Beetle,0.0,0.0,0.0,10,5,0
+8,211,Cicindela scutellaris,Festive Tiger Beetle,0.23076923076923078,0.6,0.3333333333333333,10,26,6
+9,218,Tetracha carolina,Carolina Metallic Tiger Beetle,0.0,0.0,0.0,10,2,0
+10,219,Agapanthia villosoviridescens,Golden-bloomed Longhorn,0.09090909090909091,0.1,0.09523809523809523,10,11,1
+11,222,Cerambyx scopolii,Capricorn beetle,0.0,0.0,0.0,10,1,0
+12,247,Pseudovadonia livida,Fairy-ring Longhorn Beetle,0.125,0.3,0.17647058823529413,10,24,3
+13,249,Rhagium mordax,Blackspotted Longhorn Beetle,0.0,0.0,0.0,10,0,0
+14,297,Xanthogaleruca luteola,Elm Leaf Beetle,0.0,0.0,0.0,10,1,0
+15,315,Coleomegilla maculata,Spotted Ladybeetle,0.0,0.0,0.0,10,2,0
+16,334,Cactophagus spinolae,Cactus Weevil,0.0,0.0,0.0,10,3,0
+17,358,Lucanus capreolus,Reddish-brown Stag Beetle,0.2,0.1,0.13333333333333333,10,5,1
+18,367,Meloe proscarabaeus,Black Oil Beetle,0.0,0.0,0.0,10,5,0
+19,405,Necrodes surinamensis,Red-lined Carrion Beetle,0.0,0.0,0.0,10,2,0
+20,418,Zopherus nodulosus,Zopherus nodulosus,0.0,0.0,0.0,10,13,0
+21,442,Physocephala tibialis,Common Eastern Physocephala,0.13333333333333333,0.2,0.16,10,15,2
+22,443,Aedes aegypti,Yellow Fever Mosquito,0.0,0.0,0.0,10,6,0
+23,562,Coreus marginatus,Dock Bug,0.0,0.0,0.0,10,5,0
+24,608,Banasa dimidiata,Green Burgundy Stink Bug,0.0,0.0,0.0,10,3,0
+25,635,Picromerus bidens,Spiny Shield Bug,0.0,0.0,0.0,10,4,0
+26,648,Apiomerus spissipes,Apiomerus spissipes,0.0,0.0,0.0,10,6,0
+27,668,Poecilocoris lewisi,Clown Stink Bug,0.0,0.0,0.0,10,1,0
+28,730,Andricus kingi,Red Cone Gall Wasp,0.14285714285714285,0.1,0.11764705882352941,10,7,1
+29,762,Paratrechina longicornis,Longhorn Crazy Ant,0.0,0.0,0.0,10,6,0
+30,770,Tetramorium immigrans,Immigrant Pavement Ant,0.0,0.0,0.0,10,23,0
+31,803,Isodontia mexicana,Mexican Grass-carrying Wasp,0.043478260869565216,0.1,0.06060606060606061,10,23,1
+32,809,Myzinum quinquecinctum,Five-banded Thynnid Wasp,0.0,0.0,0.0,10,6,0
+33,817,Euodynerus foraminatus,Euodynerus foraminatus,0.0,0.0,0.0,10,5,0
+34,822,Polistes annularis,Jack Spaniard Wasp,1.0,0.1,0.18181818181818182,10,1,1
+35,838,Vespa affinis,Lesser Banded Hornet,0.0,0.0,0.0,10,2,0
+36,847,Vespula vulgaris,Common Yellowjacket,0.0,0.0,0.0,10,1,0
+37,849,Nemophora degeerella,Yellow-barred Longhorn,0.11764705882352941,0.2,0.14814814814814814,10,17,2
+38,870,Chrysoteuchia topiarius,Topiary Grass-veneer Moth,0.0,0.0,0.0,10,5,0
+39,872,Cnaphalocrocis poeyalis,Lesser Rice-leafroller,0.2,0.1,0.13333333333333333,10,5,1
+40,878,Desmia funeralis,Grape Leaffolder Moth,0.5,0.1,0.16666666666666666,10,2,1
+41,895,Herpetogramma phaeopteralis,Dusky Herpetogramma,0.1,0.1,0.1,10,10,1
+42,896,Hileithia magualis,Magician Moth,0.15384615384615385,0.2,0.17391304347826086,10,13,2
+43,922,Parapoynx maculalis,Polymorphic Pondweed Moth,0.1875,0.3,0.23076923076923078,10,16,3
+44,932,Pyrausta laticlavia,Southern Purple Mint Moth,0.0,0.0,0.0,10,1,0
+45,936,Pyrausta tyralis,Coffee-loving Pyrausta Moth,0.4,0.2,0.26666666666666666,10,5,2
+46,1009,Cisseps fulvicollis,Yellow-collared Scape Moth,0.0,0.0,0.0,10,2,0
+47,1026,Eilema lurideola,Common Footman,0.0,0.0,0.0,10,0,0
+48,1054,Hypercompe oslari,Hypercompe oslari,0.0,0.0,0.0,10,8,0
+49,1058,Hypoprepia miniata,Scarlet-winged Lichen Moth,0.3333333333333333,0.5,0.4,10,15,5
+50,1065,Lascoria ambigualis,Ambiguous Moth,0.0,0.0,0.0,10,5,0
+51,1089,Nyctemera annulata,New Zealand Magpie Moth,0.0,0.0,0.0,10,1,0
+52,1101,Panopoda carneicosta,Brown Panopoda Moth,0.14285714285714285,0.1,0.11764705882352941,10,7,1
+53,1144,Paectes oculatrix,Eyed Paectes Moth,0.4,0.2,0.26666666666666666,10,5,2
+54,1166,Chloraspilates bicoloraria,Bicolored Chloraspilates Moth,0.375,0.3,0.3333333333333333,10,8,3
+55,1188,Didymoctenia exsuperata,Didymoctenia exsuperata,0.29411764705882354,0.5,0.37037037037037035,10,17,5
+56,1208,Epyaxa rosearia,New Zealand Looper,0.0625,0.1,0.07692307692307693,10,16,1
+57,1213,Eulithis explanata,White Eulithis Moth,0.08333333333333333,0.1,0.09090909090909091,10,12,1
+58,1219,Gastrina cristaria,Waved-lined Geometrid,0.15,0.3,0.2,10,20,3
+59,1229,Horisme intestinata,Brown Bark Carpet Moth,0.125,0.1,0.1111111111111111,10,8,1
+60,1240,Idaea tacturata,Dot-lined Wave,0.2,0.2,0.2,10,10,2
+61,1243,Iridopsis defectaria,Brown-shaded Gray Moth,0.2,0.2,0.2,10,10,2
+62,1301,Pseudocoremia suavis,Common Forest Looper,0.0,0.0,0.0,10,2,0
+63,1306,Scopula limboundata,Large Lace Border Moth,0.0,0.0,0.0,10,9,0
+64,1314,Tetracis cachexiata,White Slant-line,0.0,0.0,0.0,10,2,0
+65,1341,Borbo cinnara,Formosan Swift,0.0,0.0,0.0,10,28,0
+66,1344,Burnsius oileus,Tropical Checkered Skipper,0.14285714285714285,0.1,0.11764705882352941,10,7,1
+67,1365,Erynnis tristis,Mournful Duskywing,0.0,0.0,0.0,10,8,0
+68,1375,Lerema accius,Clouded Skipper,0.0,0.0,0.0,10,2,0
+69,1388,Panoquina ocola,Ocola Skipper,0.0,0.0,0.0,10,8,0
+70,1398,Pompeius verna,Little Glassywing,0.1,0.1,0.1,10,10,1
+71,1409,Urbanus procne,Brown Longtail,0.0,0.0,0.0,10,1,0
+72,1425,Trabala vishnou,Rose Myrtle Lappet Moth,0.0,0.0,0.0,10,1,0
+73,1474,Euphilotes bernardino,Bernardino Dotted-Blue,0.058823529411764705,0.1,0.07407407407407407,10,17,1
+74,1475,Favonius quercus,Purple hairstreak,0.0,0.0,0.0,10,5,0
+75,1480,Heliophorus epicles,Purple Sapphire,0.15384615384615385,0.4,0.2222222222222222,10,26,4
+76,1493,Leptotes marina,Marine Blue,0.0,0.0,0.0,10,2,0
+77,1515,Plebejus melissa,Melissa Blue,0.0,0.0,0.0,10,8,0
+78,1539,Zizeeria karsandra,Dark Grass Blue,0.11764705882352941,0.2,0.14814814814814814,10,17,2
+79,1560,Acronicta superans,Splendid Dagger Moth,0.5,0.1,0.16666666666666666,10,2,1
+80,1575,Anagrapha falcifera,Celery Looper,0.0,0.0,0.0,10,3,0
+81,1576,Anaplectoides prasina,Green Arches,0.0,0.0,0.0,10,1,0
+82,1610,Cucullia asteroides,Asteroid Moth,0.125,0.1,0.1111111111111111,10,8,1
+83,1614,Diachrysia balluca,Hologram Moth,0.0,0.0,0.0,10,6,0
+84,1621,Eudryas grata,Beautiful Wood-nymph,0.1111111111111111,0.1,0.10526315789473684,10,9,1
+85,1654,Marimatha nigrofimbria,Black-bordered Lemon Moth,0.3333333333333333,0.1,0.15384615384615385,10,3,1
+86,1665,Nephelodes minians,Bronzed Cutworm Moth,0.07142857142857142,0.1,0.08333333333333333,10,14,1
+87,1709,Spragueia leo,Common Spragueia,0.0,0.0,0.0,10,6,0
+88,1719,Tyta luctuosa,Four-spotted Moth,0.0,0.0,0.0,10,2,0
+89,1727,Nola cereella,Sorghum Webworm Moth,0.1111111111111111,0.3,0.16216216216216217,10,27,3
+90,1738,Gluphisia septentrionis,Common Gluphisia,0.05,0.1,0.06666666666666667,10,20,1
+91,1749,Peridea basitriens,Oval-based Prominent Moth,0.16666666666666666,0.2,0.18181818181818182,10,12,2
+92,1773,Anaea aidea,Tropical Leafwing Butterfly,0.0,0.0,0.0,10,3,0
+93,1779,Anthanassa tulcis,Pale-banded Crescent,0.0,0.0,0.0,10,11,0
+94,1809,Chlosyne ehrenbergii,White-rayed Patch,0.0,0.0,0.0,10,0,0
+95,1813,Chlosyne janais,Crimson Patch,0.0,0.0,0.0,10,7,0
+96,1835,Dione moneta,Mexican Silverspot,0.18181818181818182,0.2,0.19047619047619047,10,11,2
+97,1859,Euptoieta claudia,Variegated Fritillary,0.0,0.0,0.0,10,0,0
+98,1915,Marpesia chiron,Many-banded Daggerwing,0.0,0.0,0.0,10,8,0
+99,1919,Megisto rubricata,Red Satyr,0.0,0.0,0.0,10,8,0
+100,1944,Parantica aglea,Glassy Tiger,0.0,0.0,0.0,10,18,0
+101,1967,Siproeta stelenes,Malachite,0.0,0.0,0.0,10,4,0
+102,1982,Tisiphone abeona,Swordgrass Brown,0.0,0.0,0.0,10,7,0
+103,1994,Ypthima huebneri,Common Four-ring,0.0,0.0,0.0,10,10,0
+104,2069,Delias pasithoe,Red-based Jezebel,0.0,0.0,0.0,10,0,0
+105,2166,Saturnia pavonia,Small Emperor Moth,0.0,0.0,0.0,10,0,0
+106,2173,Agrius convolvuli,Convolvulus Hawkmoth,0.0,0.0,0.0,10,2,0
+107,2203,Lapara bombycoides,Northern Pine Sphinx Moth,1.0,0.1,0.18181818181818182,10,1,1
+108,2257,Isotenes miserana,Orange Fruit Borer,0.0,0.0,0.0,10,16,0
+109,2262,Platynota rostrana,Omnivorous Platynota Moth,0.3333333333333333,0.1,0.15384615384615385,10,3,1
+110,2276,Zygaena lonicerae,narrow-bordered five-spot burnet,0.16666666666666666,0.2,0.18181818181818182,10,12,2
+111,2299,Climaciella brunnea,Wasp Mantidfly,0.0,0.0,0.0,10,13,0
+112,2313,Aeshna palmata,Paddle-tailed Darner,0.0,0.0,0.0,10,3,0
+113,2323,Epiaeschna heros,Swamp Darner,0.0,0.0,0.0,10,0,0
+114,2361,Chromagrion conditum,Aurora Damsel,0.2857142857142857,0.2,0.23529411764705882,10,7,2
+115,2381,Erythromma najas,Red-eyed Damselfly,0.3333333333333333,0.1,0.15384615384615385,10,3,1
+116,2393,Ischnura senegalensis,Common Bluetail,0.0,0.0,0.0,10,17,0
+117,2500,Leucorrhinia hudsonica,Hudsonian Whiteface,0.0,0.0,0.0,10,5,0
+118,2520,Macrodiplax balteata,Marl Pennant,0.058823529411764705,0.1,0.07407407407407407,10,17,1
+119,2535,Orthetrum chrysis,Brown-backed Red Marsh Hawk,0.09090909090909091,0.1,0.09523809523809523,10,11,1
+120,2558,Rhyothemis phyllis,Yellow-striped Flutterer,0.05,0.1,0.06666666666666667,10,20,1
+121,2580,Tramea onusta,Red Saddlebags,0.0,0.0,0.0,10,8,0
+122,2593,Nososticta solida,Orange Threadtail,0.0,0.0,0.0,10,6,0
+123,2614,Hesperotettix viridis,Snakeweed Grasshopper,0.0,0.0,0.0,10,3,0
+124,2640,Valanga nigricornis,Javanese Grasshopper,0.0,0.0,0.0,10,3,0
+125,2645,Gryllus bimaculatus,African field cricket,0.0,0.0,0.0,10,2,0
+126,2663,Tropidacris cristata,giant red-winged grasshopper,0.0,0.0,0.0,10,3,0
+127,2666,Conocephalus brevipennis,Short-winged Meadow Katydid,0.25,0.1,0.14285714285714285,10,4,1
+128,2698,Ctenolepisma lineata,Four-lined Silverfish,0.13333333333333333,0.2,0.16,10,15,2
+129,2715,Grapsus grapsus,Sally Lightfoot Crab,0.15384615384615385,0.2,0.17391304347826086,10,13,2
+130,2760,Dorosoma cepedianum,American Gizzard Shad,0.0,0.0,0.0,10,4,0
+131,2766,Luxilus chrysocephalus,Striped Shiner,0.04,0.1,0.05714285714285714,10,25,1
+132,2768,Notemigonus crysoleucas,Golden Shiner,0.1,0.1,0.1,10,10,1
+133,2776,Fundulus heteroclitus,Mummichog,0.05263157894736842,0.2,0.08333333333333333,10,38,2
+134,2788,Lepisosteus platyrhincus,Florida Gar,0.1111111111111111,0.1,0.10526315789473684,10,9,1
+135,2834,Bodianus diplotaenia,Mexican Hogfish,0.0,0.0,0.0,10,15,0
+136,2850,Ocyurus chrysurus,Yellowtail Snapper,0.17647058823529413,0.3,0.2222222222222222,10,17,3
+137,2863,Abudefduf saxatilis,Atlantic Sergeant Major,0.07142857142857142,0.1,0.08333333333333333,10,14,1
+138,2873,Parma microlepis,White-ear Parma,0.1,0.1,0.1,10,10,1
+139,2880,Micropogonias undulatus,Atlantic Croaker,0.0,0.0,0.0,10,11,0
+140,2897,Zanclus cornutus,Moorish Idol,0.08333333333333333,0.2,0.11764705882352941,10,24,2
+141,2921,Phycodurus eques,Leafy Seadragon,0.15384615384615385,0.4,0.2222222222222222,10,26,4
+142,2928,Mola mola,Ocean Sunfish,0.06060606060606061,0.2,0.09302325581395349,10,33,2
+143,2941,Bombina variegata,Yellow-bellied Toad,0.0,0.0,0.0,10,6,0
+144,2944,Anaxyrus cognatus,Great Plains Toad,0.0,0.0,0.0,10,4,0
+145,2963,Phrynoidis asper,River Toad,0.0,0.0,0.0,10,5,0
+146,2975,Oophaga pumilio,Strawberry Poison-dart Frog,0.0,0.0,0.0,10,4,0
+147,2992,Hyla meridionalis,Mediterranean Tree Frog,0.0,0.0,0.0,10,0,0
+148,2994,Hyla versicolor,Gray Tree Frog,0.0,0.0,0.0,10,3,0
+149,3006,Hyperolius marmoratus,Painted Reed Frog,0.0,0.0,0.0,10,1,0
+150,3047,Rana luteiventris,Columbia Spotted Frog,0.0,0.0,0.0,10,3,0
+151,3072,Aneides lugubris,Arboreal Salamander,0.0,0.0,0.0,10,4,0
+152,3096,Pseudotriton ruber,Red Salamander,0.0,0.0,0.0,10,2,0
+153,3105,Taricha sierrae,Sierra Newt,0.0,0.0,0.0,10,3,0
+154,3116,Accipiter trivirgatus,Crested Goshawk,0.0,0.0,0.0,10,0,0
+155,3117,Aegypius monachus,Cinereous Vulture,0.2727272727272727,0.3,0.2857142857142857,10,11,3
+156,3120,Aquila heliaca,Imperial Eagle,0.125,0.1,0.1111111111111111,10,8,1
+157,3149,Elanoides forficatus,American Swallow-tailed Kite,0.13333333333333333,0.2,0.16,10,15,2
+158,3162,Haliaeetus leucogaster,White-bellied Sea-Eagle,0.07142857142857142,0.1,0.08333333333333333,10,14,1
+159,3173,Necrosyrtes monachus,Hooded Vulture,0.0,0.0,0.0,10,2,0
+160,3217,Aythya australis,White-eyed Duck,0.05,0.1,0.06666666666666667,10,20,1
+161,3232,Bucephala islandica,Barrow's Goldeneye,0.0,0.0,0.0,10,10,0
+162,3247,Dendrocygna javanica,Lesser Whistling-Duck,0.5,0.1,0.16666666666666666,10,2,1
+163,3287,Apus apus,Common Swift,0.125,0.2,0.15384615384615385,10,16,2
+164,3312,Campylopterus hemileucurus,Violet Sabrewing,0.15151515151515152,0.5,0.23255813953488372,10,33,5
+165,3322,Hylocharis leucotis,White-eared Hummingbird,0.0,0.0,0.0,10,8,0
+166,3338,Brachyramphus marmoratus,Marbled Murrelet,0.1111111111111111,0.3,0.16216216216216217,10,27,3
+167,3349,Charadrius bicinctus,Double-banded Plover,0.0,0.0,0.0,10,13,0
+168,3383,Haematopus moquini,African Oystercatcher,0.058823529411764705,0.1,0.07407407407407407,10,17,1
+169,3388,Hydrophasianus chirurgus,Pheasant-tailed Jacana,0.25,0.1,0.14285714285714285,10,4,1
+170,3476,Limosa haemastica,Hudsonian Godwit,0.06666666666666667,0.1,0.08,10,15,1
+171,3506,Jabiru mycteria,Jabiru,0.0,0.0,0.0,10,6,0
+172,3507,Leptoptilos crumenifer,Marabou Stork,0.0,0.0,0.0,10,5,0
+173,3530,Patagioenas leucocephala,White-crowned Pigeon,0.0,0.0,0.0,10,3,0
+174,3544,Zenaida asiatica,White-winged Dove,0.0,0.0,0.0,10,4,0
+175,3553,Dacelo novaeguineae,Laughing Kookaburra,0.0,0.0,0.0,10,1,0
+176,3564,Coracias benghalensis,Indian Roller,0.25,0.2,0.2222222222222222,10,8,2
+177,3632,Gallus gallus,Red Junglefowl,0.4,0.2,0.26666666666666666,10,5,2
+178,3646,Anthropoides paradiseus,Blue Crane,0.18181818181818182,0.2,0.19047619047619047,10,11,2
+179,3689,Psaltriparus minimus,Bushtit,0.0,0.0,0.0,10,3,0
+180,3691,Alauda arvensis,Skylark,0.0,0.0,0.0,10,2,0
+181,3717,Passerina leclancherii,Orange-breasted Bunting,0.07692307692307693,0.1,0.08695652173913043,10,13,1
+182,3741,Aphelocoma californica,California Scrub-Jay,0.0,0.0,0.0,10,2,0
+183,3753,Corvus corone,Carrion Crow,0.25,0.1,0.14285714285714285,10,4,1
+184,3833,Spinus lawrencei,Lawrence's Goldfinch,0.0,0.0,0.0,10,1,0
+185,3927,Caligavis chrysops,Yellow-faced Honeyeater,0.0,0.0,0.0,10,7,0
+186,3929,Gavicalis virescens,Singing Honeyeater,0.16666666666666666,0.1,0.125,10,6,1
+187,3939,Menura novaehollandiae,Superb Lyrebird,0.0,0.0,0.0,10,10,0
+188,3951,Grallina cyanoleuca,Magpie-lark,0.0,0.0,0.0,10,1,0
+189,3953,Terpsiphone paradisi,Indian Paradise-Flycatcher,0.0,0.0,0.0,10,9,0
+190,4039,Poecile gambeli,Mountain Chickadee,0.0,0.0,0.0,10,4,0
+191,4050,Geothlypis tolmiei,MacGillivray's Warbler,0.0,0.0,0.0,10,4,0
+192,4053,Leiothlypis celata,Orange-crowned Warbler,0.0,0.0,0.0,10,5,0
+193,4087,Setophaga townsendi,Townsend's Warbler,0.0,0.0,0.0,10,3,0
+194,4115,Peucaea cassinii,Cassin's Sparrow,0.0,0.0,0.0,10,5,0
+195,4124,Spizella passerina,Chipping Sparrow,0.0,0.0,0.0,10,0,0
+196,4139,Petroica australis,Toutouwai,0.0,0.0,0.0,10,1,0
+197,4171,Pycnonotus cafer,Red-vented Bulbul,0.0,0.0,0.0,10,5,0
+198,4174,Pycnonotus jocosus,Red-whiskered Bulbul,0.0,0.0,0.0,10,1,0
+199,4176,Pycnonotus sinensis,Light-vented Bulbul,0.0,0.0,0.0,10,0,0
+200,4188,Sitta europaea,Eurasian Nuthatch,0.0,0.0,0.0,10,1,0
+201,4193,Acridotheres tristis,Common Mynah,0.0,0.0,0.0,10,1,0
+202,4207,Sylvia curruca,Lesser Whitethroat,0.0,0.0,0.0,10,3,0
+203,4209,Thamnophilus doliatus,Barred Antshrike,0.0,0.0,0.0,10,11,0
+204,4225,Ramphocelus passerinii,Scarlet-rumped Tanager,0.0,0.0,0.0,10,2,0
+205,4229,Saltator maximus,Buff-throated Saltator,0.07142857142857142,0.1,0.08333333333333333,10,14,1
+206,4254,Campylorhynchus rufinucha,Rufous-naped Wren,0.0,0.0,0.0,10,2,0
+207,4258,Cistothorus platensis,Sedge Wren,0.0,0.0,0.0,10,11,0
+208,4287,Turdus philomelos,Song Thrush,0.0,0.0,0.0,10,1,0
+209,4293,Contopus cooperi,Olive-sided Flycatcher,0.14814814814814814,0.4,0.21621621621621623,10,27,4
+210,4296,Contopus virens,Eastern Wood-Pewee,0.0,0.0,0.0,10,9,0
+211,4300,Empidonax flaviventris,Yellow-bellied Flycatcher,0.0,0.0,0.0,10,12,0
+212,4309,Hymenops perspicillatus,Spectacled Tyrant,0.0,0.0,0.0,10,0,0
+213,4310,Machetornis rixosa,Cattle Tyrant,0.0,0.0,0.0,10,0,0
+214,4316,Myiarchus tyrannulus,Brown-crested Flycatcher,0.0,0.0,0.0,10,6,0
+215,4321,Pitangus sulphuratus,Great Kiskadee,0.0,0.0,0.0,10,7,0
+216,4344,Vireo griseus,White-eyed Vireo,0.0,0.0,0.0,10,6,0
+217,4365,Ardeola grayii,Indian Pond Heron,0.0,0.0,0.0,10,1,0
+218,4366,Ardeola ralloides,Squacco Heron,0.2,0.1,0.13333333333333333,10,5,1
+219,4412,Threskiornis aethiopicus,African Sacred Ibis,0.0,0.0,0.0,10,1,0
+220,4431,Colaptes punctigula,Spot-breasted Woodpecker,1.0,0.1,0.18181818181818182,10,1,1
+221,4439,Dryobates borealis,Red-cockaded Woodpecker,0.14285714285714285,0.2,0.16666666666666666,10,14,2
+222,4459,Picoides arcticus,Black-backed Woodpecker,0.05,0.1,0.06666666666666667,10,20,1
+223,4469,Pteroglossus torquatus,Collared Aracari,0.0,0.0,0.0,10,1,0
+224,4493,Fulmarus glacialis,Northern Fulmar,0.09090909090909091,0.1,0.09523809523809523,10,11,1
+225,4507,Ara macao,Scarlet Macaw,0.0,0.0,0.0,10,6,0
+226,4524,Cyanoramphus novaezelandiae,Red-crowned Parakeet,0.0,0.0,0.0,10,2,0
+227,4531,Psittacula krameri,Rose-ringed Parakeet,0.0,0.0,0.0,10,1,0
+228,4533,Trichoglossus moluccanus,Rainbow Lorikeet,0.14285714285714285,0.1,0.11764705882352941,10,7,1
+229,4555,Megascops kennicottii,Western Screech-Owl,0.0,0.0,0.0,10,2,0
+230,4566,Anhinga novaehollandiae,Australian Darter,0.0,0.0,0.0,10,1,0
+231,4623,Capra hircus,Domestic Goat,0.0,0.0,0.0,10,4,0
+232,4633,Oryx gazella,Gemsbok,0.2,0.1,0.13333333333333333,10,5,1
+233,4635,Ovis canadensis,Bighorn Sheep,0.0,0.0,0.0,10,1,0
+234,4661,Eschrichtius robustus,Gray Whale,0.125,0.2,0.15384615384615385,10,16,2
+235,4714,Neomonachus schauinslandi,Hawaiian Monk Seal,0.2222222222222222,0.4,0.2857142857142857,10,18,4
+236,4756,Lepus townsendii,White-tailed Jackrabbit,0.0,0.0,0.0,10,4,0
+237,4760,Sylvilagus bachmani,Brush Rabbit,0.0,0.0,0.0,10,11,0
+238,4763,Sylvilagus nuttallii,Mountain Cottontail,0.0,0.0,0.0,10,5,0
+239,4797,Hydrochoerus hydrochaeris,Capybara,0.0,0.0,0.0,10,3,0
+240,4800,Microtus pennsylvanicus,Meadow Vole,0.0,0.0,0.0,10,1,0
+241,4801,Myodes glareolus,Bank Vole,0.0,0.0,0.0,10,2,0
+242,4803,Ondatra zibethicus,Muskrat,0.0,0.0,0.0,10,1,0
+243,4815,Rattus rattus,Black Rat,0.0,0.0,0.0,10,1,0
+244,4817,Ammospermophilus harrisii,Harris' Antelope Squirrel,0.0,0.0,0.0,10,10,0
+245,4850,Sciurus yucatanensis,Yucatán Squirrel,0.1,0.1,0.1,10,10,1
+246,4858,Trichechus manatus,West Indian Manatee,0.0,0.0,0.0,10,6,0
+247,4861,Crocodylus acutus,American Crocodile,0.0,0.0,0.0,10,5,0
+248,4877,Stellagama stellio,Roughtail Rock Agama,0.0,0.0,0.0,10,7,0
+249,4884,Gerrhonotus infernalis,Texas Alligator Lizard,0.0,0.0,0.0,10,4,0
+250,4945,Oxybelis aeneus,Brown Vinesnake,0.0,0.0,0.0,10,1,0
+251,4960,Sonora semiannulata,Western Groundsnake,0.0,0.0,0.0,10,4,0
+252,4968,Thamnophis hammondii,Two-striped Garter Snake,0.0,0.0,0.0,10,6,0
+253,5007,Hemidactylus turcicus,Mediterranean House Gecko,0.0,0.0,0.0,10,5,0
+254,5022,Podarcis siculus,Italian Wall Lizard,0.0,0.0,0.0,10,1,0
+255,5055,Sceloporus orcutti,Granite Spiny Lizard,0.0,0.0,0.0,10,4,0
+256,5070,Eulamprus quoyii,Eastern Water Skink,0.0,0.0,0.0,10,9,0
+257,5100,Indotyphlops braminus,Khorat Blind Snake,0.0,0.0,0.0,10,3,0
+258,5119,Crotalus ornatus,Eastern Black-tailed Rattlesnake,0.041666666666666664,0.1,0.058823529411764705,10,24,1
+259,5183,Urticina grebelnyi,Painted Anemone,0.0,0.0,0.0,10,11,0
+260,5197,Aurelia labiata,Greater Moon Jellyfish,0.07692307692307693,0.1,0.08695652173913043,10,13,1
+261,5223,Donax gouldii,Gould Beanclam,0.11538461538461539,0.3,0.16666666666666666,10,26,3
+262,5252,Octopus tetricus,Common Sydney Octopus,0.0,0.0,0.0,10,10,0
+263,5287,Nucella lapillus,Dog Whelk,0.0,0.0,0.0,10,10,0
+264,5301,Doriopsilla fulva,White-spotted Dorid,0.21052631578947367,0.4,0.27586206896551724,10,19,4
+265,5308,Peltodoris nobilis,Sea Lemon,0.2,0.1,0.13333333333333333,10,5,1
+266,5320,Acanthodoris rhodoceras,Black-tipped Spiny Doris,0.14285714285714285,0.2,0.16666666666666666,10,14,2
+267,5322,Phyllidia ocellata,Ocellate Phyllidia,0.18518518518518517,0.5,0.2702702702702703,10,27,5
+268,5332,Ariolimax buttoni,Button's Banana Slug,0.0,0.0,0.0,10,3,0
+269,5338,Megaustenia imperator,Arboreal Snail,0.0,0.0,0.0,10,0,0
+270,5341,Discus rotundatus,Rounded Snail,0.0,0.0,0.0,10,6,0
+271,5375,Tegula funebralis,Black Tegula,0.13043478260869565,0.3,0.18181818181818182,10,23,3
+272,5379,Cryptochiton stelleri,Gumboot Chiton,0.0,0.0,0.0,10,7,0
+273,5387,Tonicella lineata,Lined Chiton,0.10714285714285714,0.3,0.15789473684210525,10,28,3
+274,5407,Evernia prunastri,Oakmoss,0.09090909090909091,0.1,0.09523809523809523,10,11,1
+275,5433,Peltigera praetextata,scaly pelt lichen,0.07692307692307693,0.2,0.1111111111111111,10,26,2
+276,5440,Teloschistes exilis,slender orange-bush,0.043478260869565216,0.1,0.06060606060606061,10,23,1
+277,5445,Umbilicaria mammulata,Smooth Rock Tripe,0.10256410256410256,0.4,0.16326530612244897,10,39,4
+278,5454,Gyromitra infula,Saddle-shaped False Morel,0.16666666666666666,0.1,0.125,10,6,1
+279,5469,Kretzschmaria deusta,Brittle Cinder,0.0,0.0,0.0,10,8,0
+280,5527,Calvatia gigantea,giant puffball,0.29411764705882354,0.5,0.37037037037037035,10,17,5
+281,5532,Cruentomycena viscidocruenta,Cruentomycena viscidocruenta,0.043478260869565216,0.1,0.06060606060606061,10,23,1
+282,5596,Myxarium nucleatum,Crystal Brain Fungus,0.0,0.0,0.0,10,8,0
+283,5634,Fuscoporia gilva,Mustard Yellow Polypore,0.15384615384615385,0.2,0.17391304347826086,10,13,2
+284,5637,Phellinus tremulae,Aspen Bracket,0.2,0.4,0.26666666666666666,10,20,4
+285,5674,Cryptoporus volvatus,Veiled Polypore,0.0,0.0,0.0,10,8,0
+286,5690,Trametes coccinea,Southern Cinnabar Polypore,0.14285714285714285,0.2,0.16666666666666666,10,14,2
+287,5735,Dicranum scoparium,broom fork-moss,0.0,0.0,0.0,10,5,0
+288,5767,Ulva lactuca,Sea Lettuce,0.0,0.0,0.0,10,7,0
+289,5773,Marchantia polymorpha,umbrella liverwort,0.0,0.0,0.0,10,5,0
+290,5809,Zantedeschia aethiopica,calla lily,0.15384615384615385,0.2,0.17391304347826086,10,13,2
+291,5885,Brodiaea terrestris,Dwarf Brodiaea,0.2727272727272727,0.6,0.375,10,22,6
+292,5930,Triteleia hyacinthina,white brodiaea,0.0,0.0,0.0,10,9,0
+293,5941,Yucca rupicola,Twisted-Leaf Yucca,0.18518518518518517,0.5,0.2702702702702703,10,27,5
+294,5942,Yucca schidigera,Mojave yucca,0.08,0.2,0.11428571428571428,10,25,2
+295,5983,Romulea rosea,Rosy sandcrocus,0.0,0.0,0.0,10,8,0
+296,6026,Dipodium roseum,Rosy Hyacinth Orchid,0.09523809523809523,0.2,0.12903225806451613,10,21,2
+297,6027,Disa bracteata,South African Weed Orchid,0.0,0.0,0.0,10,7,0
+298,6036,Epipactis palustris,Marsh Helleborine,0.0,0.0,0.0,10,12,0
+299,6037,Galearis spectabilis,showy orchis,0.08333333333333333,0.1,0.09090909090909091,10,12,1
+300,6054,Neottia nidus-avis,bird's-nest orchid,0.0,0.0,0.0,10,2,0
+301,6108,Tinantia anomala,False dayflower,0.25,0.4,0.3076923076923077,10,16,4
+302,6109,Tradescantia fluminensis,Wandering Jew,0.125,0.2,0.15384615384615385,10,16,2
+303,6112,Tradescantia pallida,Purple heart,0.3125,0.5,0.38461538461538464,10,16,5
+304,6120,Dioscorea bulbifera,air potato,0.1,0.1,0.1,10,10,1
+305,6127,Uvularia grandiflora,largeflower bellwort,0.25,0.1,0.14285714285714285,10,4,1
+306,6133,Calochortus catalinae,Catalina mariposa lily,0.0,0.0,0.0,10,6,0
+307,6220,Smilax rotundifolia,common greenbrier,0.0,0.0,0.0,10,10,0
+308,6247,Carex intumescens,bladder sedge,0.09090909090909091,0.1,0.09523809523809523,10,11,1
+309,6297,Scirpus atrovirens,dark green bulrush,0.0,0.0,0.0,10,10,0
+310,6313,Luzula multiflora,heath wood-rush,0.0,0.0,0.0,10,4,0
+311,6327,Aristida purpurea,purple three-awn,0.5,0.1,0.16666666666666666,10,2,1
+312,6332,Avena barbata,slender wild oat,0.0,0.0,0.0,10,4,0
+313,6387,Lamarckia aurea,goldentop grass,0.0,0.0,0.0,10,4,0
+314,6391,Lolium arundinaceum,Kentucky fescue,0.0,0.0,0.0,10,2,0
+315,6416,Poa annua,Annual Meadow-grass,0.058823529411764705,0.1,0.07407407407407407,10,17,1
+316,6418,Poa pratensis,Kentucky bluegrass,0.0,0.0,0.0,10,3,0
+317,6431,Stenotaphrum secundatum,Saint Augustine grass,0.0,0.0,0.0,10,5,0
+318,6444,Typha domingensis,southern cattail,0.15,0.3,0.2,10,20,3
+319,6458,Hedychium gardnerianum,Kahili ginger,0.058823529411764705,0.1,0.07407407407407407,10,17,1
+320,6472,Lycopodium volubile,Climbing clubmoss,0.07142857142857142,0.1,0.08333333333333333,10,14,1
+321,6473,Phlegmariurus varius,hanging clubmoss,0.0,0.0,0.0,10,32,0
+322,6529,Polytaenia texana,Texas Prairie Parsley,0.027777777777777776,0.1,0.043478260869565216,10,36,1
+323,6531,Sanicula arctopoides,Footsteps of spring,0.034482758620689655,0.1,0.05128205128205128,10,29,1
+324,6534,Sanicula crassicaulis,snakeroot,0.0,0.0,0.0,10,10,0
+325,6550,Aralia nudicaulis,wild sarsaparilla,0.058823529411764705,0.1,0.07407407407407407,10,17,1
+326,6565,Pseudopanax crassifolius,Lancewood,0.0,0.0,0.0,10,6,0
+327,6573,Pennantia corymbosa,Kaikomako,0.0,0.0,0.0,10,3,0
+328,6592,Achyrachaena mollis,Blow Wives,0.1111111111111111,0.2,0.14285714285714285,10,18,2
+329,6596,Adenophyllum porophylloides,San Felipe dogweed,0.0,0.0,0.0,10,1,0
+330,6612,Anaphalis margaritacea,pearly everlasting,0.0,0.0,0.0,10,2,0
+331,6621,Arctotheca calendula,Capeweed,0.0,0.0,0.0,10,4,0
+332,6625,Arnoglossum atriplicifolium,pale Indian plantain,0.0,0.0,0.0,10,10,0
+333,6630,Artemisia campestris,field wormwood,0.1875,0.3,0.23076923076923078,10,16,3
+334,6685,Centaurea solstitialis,Yellow Starthistle,0.08333333333333333,0.1,0.09090909090909091,10,12,1
+335,6712,Cirsium oleraceum,Cabbage Thistle,0.0,0.0,0.0,10,16,0
+336,6719,Conoclinium coelestinum,blue mistflower,0.2916666666666667,0.7,0.4117647058823529,10,24,7
+337,6741,Diaperia prolifera,flathead rabbit tobacco,0.09090909090909091,0.1,0.09523809523809523,10,11,1
+338,6743,Dieteria canescens,Hoary Tansyaster,0.42857142857142855,0.6,0.5,10,14,6
+339,6776,Erigeron philadelphicus,Philadelphia fleabane,0.14285714285714285,0.2,0.16666666666666666,10,14,2
+340,6789,Eupatorium perfoliatum,common boneset,0.0,0.0,0.0,10,10,0
+341,6826,Helianthus divaricatus,woodland sunflower,0.037037037037037035,0.1,0.05405405405405406,10,27,1
+342,6845,Hypochaeris glabra,Smooth Cat's Ear,0.0,0.0,0.0,10,4,0
+343,6888,Malacothrix saxatilis,Cliff Aster,0.0,0.0,0.0,10,1,0
+344,6938,Pinaropappus roseus,White Rock-lettuce,0.0,0.0,0.0,10,0,0
+345,6962,Rudbeckia amplexicaulis,clasping coneflower,0.05555555555555555,0.1,0.07142857142857142,10,18,1
+346,6988,Silphium laciniatum,compass plant,0.1111111111111111,0.1,0.10526315789473684,10,9,1
+347,6999,Solidago hispida,Hairy Goldenrod,0.0,0.0,0.0,10,9,0
+348,7004,Solidago rigida,stiff-leaved goldenrod,0.15789473684210525,0.3,0.20689655172413793,10,19,3
+349,7017,Symphyotrichum chilense,Pacific Aster,0.18181818181818182,0.2,0.19047619047619047,10,11,2
+350,7103,Lobelia cardinalis,cardinal flower,0.13157894736842105,0.5,0.20833333333333334,10,38,5
+351,7105,Lobelia inflata,Indian tobacco,0.0,0.0,0.0,10,11,0
+352,7121,Selliera radicans,Selliera,0.0,0.0,0.0,10,6,0
+353,7123,Nephrophyllidium crista-galli,Deer-cabbage,0.13043478260869565,0.3,0.18181818181818182,10,23,3
+354,7137,Cynoglossum officinale,hound's-tongue,0.16666666666666666,0.1,0.125,10,6,1
+355,7159,Hydrophyllum virginianum,Virginia waterleaf,0.0,0.0,0.0,10,11,0
+356,7169,Mertensia virginica,Virginia bluebells,0.14285714285714285,0.1,0.11764705882352941,10,7,1
+357,7205,Pulmonaria officinalis,Lungwort,0.14285714285714285,0.1,0.11764705882352941,10,7,1
+358,7233,Cardamine diphylla,Broadleaf Toothwort,0.041666666666666664,0.1,0.058823529411764705,10,24,1
+359,7241,Chorispora tenella,crossflower,0.3333333333333333,0.4,0.36363636363636365,10,12,4
+360,7257,Lepidium didymum,Lesser swine-cress,0.0,0.0,0.0,10,10,0
+361,7275,Sisymbrium loeselii,False London-rocket,0.0,0.0,0.0,10,6,0
+362,7339,Anredera cordifolia,Mignonette vine,0.0,0.0,0.0,10,2,0
+363,7354,Cylindropuntia ramosissima,branched pencil cholla,0.02857142857142857,0.1,0.044444444444444446,10,35,1
+364,7361,Echinocereus coccineus,scarlet hedgehog cactus,0.2222222222222222,0.2,0.21052631578947367,10,9,2
+365,7362,Echinocereus dasyacanthus,Spiny Hedgehog Cactus,0.041666666666666664,0.1,0.058823529411764705,10,24,1
+366,7365,Echinocereus fendleri,Fendler's hedgehog cactus,0.2857142857142857,0.2,0.23529411764705882,10,7,2
+367,7376,Ferocactus cylindraceus,California barrel cactus,0.06521739130434782,0.3,0.10714285714285714,10,46,3
+368,7381,Ferocactus wislizeni,fishhook barrel cactus,0.23809523809523808,0.5,0.3225806451612903,10,21,5
+369,7383,Homalocephala polycephala,harem cactus,0.05172413793103448,0.3,0.08823529411764706,10,58,3
+370,7385,Lophocereus schottii,senita cactus,0.06666666666666667,0.1,0.08,10,15,1
+371,7418,Stenocereus gummosus,Galloping Cactus,0.14285714285714285,0.2,0.16666666666666666,10,14,2
+372,7433,Herniaria glabra,Smooth Rupturewort,0.17647058823529413,0.3,0.2222222222222222,10,17,3
+373,7444,Saponaria ocymoides,Rock Soapwort,0.06060606060606061,0.2,0.09302325581395349,10,33,2
+374,7460,Silene vulgaris,bladder campion,0.0,0.0,0.0,10,4,0
+375,7463,Stellaria aquatica,Water Chickweed,0.10526315789473684,0.2,0.13793103448275862,10,19,2
+376,7480,Drosera spatulata,Rosy Sundew,0.23809523809523808,0.5,0.3225806451612903,10,21,5
+377,7496,Montia parvifolia,Small-leaved Blinks,0.0,0.0,0.0,10,9,0
+378,7504,Mirabilis laevis,Wishbone bush,0.25,0.1,0.14285714285714285,10,4,1
+379,7528,Eriogonum inflatum,desert trumpet,0.0,0.0,0.0,10,7,0
+380,7548,Persicaria hydropiper,waterpepper,0.0,0.0,0.0,10,7,0
+381,7559,Polygonum paronychia,beach knotweed,0.0,0.0,0.0,10,4,0
+382,7561,Reynoutria japonica,Asiatic Knotweed,0.0,0.0,0.0,10,5,0
+383,7572,Sarcobatus vermiculatus,Greasewood,0.029411764705882353,0.1,0.045454545454545456,10,34,1
+384,7602,Cornus rugosa,Round-leaved Dogwood,0.2,0.2,0.2,10,10,2
+385,7615,Mentzelia laevicaulis,Giant Blazingstar,0.0,0.0,0.0,10,9,0
+386,7619,Coriaria arborea,Tree Tutu,0.0,0.0,0.0,10,11,0
+387,7643,Lonicera canadensis,American fly-honeysuckle,0.0,0.0,0.0,10,9,0
+388,7653,Lonicera subspicata,Southern Honeysuckle,0.08333333333333333,0.1,0.09090909090909091,10,12,1
+389,7658,Scabiosa ochroleuca,Cream Scabiosa,0.0,0.0,0.0,10,14,0
+390,7663,Symphoricarpos occidentalis,Western Snowberry,0.0,0.0,0.0,10,4,0
+391,7671,Adoxa moschatellina,Moschatel,0.2222222222222222,0.2,0.21052631578947367,10,9,2
+392,7697,Impatiens walleriana,Impatiens,0.1,0.2,0.13333333333333333,10,20,2
+393,7719,Chamaedaphne calyculata,leatherleaf,0.0,0.0,0.0,10,2,0
+394,7729,Erica arborea,Tree heath,0.05263157894736842,0.1,0.06896551724137931,10,19,1
+395,7745,Gaylussacia baccata,black huckleberry,0.0,0.0,0.0,10,3,0
+396,7828,Phlox diffusa,spreading phlox,0.05263157894736842,0.1,0.06896551724137931,10,19,1
+397,7839,Polemonium californicum,California Jacob's ladder,0.1,0.1,0.1,10,10,1
+398,7865,Myrsine salicina,Toro,0.2,0.1,0.13333333333333333,10,5,1
+399,7868,Primula farinosa,Bird's-eye Primrose,0.2631578947368421,0.5,0.3448275862068966,10,19,5
+400,7893,Acacia melanoxylon,Tasmanian blackwood,0.0,0.0,0.0,10,9,0
+401,7907,Anthyllis vulneraria,common kidneyvetch,0.0,0.0,0.0,10,6,0
+402,7928,Canavalia rosea,Beach Bean,0.14285714285714285,0.1,0.11764705882352941,10,7,1
+403,7949,Dermatophyllum secundiflorum,Texas mountain laurel,0.0,0.0,0.0,10,5,0
+404,7955,Enterolobium cyclocarpum,elephant ear tree,0.0,0.0,0.0,10,5,0
+405,7980,Lathyrus japonicus,seaside pea,0.5,0.4,0.4444444444444444,10,8,4
+406,7981,Lathyrus latifolius,broad-leaved sweet pea,0.3,0.9,0.45,10,30,9
+407,7983,Lathyrus palustris,marsh pea,0.125,0.2,0.15384615384615385,10,16,2
+408,7993,Leucaena leucocephala,White leadtree,0.0,0.0,0.0,10,9,0
+409,7995,Lotus pedunculatus,greater bird's-foot-trefoil,0.047619047619047616,0.1,0.06451612903225806,10,21,1
+410,8021,Medicago minima,little bur-clover,0.0,0.0,0.0,10,5,0
+411,8074,Sesbania vesicaria,Bladder Pod,0.0,0.0,0.0,10,2,0
+412,8099,Trifolium repens,white clover,0.0,0.0,0.0,10,31,0
+413,8160,Castanea dentata,American chestnut,0.16666666666666666,0.3,0.21428571428571427,10,18,3
+414,8161,Castanea sativa,Sweet Chestnut,0.0,0.0,0.0,10,3,0
+415,8185,Quercus ilex,holly oak,0.0,0.0,0.0,10,6,0
+416,8204,Quercus stellata,post oak,0.1,0.1,0.1,10,10,1
+417,8218,Juglans regia,Persian walnut,0.0,0.0,0.0,10,9,0
+418,8230,Apocynum androsaemifolium,spreading dogbane,0.0,0.0,0.0,10,7,0
+419,8231,Apocynum cannabinum,hemp dogbane,0.07142857142857142,0.1,0.08333333333333333,10,14,1
+420,8258,Asclepias variegata,redring milkweed,0.0,0.0,0.0,10,9,0
+421,8279,Parsonsia heterophylla,New Zealand jasmine,0.0,0.0,0.0,10,5,0
+422,8325,Coprosma dumosa,Coprosma dumosa,0.0,0.0,0.0,10,15,0
+423,8336,Galium album,Hedge Bedstraw,0.1,0.2,0.13333333333333333,10,20,2
+424,8338,Galium aparine,catchweed bedstraw,0.0,0.0,0.0,10,9,0
+425,8373,Geranium erianthum,woolly cranesbill,0.21739130434782608,0.5,0.30303030303030304,10,23,5
+426,8450,Lavandula stoechas,topped lavender,0.3333333333333333,0.5,0.4,10,15,5
+427,8466,Mentha pulegium,Pennyroyal,0.0,0.0,0.0,10,1,0
+428,8527,Vitex lucens,Puriri,0.0,0.0,0.0,10,6,0
+429,8580,Castilleja linariifolia,Wyoming Indian paintbrush,0.2,0.1,0.13333333333333333,10,5,1
+430,8617,Triphysaria eriantha,Johnnytuck,0.17391304347826086,0.4,0.24242424242424243,10,23,4
+431,8654,Mecardonia procumbens,Yellow-flowered waterhyssop,0.2,0.1,0.13333333333333333,10,5,1
+432,8663,Penstemon eatonii,firecracker penstemon,0.043478260869565216,0.1,0.06060606060606061,10,23,1
+433,8670,Penstemon rostriflorus,Bridges' penstemon,0.05555555555555555,0.1,0.07142857142857142,10,18,1
+434,8717,Verbascum nigrum,Dark Mullein,0.0,0.0,0.0,10,10,0
+435,8752,Persea americana,Avocado,0.0,0.0,0.0,10,9,0
+436,8773,Croton glandulosus,Tropic Croton,0.0,0.0,0.0,10,5,0
+437,8784,Euphorbia characias,Mediterranean spurge,0.0,0.0,0.0,10,6,0
+438,8785,Euphorbia corollata,flowering spurge,0.0,0.0,0.0,10,3,0
+439,8790,Euphorbia helioscopia,Sun spurge,0.0,0.0,0.0,10,15,0
+440,8812,Euphorbia terracina,Geraldton Carnation Weed,0.0,0.0,0.0,10,3,0
+441,8815,Jatropha gossypiifolia,Bellyache Bush,0.2,0.2,0.2,10,10,2
+442,8820,Mercurialis perennis,Dog's Mercury,0.3333333333333333,0.2,0.25,10,6,2
+443,8826,Hypericum ascyron,Great St. John's Wort,0.0,0.0,0.0,10,20,0
+444,8858,Populus deltoides,eastern cottonwood,0.0,0.0,0.0,10,1,0
+445,8914,Viola sempervirens,Redwood Violet,0.2,0.2,0.2,10,10,2
+446,8998,Decodon verticillatus,willow-herb,0.16666666666666666,0.1,0.125,10,6,1
+447,9009,Rhexia virginica,Virginia meadow beauty,0.11764705882352941,0.2,0.14814814814814814,10,17,2
+448,9032,Circaea canadensis,broadleaf enchanter's nightshade,0.047619047619047616,0.1,0.06451612903225806,10,21,1
+449,9081,Nuphar polysepala,American Yellow Pond-lily,0.0,0.0,0.0,10,4,0
+450,9177,Eschscholzia parishii,goldpoppy,0.13157894736842105,0.5,0.20833333333333334,10,38,5
+451,9201,Actaea spicata,Eurasian baneberry,0.0,0.0,0.0,10,4,0
+452,9203,Anemonastrum canadense,meadow anemone,0.058823529411764705,0.1,0.07407407407407407,10,17,1
+453,9217,Aquilegia chrysantha,golden columbine,0.16666666666666666,0.1,0.125,10,6,1
+454,9218,Aquilegia coerulea,Colorado blue columbine,0.25,0.2,0.2222222222222222,10,8,2
+455,9253,Hydrastis canadensis,Goldenseal,0.0,0.0,0.0,10,10,0
+456,9257,Pulsatilla occidentalis,white pasqueflower,0.0,0.0,0.0,10,5,0
+457,9258,Pulsatilla patens,eastern pasqueflower,0.4,0.2,0.26666666666666666,10,5,2
+458,9263,Ranunculus bulbosus,bulbous buttercup,0.06666666666666667,0.1,0.08,10,15,1
+459,9266,Ranunculus fascicularis,Early Buttercup,0.0,0.0,0.0,10,22,0
+460,9280,Thalictrum lucidum,Shining Meadow-rue,0.05263157894736842,0.2,0.08333333333333333,10,38,2
+461,9302,Artocarpus altilis,Breadfruit,0.08333333333333333,0.1,0.09090909090909091,10,12,1
+462,9304,Broussonetia papyrifera,Paper mulberry,0.0,0.0,0.0,10,1,0
+463,9323,Ceanothus herbaceus,inland ceanothus,0.05555555555555555,0.1,0.07142857142857142,10,18,1
+464,9330,Ceanothus spinosus,greenbark ceanothus,0.0,0.0,0.0,10,12,0
+465,9340,Frangula purshiana,Cascara,0.0,0.0,0.0,10,6,0
+466,9366,Cercocarpus ledifolius,Curl-leaf mountain-mahogany,0.0,0.0,0.0,10,4,0
+467,9368,Chamaebatia foliolosa,Mountain Misery,0.05555555555555555,0.1,0.07142857142857142,10,18,1
+468,9376,Dryas octopetala,Mountain Avens,0.05263157894736842,0.1,0.06896551724137931,10,19,1
+469,9408,Potentilla canadensis,dwarf cinquefoil,0.0,0.0,0.0,10,6,0
+470,9474,Rubus phoenicolasius,wineberry,0.375,0.3,0.3333333333333333,10,8,3
+471,9475,Rubus pubescens,dwarf raspberry,0.0,0.0,0.0,10,7,0
+472,9506,Ulmus rubra,slippery elm,0.0,0.0,0.0,10,5,0
+473,9553,Dysoxylum spectabile,Kohekohe,0.0,0.0,0.0,10,7,0
+474,9555,Citrus trifoliata,trifoliate orange,0.125,0.1,0.1111111111111111,10,8,1
+475,9574,Acer palmatum,Japanese maple,0.0,0.0,0.0,10,3,0
+476,9580,Acer saccharum,sugar maple,0.0,0.0,0.0,10,2,0
+477,9612,Sedum acre,Biting Stonecrop,0.0,0.0,0.0,10,31,0
+478,9623,Tylecodon paniculatus,Botterboom,0.0,0.0,0.0,10,6,0
+479,9624,Umbilicus rupestris,Wall Pennywort,0.0,0.0,0.0,10,7,0
+480,9629,Ribes cynosbati,prickly gooseberry,0.0,0.0,0.0,10,5,0
+481,9656,Lithophragma affine,San Francisco woodland-star,0.0,0.0,0.0,10,10,0
+482,9664,Mitella nuda,naked bishop's cap,0.0,0.0,0.0,10,4,0
+483,9673,Tiarella trifoliata,threeleaf foamflower,0.07692307692307693,0.1,0.08695652173913043,10,13,1
+484,9681,Convolvulus arvensis,field bindweed,0.0,0.0,0.0,10,3,0
+485,9721,Lycium barbarum,matrimony vine,0.0,0.0,0.0,10,6,0
+486,9746,Solanum pseudocapsicum,Jerusalem cherry,0.13333333333333333,0.2,0.16,10,15,2
+487,9762,Vitis mustangensis,mustang grape,0.0,0.0,0.0,10,8,0
+488,9777,Cupressus nootkatensis,Nootka cypress,0.0,0.0,0.0,10,4,0
+489,9780,Juniperus communis,common juniper,0.043478260869565216,0.1,0.06060606060606061,10,23,1
+490,9846,Tsuga heterophylla,western hemlock,0.0,0.0,0.0,10,5,0
+491,9853,Podocarpus totara,totara,0.0,0.0,0.0,10,4,0
+492,9864,Dicksonia fibrosa,golden tree fern,0.0,0.0,0.0,10,14,0
+493,9875,Equisetum variegatum,variegated horsetail,0.5,0.1,0.16666666666666666,10,2,1
+494,9881,Hymenophyllum nephrophyllum,kidney fern,0.0,0.0,0.0,10,18,0
+495,9888,Osmunda claytoniana,interrupted fern,0.25,0.4,0.3076923076923077,10,16,4
+496,9937,Dryopteris arguta,coastal woodfern,0.14285714285714285,0.2,0.16666666666666666,10,14,2
+497,9946,Polystichum lonchitis,holly fern,0.0,0.0,0.0,10,11,0
+498,9965,Acrostichum danaeifolium,Giant leather fern,0.037037037037037035,0.1,0.05405405405405406,10,27,1
+499,9985,Pteris macilenta,Sweet Fern,0.0,0.0,0.0,10,10,0

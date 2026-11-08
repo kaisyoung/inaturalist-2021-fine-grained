@@ -1,0 +1,72 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\paragraph{Implementation.}
+Experiments run locally on an Apple M4 Pro.  Deep models use PyTorch and
+torchvision \cite{paszke2019pytorch} with MPS in FP32; traditional pipelines
+use scikit-learn \cite{pedregosa2011scikit} and OpenCV
+\cite{bradski2000opencv}.  Data, image, configuration, progress, plotting, and
+serialisation utilities use NumPy, pandas, tqdm, scikit-image, Pillow,
+Matplotlib, joblib, torchvision, and PyYAML
+\cite{harris2020array,mckinney2010data,costaluis2019tqdm,vanderwalt2014scikitimage,
+clark2026pillow,hunter2007matplotlib,joblib2025,marcel2010torchvision,pyyaml2025}.
+Random seeds for Python, NumPy, data samplers,
+workers, and model initialisation are fixed to 42.  Data decoding applies EXIF
+orientation and handles grayscale or alpha-channel inputs by safe RGB
+conversion.  Failed or unreadable images are fatal rather than silently
+skipped.
+
+Scratch ResNet18 uses a 25-epoch cap and patience 6.  The two pretrained
+ResNet18 augmentation variants share initial pretrained weights, head
+initialisation, sampler order, optimiser, scheduler, 15-epoch cap, and
+patience 4; only the training transform changes.  EfficientNet-B0 uses the
+same strong-augmentation optimisation policy.  A disposable preflight chooses
+a feasible micro-batch without contributing weights or measurements to the
+canonical run.  Before epoch one, the model is rebuilt and all random sources
+are reseeded.
+
+\paragraph{Metrics.}
+For each of 500 labels we compute precision, recall, and F1 with zero assigned
+when a denominator is empty, then report their unweighted macro averages.
+Top-$k$ accuracy counts an example as correct when its true class is among the
+$k$ largest scores.  Score columns are aligned through the estimator's
+explicit class order, and stable descending ranking breaks exact ties in favour
+of the lower label.  Numeric confusion matrices use rows for true labels and
+columns for predictions.  We retain both overall/top-1 accuracy names for
+rubric compatibility, but they are the same statistic.
+
+Traditional training time surrounds classifier \texttt{fit} only, and its
+test time surrounds scoring an already-loaded cached feature matrix.  Deep
+training time includes loading, augmentation, transfer, forward/backward, and
+optimiser work in the training loop, excluding validation and serialisation.
+Deep test time is synchronised model-forward time; full evaluation wall time
+is also logged.  Consequently, traditional and deep timing numbers describe
+different pipeline boundaries and should not be interpreted as a direct
+hardware-speed contest.
+
+\paragraph{Selection and reproducibility.}
+For Stage~3, validation metrics are independently recomputed from each best
+checkpoint before freeze.  Test selection includes scratch ResNet18, the
+validation-best pretrained ResNet18 augmentation, and completed
+EfficientNet-B0; the basic-augmentation and frozen-head ResNet18 runs remain
+validation-only.  For rewritten Stage~2, the selection manifest binds the 19
+validation configurations, selected component order, normalisation, model and
+cache hashes, train-fitted BoVW vocabulary, and Stage~1 split hashes.  Test
+evaluation rejects a missing or mismatched manifest, an unlisted model, and
+silent replacement of canonical metrics.  This freezes the current state
+going forward.  Because no independently verifiable pre-test manifest survives
+for the already-recorded traditional results, it does not establish historical
+chronology.  Atomic caches, checkpoints, predictions, metric files, and
+configuration hashes nevertheless make the evidence currently reported
+traceable to its bound source.
+Figure~\ref{fig:convergence} shows observed optimisation curves reconstructed
+from the persisted epoch logs, without rerunning inference.
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{training_convergence.png}
+  \caption{Training loss and validation macro F1 for scratch ResNet18 and the
+  best pretrained EfficientNet-B0.  Transfer learning converges faster and to
+  a substantially stronger validation solution.}
+  \label{fig:convergence}
+\end{figure*}

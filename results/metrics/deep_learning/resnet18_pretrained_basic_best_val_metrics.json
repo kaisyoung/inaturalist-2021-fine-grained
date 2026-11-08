@@ -1,0 +1,70 @@
+{
+  "best_epoch": 15,
+  "checkpoint_path": "results/models/deep_learning/resnet18_pretrained_basic_best.pt",
+  "checkpoint_sha256": "64ecacadf724c59879bcf9a4249d065f40fd5175b1324486cce386d64ee8068d",
+  "completed_epochs": 15,
+  "experiment_name": "resnet18_pretrained_basic",
+  "metrics": {
+    "evaluation_wall_time_seconds": 6.055906624998897,
+    "forward_time_seconds": 5.475275460987177,
+    "loss": 1.472265060043335,
+    "macro_f1": 0.6608436297430889,
+    "macro_precision": 0.6845021068628654,
+    "macro_recall": 0.6616000000000001,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.6616,
+    "top1_accuracy": 0.6616,
+    "top5_accuracy": 0.8538
+  },
+  "parameter_counts": {
+    "total": 11433012,
+    "trainable": 11433012
+  },
+  "resolved_config_path": "results/metrics/deep_learning/resnet18_pretrained_basic_resolved_config.json",
+  "resolved_config_sha256": "385d48697ae5a13315268056fb417375941f85313224fe8100399eea396c2672",
+  "schema_version": 1,
+  "selection_metric": "macro_f1",
+  "selection_value": 0.6608436297430889,
+  "stage1_artifacts": {
+    "class_mapping.json": {
+      "bytes": 279280,
+      "path": "data/splits/class_mapping.json",
+      "sha256": "2d6e60104b133d2758dffd585d373b085ddb42845d0b4b2c93bf5277ef9a0a1b",
+      "verification": "verified_current_bytes"
+    },
+    "selected_classes_seed42.txt": {
+      "bytes": 2450,
+      "path": "data/splits/selected_classes_seed42.txt",
+      "sha256": "3c2af417a5c174ef14f2be117a00880b0a08f8dce0c24fad6aaa8ea5dcde8141",
+      "verification": "verified_current_bytes"
+    },
+    "split_summary.json": {
+      "bytes": 2063,
+      "path": "data/splits/split_summary.json",
+      "sha256": "324413fb3d8d3affe611f8fd1454358cf54f2e6fcd81ef961994be0cc19f0b76",
+      "verification": "verified_current_bytes"
+    },
+    "test.csv": {
+      "bytes": 1164945,
+      "path": "data/splits/test.csv",
+      "sha256": "45ba7673b6b0e27cab8ef5a482ea8142de54e35be05a5b1ba9bb3fe20d5b8f91",
+      "verification": "accepted_precheck_digest; file not opened"
+    },
+    "train.csv": {
+      "bytes": 4971333,
+      "path": "data/splits/train.csv",
+      "sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+      "verification": "verified_current_bytes"
+    },
+    "val.csv": {
+      "bytes": 1222951,
+      "path": "data/splits/val.csv",
+      "sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb",
+      "verification": "verified_current_bytes"
+    }
+  },
+  "stopped_early": false,
+  "training_time_seconds": 1502.5804650840146,
+  "validation_time_seconds": 5.475275460987177
+}

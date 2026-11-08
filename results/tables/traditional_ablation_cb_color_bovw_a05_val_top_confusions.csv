@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,21,Physocephala tibialis,31,Isodontia mexicana,1,3,4
+2,136,Ocyurus chrysurus,137,Abudefduf saxatilis,1,3,4
+3,294,Yucca schidigera,370,Lophocereus schottii,3,1,4
+4,39,Cnaphalocrocis poeyalis,56,Epyaxa rosearia,2,2,4
+5,30,Tetramorium immigrans,369,Homalocephala polycephala,3,0,3
+6,54,Chloraspilates bicoloraria,56,Epyaxa rosearia,3,0,3
+7,68,Lerema accius,71,Urbanus procne,3,0,3
+8,96,Dione moneta,146,Oophaga pumilio,1,2,3
+9,134,Lepisosteus platyrhincus,246,Trichechus manatus,1,2,3
+10,135,Bodianus diplotaenia,137,Abudefduf saxatilis,2,1,3
+11,162,Dendrocygna javanica,169,Hydrophasianus chirurgus,2,1,3
+12,166,Brachyramphus marmoratus,234,Eschrichtius robustus,2,1,3
+13,173,Patagioenas leucocephala,212,Hymenops perspicillatus,2,1,3
+14,215,Pitangus sulphuratus,227,Psittacula krameri,2,1,3
+15,221,Dryobates borealis,222,Picoides arcticus,1,2,3
+16,224,Fulmarus glacialis,234,Eschrichtius robustus,1,2,3
+17,326,Pseudopanax crassifolius,370,Lophocereus schottii,2,1,3
+18,363,Cylindropuntia ramosissima,369,Homalocephala polycephala,1,2,3
+19,363,Cylindropuntia ramosissima,385,Mentzelia laevicaulis,1,2,3
+20,365,Echinocereus dasyacanthus,369,Homalocephala polycephala,2,1,3

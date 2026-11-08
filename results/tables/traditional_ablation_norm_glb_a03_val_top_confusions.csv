@@ -1,0 +1,21 @@
+rank,class_a_new_label,class_a_scientific_name,class_b_new_label,class_b_scientific_name,a_as_b,b_as_a,total_confusions
+1,157,Elanoides forficatus,163,Apus apus,4,3,7
+2,264,Doriopsilla fulva,265,Peltodoris nobilis,2,4,6
+3,294,Yucca schidigera,370,Lophocereus schottii,1,4,5
+4,135,Bodianus diplotaenia,136,Ocyurus chrysurus,4,0,4
+5,138,Parma microlepis,141,Phycodurus eques,4,0,4
+6,166,Brachyramphus marmoratus,224,Fulmarus glacialis,0,4,4
+7,295,Romulea rosea,399,Primula farinosa,4,0,4
+8,336,Conoclinium coelestinum,425,Geranium erianthum,4,0,4
+9,450,Eschscholzia parishii,459,Ranunculus fascicularis,0,4,4
+10,136,Ocyurus chrysurus,140,Zanclus cornutus,3,1,4
+11,156,Aquila heliaca,163,Apus apus,3,1,4
+12,323,Sanicula arctopoides,430,Triphysaria eriantha,3,1,4
+13,58,Gastrina cristaria,62,Pseudocoremia suavis,2,2,4
+14,118,Macrodiplax balteata,121,Tramea onusta,2,2,4
+15,136,Ocyurus chrysurus,137,Abudefduf saxatilis,2,2,4
+16,290,Zantedeschia aethiopica,452,Anemonastrum canadense,2,2,4
+17,20,Zopherus nodulosus,369,Homalocephala polycephala,3,0,3
+18,60,Idaea tacturata,63,Scopula limboundata,0,3,3
+19,79,Acronicta superans,90,Gluphisia septentrionis,3,0,3
+20,137,Abudefduf saxatilis,140,Zanclus cornutus,3,0,3

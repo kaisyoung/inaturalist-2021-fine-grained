@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "accepted_continuity",
+  "purpose": "Preserve the immutable Stage 3 freeze while explicitly reconciling its historical Stage 2 provenance with the regenerated traditional-computer-vision evidence.",
+  "immutable_stage3_evidence": {
+    "stage3_freeze": {
+      "path": "results/metrics/deep_learning/stage3_freeze.json",
+      "sha256": "bea68b307fb7ff5db4f066b47ff00ade462bd71609ed9735c4faff125ce2257f",
+      "bytes": 21726
+    },
+    "stage3_test_access": {
+      "path": "results/metrics/deep_learning/stage3_test_access.json",
+      "sha256": "04420ab5eb9bca3f5a6e56f6015fd2ce158ba9121d0e328b076912bac2292f2b",
+      "bytes": 8072
+    }
+  },
+  "legacy_stage2_bindings": [
+    {
+      "origin": "results/metrics/deep_learning/stage3_freeze.json",
+      "location": "$.stage2_artifacts.STAGE2_FINAL_ACCEPTANCE_REPORT.md",
+      "legacy": {
+        "path_at_stage3_freeze": "STAGE2_FINAL_ACCEPTANCE_REPORT.md",
+        "sha256_at_stage3_freeze": "a2a6aa5df577b3d56da5be1a3329227250d15e978b2f3a912f573b90a014c6d9",
+        "bytes_at_stage3_freeze": 30903
+      },
+      "current_replacement": {
+        "path": "STAGE2_FINAL_ACCEPTANCE_REPORT.md",
+        "sha256": "dea1c7a46e8c48609906c118c6c6e8fe8ae68412025da7dd8db4a764c5890759",
+        "bytes": 694
+      },
+      "disposition": "superseded_historical_report_notice"
+    },
+    {
+      "origin": "results/metrics/deep_learning/stage3_freeze.json",
+      "location": "$.stage2_artifacts.STAGE2_TRADITIONAL_REPORT.md",
+      "legacy": {
+        "path_at_stage3_freeze": "STAGE2_TRADITIONAL_REPORT.md",
+        "sha256_at_stage3_freeze": "874130190f8a9f976e84009e0b1459d268626361e3e38382c935de66e51ac9e6",
+        "bytes_at_stage3_freeze": 30583
+      },
+      "current_replacement": {
+        "path": "STAGE2_TRADITIONAL_REPORT.md",
+        "sha256": "39426c5a8c31735d61b8e0ad3a04a434b0347842f63613671fd1a6450799d1c7",
+        "bytes": 690
+      },
+      "disposition": "superseded_historical_report_notice"
+    },
+    {
+      "origin": "results/metrics/deep_learning/stage3_freeze.json",
+      "location": "$.stage2_artifacts.results/metrics/stage2_freeze.json",
+      "legacy": {
+        "path_at_stage3_freeze": "results/metrics/stage2_freeze.json",
+        "sha256_at_stage3_freeze": "6f959c8b1253616e04a549d6063ce71528dc9872cd865435a7310866c8f1e92f",
+        "bytes_at_stage3_freeze": 3556
+      },
+      "current_replacement": {
+        "path": "results/metrics/stage2_freeze.json",
+        "sha256": "f5b908ce68b0cfb95b3047c2ba5a875fb975e56026b6337c966d5c326140562d",
+        "bytes": 16287
+      },
+      "disposition": "regenerated_stage2_evidence"
+    },
+    {
+      "origin": "results/metrics/deep_learning/stage3_freeze.json",
+      "location": "$.stage2_artifacts.results/tables/stage2_feature_ablation_results.csv",
+      "legacy": {
+        "path_at_stage3_freeze": "results/tables/stage2_feature_ablation_results.csv",
+        "sha256_at_stage3_freeze": "a919aaeca2ae28f0fd6f5a0e7f51c2a6ec0dbf4faac6069c5deb84ea9e80afb6",
+        "bytes_at_stage3_freeze": 708
+      },
+      "current_replacement": {
+        "path": "results/tables/stage2_feature_ablation_results.csv",
+        "sha256": "ba723a0a362bd50a569a12bbcb6f56578ed37f1a6f351daed793c74ad692e2ce",
+        "bytes": 705
+      },
+      "disposition": "regenerated_stage2_evidence"
+    },
+    {
+      "origin": "results/metrics/deep_learning/stage3_freeze.json",
+      "location": "$.stage2_artifacts.results/tables/stage2_traditional_results.csv",
+      "legacy": {
+        "path_at_stage3_freeze": "results/tables/stage2_traditional_results.csv",
+        "sha256_at_stage3_freeze": "cfdcff1a73ef8dbf06083ce296469c08bd1a5c034902b00526d0f63241d89c56",
+        "bytes_at_stage3_freeze": 907
+      },
+      "current_replacement": {
+        "path": "results/tables/stage2_traditional_results.csv",
+        "sha256": "b2a2d554975c06e28639a39d44b80e120e36dc5eb8e23bc0d75715a8ac15768c",
+        "bytes": 934
+      },
+      "disposition": "regenerated_stage2_evidence"
+    }
+  ],
+  "assertions": {
+    "stage3_freeze_and_test_access_unchanged": true,
+    "stage3_checkpoints_and_model_evidence_unchanged": true,
+    "stage3_training_semantically_independent_of_stage2_models_and_tables": true,
+    "legacy_stage2_bindings_are_historical_provenance_only": true
+  },
+  "rationale": "Stage 3 training used the immutable Stage 1 split contract and Stage 3 configurations; the preserved freeze and test-access record bind its checkpoints and model-specific evidence. Stage 3 did not train from, initialize from, or derive weights from Stage 2 models or Stage 2 result tables. The Stage 2 entries embedded in the immutable Stage 3 freeze therefore remain historical governance provenance; the current replacements above are the authoritative post-rewrite Stage 2 evidence."
+}

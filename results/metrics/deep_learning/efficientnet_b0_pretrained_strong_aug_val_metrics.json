@@ -1,0 +1,133 @@
+{
+  "artifacts": {
+    "confusion": {
+      "bytes": 8322,
+      "path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_val_confusion.npz",
+      "sha256": "52ddb4e939fa0d3abde0509172776bc6e43993ce6a5bf90177329230b3c48de5"
+    },
+    "confusion_figure": {
+      "bytes": 81880,
+      "path": "results/figures/deep_learning/efficientnet_b0_pretrained_strong_aug_val_confusion_matrix.png",
+      "sha256": "2e2b476544bcd89896012c91dc3ad0816b95b0579dc34508363cd764fb61d1d0"
+    },
+    "pairs": {
+      "bytes": 2834,
+      "path": "results/tables/deep_learning/efficientnet_b0_pretrained_strong_aug_val_top_confusions.csv",
+      "sha256": "8a6ed41f1b819f6b91ba82b557f884bd7d37b284de2778a5ffd269df4464785a"
+    },
+    "pairs_figure": {
+      "bytes": 156502,
+      "path": "results/figures/deep_learning/efficientnet_b0_pretrained_strong_aug_val_top_confusions.png",
+      "sha256": "1adeecb03577d4a4e99d29c6f01f13902a422a3f274c07c25edb81a6912abb68"
+    },
+    "per_class": {
+      "bytes": 42153,
+      "path": "results/tables/deep_learning/efficientnet_b0_pretrained_strong_aug_val_per_class_metrics.csv",
+      "sha256": "7c9b94f3d78802586ea50048d1144939fb11f637fe52c427dbe68bd80a6dc179"
+    },
+    "predictions": {
+      "bytes": 3135897,
+      "path": "results/predictions/deep_learning/efficientnet_b0_pretrained_strong_aug_val_predictions.csv",
+      "sha256": "abfbffb583128e77f29357b41fedec3af7090841fd0f8207a7b679dcd057b6b4"
+    }
+  },
+  "best_epoch": 14,
+  "experiment_name": "efficientnet_b0_pretrained_strong_aug",
+  "freeze_backbone": false,
+  "image_size": 224,
+  "metrics": {
+    "evaluation_wall_time_seconds": 12.53195891600626,
+    "loss": 1.1044400253295898,
+    "macro_f1": 0.732628022230847,
+    "macro_precision": 0.7518959521902245,
+    "macro_recall": 0.7367999999999999,
+    "model_forward_time_seconds": 6.294280456997512,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.7368,
+    "seconds_per_image": 0.0012588560913995024,
+    "top1_accuracy": 0.7368,
+    "top5_accuracy": 0.902
+  },
+  "model_name": "efficientnet_b0",
+  "num_classes": 500,
+  "pretrained": true,
+  "provenance": {
+    "checkpoint_path": "results/models/deep_learning/efficientnet_b0_pretrained_strong_aug_best.pt",
+    "checkpoint_sha256": "787bc18b24b02e7671eea4197af75be8f193c969331351d8173a84aad7cd7a97",
+    "device": "mps",
+    "resolved_config_path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_resolved_config.json",
+    "resolved_config_sha256": "272e5d5f7e4b2dc800e893f2b19f944fd12c67e999f9fa25d5d9571275e6cd1c",
+    "source_config_path": "configs/deep_efficientnet_b0_pretrained.yaml",
+    "source_config_sha256": "e83acda6a2bcadfb88744e124c2deaaff0aac8ec1148076845e931ce2c4ae085",
+    "split_manifest": "val.csv",
+    "split_manifest_sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb",
+    "stored_best_metrics_path": "results/metrics/deep_learning/efficientnet_b0_pretrained_strong_aug_best_val_metrics.json",
+    "stored_best_metrics_sha256": "e006e0cc12990d08d4c56b39be9693ab59b2f4fde9d7fe68f9018cba55a7b23b",
+    "versions": {
+      "Pillow": "12.3.0",
+      "PyYAML": "6.0.3",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "platform": "macOS-27.0-arm64-arm-64bit",
+      "python": "3.12.13",
+      "scikit_learn": "1.7.2",
+      "torch": "2.12.1",
+      "torchvision": "0.27.1"
+    }
+  },
+  "schema_version": 1,
+  "score_type": "softmax_probability",
+  "split": "val",
+  "status": "complete",
+  "training_time_seconds": 2421.252361708008,
+  "validation_recheck": {
+    "agrees_with_stored_best": true,
+    "differences": {
+      "loss": {
+        "checkpoint_best": 1.1044400253295898,
+        "max_absolute_difference": 0.0,
+        "observed": 1.1044400253295898,
+        "persisted_best": 1.1044400253295898
+      },
+      "macro_f1": {
+        "checkpoint_best": 0.732628022230847,
+        "max_absolute_difference": 0.0,
+        "observed": 0.732628022230847,
+        "persisted_best": 0.732628022230847
+      },
+      "macro_precision": {
+        "checkpoint_best": 0.7518959521902245,
+        "max_absolute_difference": 0.0,
+        "observed": 0.7518959521902245,
+        "persisted_best": 0.7518959521902245
+      },
+      "macro_recall": {
+        "checkpoint_best": 0.7367999999999999,
+        "max_absolute_difference": 0.0,
+        "observed": 0.7367999999999999,
+        "persisted_best": 0.7367999999999999
+      },
+      "overall_accuracy": {
+        "checkpoint_best": 0.7368,
+        "max_absolute_difference": 0.0,
+        "observed": 0.7368,
+        "persisted_best": 0.7368
+      },
+      "top1_accuracy": {
+        "checkpoint_best": 0.7368,
+        "max_absolute_difference": 0.0,
+        "observed": 0.7368,
+        "persisted_best": 0.7368
+      },
+      "top5_accuracy": {
+        "checkpoint_best": 0.902,
+        "max_absolute_difference": 0.0,
+        "observed": 0.902,
+        "persisted_best": 0.902
+      }
+    },
+    "stored_best_epoch": 14,
+    "tolerance": 1e-06
+  }
+}

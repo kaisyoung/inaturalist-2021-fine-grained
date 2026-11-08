@@ -1,0 +1,153 @@
+{
+  "classifier": "RandomForestClassifier",
+  "estimator_diagnostics": {
+    "classifier": "RandomForestClassifier",
+    "converged": true,
+    "max_iter": null,
+    "n_iter": null
+  },
+  "estimator_parameters": {
+    "classifier": {
+      "class": "sklearn.ensemble._forest.RandomForestClassifier",
+      "repr": "RandomForestClassifier(min_samples_leaf=2, n_estimators=300, n_jobs=-1,\n                       random_state=42)"
+    },
+    "classifier__bootstrap": true,
+    "classifier__ccp_alpha": 0.0,
+    "classifier__class_weight": null,
+    "classifier__criterion": "gini",
+    "classifier__max_depth": null,
+    "classifier__max_features": "sqrt",
+    "classifier__max_leaf_nodes": null,
+    "classifier__max_samples": null,
+    "classifier__min_impurity_decrease": 0.0,
+    "classifier__min_samples_leaf": 2,
+    "classifier__min_samples_split": 2,
+    "classifier__min_weight_fraction_leaf": 0.0,
+    "classifier__monotonic_cst": null,
+    "classifier__n_estimators": 300,
+    "classifier__n_jobs": -1,
+    "classifier__oob_score": false,
+    "classifier__random_state": 42,
+    "classifier__verbose": 0,
+    "classifier__warm_start": false,
+    "memory": null,
+    "normalise": {
+      "class": "src.traditional.normalize.PowerNormalizer",
+      "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424)])"
+    },
+    "normalise__alpha": 0.3,
+    "normalise__blocks": [
+      [
+        0,
+        520
+      ],
+      [
+        520,
+        660
+      ],
+      [
+        660,
+        2424
+      ]
+    ],
+    "normalise__blockwise": true,
+    "normalise__weights": null,
+    "steps": [
+      [
+        "normalise",
+        {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 520), (520, 660), (660, 2424)])"
+        }
+      ],
+      [
+        "classifier",
+        {
+          "class": "sklearn.ensemble._forest.RandomForestClassifier",
+          "repr": "RandomForestClassifier(min_samples_leaf=2, n_estimators=300, n_jobs=-1,\n                       random_state=42)"
+        }
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false
+  },
+  "experiment_name": "random_forest",
+  "feature_components": [
+    "color",
+    "texture",
+    "hog"
+  ],
+  "feature_dim": 2424,
+  "feature_set": "handcrafted",
+  "feature_type": "color_texture_hog",
+  "image_size": [
+    128,
+    128
+  ],
+  "metrics": {
+    "inference_time_seconds": 1.993660792009905,
+    "macro_f1": 0.06837160954030198,
+    "macro_precision": 0.0727674148737944,
+    "macro_recall": 0.086,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.086,
+    "seconds_per_image": 0.000398732158401981,
+    "top1_accuracy": 0.086,
+    "top5_accuracy": 0.2144
+  },
+  "model_name": "random_forest",
+  "model_type": "random_forest",
+  "normalisation": {
+    "alpha": 0.3,
+    "blocks": [
+      [
+        0,
+        520
+      ],
+      [
+        520,
+        660
+      ],
+      [
+        660,
+        2424
+      ]
+    ],
+    "blockwise": true
+  },
+  "provenance": {
+    "feature_bindings": [
+      {
+        "feature_config_path": "results/features/traditional_feature_config.json",
+        "feature_config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+        "feature_dim": 2424,
+        "role": "handcrafted",
+        "train_feature_path": "results/features/traditional_train_features.npz",
+        "train_feature_sha256": "8e6b7a623153840b52abdd3d9159fedb26b63c1321920ab962b5fdbc3edc28f4",
+        "train_manifest_file_name": "train.csv",
+        "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+      }
+    ],
+    "feature_caches": [
+      {
+        "config_path": "results/features/traditional_feature_config.json",
+        "config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+        "feature_file_path": "results/features/traditional_val_features.npz",
+        "feature_file_sha256": "6b47f178712947ee336804c0fc30025f1801d138854fa4dd0a2a63bcf0f80478",
+        "role": "handcrafted"
+      }
+    ],
+    "feature_config_path": "results/features/traditional_feature_config.json",
+    "feature_config_sha256": "a31b70ff972bd75c5865d608c4eef1f00b5f621e2d4f6f13538c36a0d9ed65ea",
+    "model_path": "results/models/traditional/random_forest.joblib",
+    "model_sha256": "346c4d48e505b71f019765d30bc2c54dc73a0e566a971cfc6ad65cf4a0946fda",
+    "split_manifest": "val.csv",
+    "split_manifest_sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb"
+  },
+  "schema_version": 2,
+  "score_type": "predict_proba",
+  "split": "val",
+  "status": "complete",
+  "training_time_seconds": 870.5291331250337
+}

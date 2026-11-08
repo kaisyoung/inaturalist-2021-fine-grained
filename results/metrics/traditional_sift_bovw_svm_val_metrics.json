@@ -1,0 +1,131 @@
+{
+  "classifier": "LinearSVC",
+  "estimator_diagnostics": {
+    "classifier": "LinearSVC",
+    "converged": true,
+    "max_iter": 5000,
+    "n_iter": 23
+  },
+  "estimator_parameters": {
+    "classifier": {
+      "class": "sklearn.svm._classes.LinearSVC",
+      "repr": "LinearSVC(max_iter=5000, random_state=42)"
+    },
+    "classifier__C": 1.0,
+    "classifier__class_weight": null,
+    "classifier__dual": "auto",
+    "classifier__fit_intercept": true,
+    "classifier__intercept_scaling": 1,
+    "classifier__loss": "squared_hinge",
+    "classifier__max_iter": 5000,
+    "classifier__multi_class": "ovr",
+    "classifier__penalty": "l2",
+    "classifier__random_state": 42,
+    "classifier__tol": 0.0001,
+    "classifier__verbose": 0,
+    "memory": null,
+    "normalise": {
+      "class": "src.traditional.normalize.PowerNormalizer",
+      "repr": "PowerNormalizer(blocks=[(0, 1280)])"
+    },
+    "normalise__alpha": 0.3,
+    "normalise__blocks": [
+      [
+        0,
+        1280
+      ]
+    ],
+    "normalise__blockwise": true,
+    "normalise__weights": null,
+    "steps": [
+      [
+        "normalise",
+        {
+          "class": "src.traditional.normalize.PowerNormalizer",
+          "repr": "PowerNormalizer(blocks=[(0, 1280)])"
+        }
+      ],
+      [
+        "classifier",
+        {
+          "class": "sklearn.svm._classes.LinearSVC",
+          "repr": "LinearSVC(max_iter=5000, random_state=42)"
+        }
+      ]
+    ],
+    "transform_input": null,
+    "verbose": false
+  },
+  "experiment_name": "sift_bovw_svm",
+  "feature_components": [
+    "bovw"
+  ],
+  "feature_dim": 1280,
+  "feature_set": "bovw",
+  "feature_type": "sift_bovw",
+  "image_size": "max side 256",
+  "metrics": {
+    "inference_time_seconds": 0.1394522080081515,
+    "macro_f1": 0.04127097860359536,
+    "macro_precision": 0.03879952619149146,
+    "macro_recall": 0.047200000000000006,
+    "num_classes": 500,
+    "num_samples": 5000,
+    "overall_accuracy": 0.0472,
+    "seconds_per_image": 2.78904416016303e-05,
+    "top1_accuracy": 0.0472,
+    "top5_accuracy": 0.113
+  },
+  "model_name": "sift_bovw_svm",
+  "model_type": "linear_svm",
+  "normalisation": {
+    "alpha": 0.3,
+    "blocks": [
+      [
+        0,
+        1280
+      ]
+    ],
+    "blockwise": true
+  },
+  "provenance": {
+    "feature_bindings": [
+      {
+        "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+        "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+        "feature_dim": 1280,
+        "role": "bovw",
+        "train_feature_path": "results/features/bovw/bovw_train_features.npz",
+        "train_feature_sha256": "3f8bae0f39dd90f9c002bf3b7c4021a01985f481e4425d417546c68afb0f44ea",
+        "train_manifest_file_name": "train.csv",
+        "train_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3",
+        "vocabulary_training_manifest_sha256": "d8f4abccc568484f6efaff243c409b8ddcbc8fe46d2146a6922230b4428706c7"
+      }
+    ],
+    "feature_caches": [
+      {
+        "config_path": "results/features/bovw/bovw_feature_config.json",
+        "config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+        "feature_file_path": "results/features/bovw/bovw_val_features.npz",
+        "feature_file_sha256": "68cdb81ec2284cf14d6e4ed47d36b1806ac6c4a0e08d33449d550e41a4f82bd7",
+        "role": "bovw",
+        "vocabulary_path": "results/features/bovw/bovw_vocabulary.joblib",
+        "vocabulary_sha256": "10db55adcb311282c1268b4e4507be34cba162fd809cbd022cfdcff70313e5e3"
+      }
+    ],
+    "feature_config_path": "results/features/bovw/bovw_feature_config.json",
+    "feature_config_sha256": "b017f7024615b4b8dffcd98027d565c7e1a1195283314d1be876629efbcfde08",
+    "model_path": "results/models/traditional/sift_bovw_svm.joblib",
+    "model_sha256": "53a815b01a0b459d00b5e4efe9a94500468dcc6b9cae2e35d2862f14eb1ff1f7",
+    "split_manifest": "val.csv",
+    "split_manifest_sha256": "4adf287996d35d9e57f829426ff7480bbaf0b74e1c319a29d57fe74b3f0366bb"
+  },
+  "schema_version": 2,
+  "score_type": "decision_function",
+  "split": "val",
+  "status": "complete",
+  "svm_backend": "linearsvc",
+  "training_time_seconds": 378.838756208017
+}

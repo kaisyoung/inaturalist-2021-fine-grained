@@ -1,0 +1,17 @@
+% Generated from frozen Stage 4 evidence. Do not edit by hand.
+\begin{table*}[t]
+\centering
+\caption{Fixed-protocol robustness summary over 16 corrupted test conditions per model. The traditional comparator is the 2,424-D handcrafted Random Forest, not the primary 3,704-D LinearSVC.}
+\label{tab:robustness}
+\small
+\begin{tabularx}{\textwidth}{@{}Xcccccc@{}}
+\toprule
+Model & Clean F1 & Mean corrupt. F1 & Worst F1 & Mean $\Delta$ top-1 & Max $\Delta$ top-1 & Rank \\
+\midrule
+EfficientNet-B0 pretrained & 0.723535 & 0.562260 & 0.191962 & 0.164025 & 0.538000 & 1 \\
+ResNet18 pretrained & 0.672752 & 0.478144 & 0.091338 & 0.198675 & 0.587800 & 2 \\
+ResNet18 scratch & 0.292782 & 0.216528 & 0.077121 & 0.076512 & 0.211200 & 3 \\
+RF (2,424-D handcrafted) & 0.065407 & 0.048932 & 0.014465 & 0.019550 & 0.058600 & 4 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
