@@ -75,7 +75,7 @@ instructions, provenance gates, and troubleshooting.
 
 ## Project background
 
-This repository supports a COMP9517 Computer Vision group project on fine-grained
+This repository supports a computer-vision group project on fine-grained
 species classification using a reproducible 500-class subset of iNaturalist-2021
 Mini. Stage 1 implements dataset extraction, split preparation, selective image
 materialisation, and leakage checks. Stage 2 adds reproducible handcrafted-feature
