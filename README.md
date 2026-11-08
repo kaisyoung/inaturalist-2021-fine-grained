@@ -5,8 +5,6 @@ computer-vision pipeline against fine-tuned CNNs on an identical split
 (20,000 train / 5,000 validation / 5,000 test), then measuring how each degrades
 under image corruption.
 
-COMP9517 Computer Vision, UNSW, 26T2 — five-person group project.
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/figures/model_comparison_dark.png">
   <img src="results/figures/model_comparison_light.png" width="100%"

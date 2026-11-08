@@ -381,32 +381,37 @@ def _author_identity_state(main_text: str) -> tuple[str, str]:
     if not author_match:
         return "invalid", "Could not parse the author block"
 
-    author = author_match.group(1)
-    identity_text = re.sub(
-        r"\\(?:quad|qquad|and)\b|\\\\(?:\[[^]]*\])?",
-        " ",
-        author,
-    )
-    identity_text = " ".join(identity_text.split())
+    # Split on the LaTeX separators rather than flattening them away: a bare
+    # name carries no zID to mark where one identity ends and the next begins,
+    # so "Yuan Cao Kaishi Yang" is only two identities if the separator survives.
+    segments = [
+        " ".join(part.split())
+        for part in re.split(
+            r"\\(?:quad|qquad|and)\b|\\\\(?:\[[^]]*\])?",
+            author_match.group(1),
+        )
+    ]
+    segments = [part for part in segments if part]
     footer = "COMP9517 Computer Vision Group Project"
-    if identity_text.endswith(f" {footer}"):
-        identity_text = identity_text[: -len(footer)].strip()
+    if segments and segments[-1] == footer:
+        segments.pop()
 
-    expected_placeholders = " ".join(
+    expected_placeholders = [
         f"TODO Author {index} Name (TODO zID {index})" for index in range(1, 6)
-    )
-    if re.search(r"\bTODO\b", identity_text, re.IGNORECASE):
-        if identity_text == expected_placeholders:
+    ]
+    if re.search(r"\bTODO\b", " ".join(segments), re.IGNORECASE):
+        if segments == expected_placeholders:
             return "handoff", "Exactly five visible TODO author/zID pairs remain"
         return "invalid", "TODO author identities do not exactly match the five-pair handoff state"
 
-    pair_pattern = re.compile(r"\s*(?P<name>[^()]+?)\s*\(\s*(?P<zid>z\d{7})\s*\)")
-    completed: list[tuple[str, str]] = []
-    position = 0
-    while position < len(identity_text):
-        pair_match = pair_pattern.match(identity_text, position)
+    # The zID is optional: the public report credits names only, while an
+    # internal build may still pair each name with one.
+    pair_pattern = re.compile(r"(?P<name>[^()]+?)\s*(?:\(\s*(?P<zid>z\d{7})\s*\))?$")
+    completed: list[tuple[str, str | None]] = []
+    for segment in segments:
+        pair_match = pair_pattern.match(segment)
         if not pair_match:
-            return "invalid", "Completed identities must be plain-text names paired with z plus seven digits"
+            return "invalid", f"Author identity is not a plain-text name with an optional zID: {segment!r}"
         name = " ".join(pair_match.group("name").split())
         if not name or not any(character.isalpha() for character in name) or not all(
             character.isalpha() or character.isspace() or character in ".-'\N{RIGHT SINGLE QUOTATION MARK}"
@@ -414,14 +419,15 @@ def _author_identity_state(main_text: str) -> tuple[str, str]:
         ):
             return "invalid", f"Completed author name is not plain text: {name!r}"
         completed.append((name, pair_match.group("zid")))
-        position = pair_match.end()
 
     if len(completed) != 5:
-        return "invalid", f"Expected five completed name/zID pairs; observed {len(completed)}"
-    zids = [zid for _, zid in completed]
+        return "invalid", f"Expected five author identities; observed {len(completed)}"
+    zids = [zid for _, zid in completed if zid]
     if len(set(zids)) != len(zids):
         return "invalid", "Completed author zIDs must be unique"
-    return "completed", "Five completed plain-text author names have five unique valid zIDs"
+    if zids:
+        return "completed", f"Five plain-text author names carry {len(zids)} unique valid zIDs"
+    return "completed", "Five completed plain-text author names, credited without zIDs"
 
 
 def placeholder_check(main_text: str, *, allow_placeholders: bool) -> AuditCheck:
