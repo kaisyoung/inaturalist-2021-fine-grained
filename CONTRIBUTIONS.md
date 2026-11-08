@@ -1,6 +1,6 @@
 # Contributions
 
-COMP9517 (Computer Vision), UNSW, 26T2 — group project on fine-grained species
+A five-person group project in computer vision: fine-grained species
 classification using a 500-class subset of iNaturalist-2021
 (20,000 train / 5,000 validation / 5,000 test).
 
@@ -107,11 +107,11 @@ is mathematically identical, and the difference it produces is about 0.5 points.
 
 ### Version control
 
-`src/` was never committed to `main` — the repository's default branch contains
-`scripts/`, `tests/`, `configs/`, `docs/` and `report/`, but none of the 48 source
-files, because the initial code was added through GitHub's web upload. The
-`traditional-rewrite` branch is where the source tree first entered version
-control. Six commits there are mine, authored under my UNSW address:
+In the team's original repository, `src/` was never committed to `main`: that
+default branch holds `scripts/`, `tests/`, `configs/`, `docs/` and `report/`, but
+none of the 48 source files, because the initial code was added through GitHub's
+web upload. The `traditional-rewrite` branch there is where the source tree first
+entered version control. Six commits on it are mine:
 
 ```
 da853e2  2026-07-31  Add .gitignore for data and large intermediates
