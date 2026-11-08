@@ -7,6 +7,12 @@ under image corruption.
 
 COMP9517 Computer Vision, UNSW, 26T2 — five-person group project.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/model_comparison_dark.png">
+  <img src="results/figures/model_comparison_light.png" width="100%"
+       alt="Held-out test top-1 accuracy for six models. Pretrained EfficientNet-B0 72.7% and pretrained ResNet18 67.6% lead, ResNet18 from scratch reaches 29.9%, and the three classical descriptors reach 12.5%, 8.2% and 4.8%.">
+</picture>
+
 ## Results on the held-out test split
 
 | Method | Input | Top-1 | Top-5 | Macro-F1 |

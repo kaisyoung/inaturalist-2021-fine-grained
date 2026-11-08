@@ -40,6 +40,8 @@ env/
 !/results/logs/.gitkeep
 /results/figures/*
 !/results/figures/.gitkeep
+!/results/figures/model_comparison_light.png
+!/results/figures/model_comparison_dark.png
 /results/final_report_figures/
 
 # Submission builds and unrelated local/generated assets
